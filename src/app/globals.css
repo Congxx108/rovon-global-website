@@ -1,0 +1,87 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #faf5ec;
+  --foreground: #2c2520;
+  --surface: #f7f3ed;
+  --surface-strong: #eee6db;
+  --border-subtle: #d9cbbb;
+  --accent: #8f5a3f;
+  --cta: #a7613f;
+  --radius-card: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #faf5ec 0%, #f7f3ed 42%, #fffaf3 100%);
+  color: var(--foreground);
+  font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #a7613f;
+  color: #fffaf3;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-clay-500;
+}
+
+.section-y {
+  @apply py-20 md:py-28;
+}
+
+.panel-card {
+  @apply rounded-lg border border-stonebrand-200/80 bg-white/95 shadow-card transition duration-200 ease-out;
+}
+
+.panel-card-hover {
+  @apply hover:-translate-y-1 hover:border-clay-500/35 hover:shadow-lift;
+}
+
+.editorial-eyebrow {
+  @apply text-xs font-semibold uppercase tracking-normal text-clay-600;
+}
+
+.headline-serif {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0;
+}
+
+.soft-section {
+  @apply bg-stonebrand-50;
+}
+
+.sand-section {
+  @apply bg-sand-50;
+}
+
+.subtle-grid {
+  background-image:
+    linear-gradient(rgba(85, 50, 41, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(85, 50, 41, 0.045) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
