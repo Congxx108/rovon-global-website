@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import { AnalyticsScripts } from "@/components/analytics/analytics-scripts";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -51,6 +52,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
+        <AnalyticsScripts />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

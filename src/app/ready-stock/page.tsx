@@ -16,7 +16,12 @@ export default function ReadyStockPage() {
   return (
     <>
       <PageHero title={readyStockInfo.name} description={readyStockInfo.headline} breadcrumbPath="/ready-stock">
-        <WhatsAppCTA message={readyStockInfo.whatsappMessage} label={readyStockInfo.ctaLabel} />
+        <WhatsAppCTA
+          message={readyStockInfo.whatsappMessage}
+          label={readyStockInfo.ctaLabel}
+          eventName="click_ready_stock_inquiry"
+          eventParams={{ cta_label: readyStockInfo.ctaLabel, inquiry_type: "Ready Stock List" }}
+        />
       </PageHero>
       <section className="section-y">
         <div className="container-shell max-w-4xl">

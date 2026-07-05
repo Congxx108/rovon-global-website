@@ -136,8 +136,17 @@ export default function HomePage() {
               {siteConfig.brandName} supports importers, distributors, trading companies, and brand buyers with factory-backed bag production, multi-category wholesale supply, and OEM/ODM custom solutions. Contact {siteConfig.contactPerson} directly to discuss catalogs, product requirements, and sourcing plans.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/catalog">Get Latest Catalog</ButtonLink>
-              <WhatsAppCTA message={contactMessage(`please send me the latest ${siteConfig.brandName} catalog and wholesale quotation.`)} />
+              <ButtonLink
+                href="/catalog"
+                eventName="click_get_catalog"
+                eventParams={{ cta_label: "Get Latest Catalog", page_path: "/" }}
+              >
+                Get Latest Catalog
+              </ButtonLink>
+              <WhatsAppCTA
+                message={contactMessage(`please send me the latest ${siteConfig.brandName} catalog and wholesale quotation.`)}
+                eventName="click_contact_cason"
+              />
             </div>
             <div className="mt-10 grid gap-3 sm:grid-cols-2">
               {trustItems.map((item) => (
@@ -419,7 +428,10 @@ export default function HomePage() {
                 Explore Wholesale Solutions
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </ButtonLink>
-              <WhatsAppCTA message={contactMessage("I want to discuss wholesale bag sourcing and OEM/ODM support. Please send the latest catalog and quotation path.")} />
+              <WhatsAppCTA
+                message={contactMessage("I want to discuss wholesale bag sourcing and OEM/ODM support. Please send the latest catalog and quotation path.")}
+                eventName="click_contact_cason"
+              />
             </div>
           </div>
         </div>
@@ -439,6 +451,7 @@ export default function HomePage() {
               message={contactMessage("I want to discuss my bag sourcing plan. Please help me with catalog options, product requirements, and OEM/ODM communication.")}
               label={`Contact ${siteConfig.contactPerson} on WhatsApp`}
               className="mt-8"
+              eventName="click_contact_cason"
             />
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -477,7 +490,12 @@ export default function HomePage() {
               <ButtonLink href="/ready-stock" variant="outline">
                 Learn About Ready Stock
               </ButtonLink>
-              <WhatsAppCTA message={readyStockInfo.whatsappMessage} label={readyStockInfo.ctaLabel} />
+              <WhatsAppCTA
+                message={readyStockInfo.whatsappMessage}
+                label={readyStockInfo.ctaLabel}
+                eventName="click_ready_stock_inquiry"
+                eventParams={{ cta_label: readyStockInfo.ctaLabel }}
+              />
             </div>
           </div>
         </div>

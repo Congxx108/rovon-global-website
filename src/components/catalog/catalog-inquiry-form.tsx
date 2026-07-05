@@ -2,7 +2,8 @@
 
 import { MessageCircle } from "lucide-react";
 import type { FormEvent } from "react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 import { siteConfig, whatsappLink } from "@/data/site";
 
 const businessTypeOptions = [
@@ -118,6 +119,10 @@ function SelectField({
 export function CatalogInquiryForm() {
   const [formState, setFormState] = useState<CatalogFormState>(initialState);
 
+  useEffect(() => {
+    trackEvent("view_catalog_page", { page_path: "/catalog" });
+  }, []);
+
   const customizationSummary = useMemo(() => {
     return formState.customizationNeeds.length > 0
       ? formState.customizationNeeds.join(", ")
@@ -159,6 +164,15 @@ export function CatalogInquiryForm() {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    trackEvent("submit_catalog_whatsapp", {
+      business_type: formState.businessType || "Not provided",
+      category: formState.interestedCategory || "Not provided",
+      quantity_range: formState.quantityRange || "Not provided",
+      inquiry_type: formState.inquiryPurpose || "Not provided",
+      has_customization: formState.customizationNeeds.length > 0,
+      page_path: "/catalog",
+      cta_label: `Send Inquiry to ${siteConfig.contactPerson} on WhatsApp`,
+    });
     window.open(whatsappLink(buildMessage()), "_blank", "noopener,noreferrer");
   }
 

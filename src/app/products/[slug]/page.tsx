@@ -50,7 +50,12 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
   return (
     <>
       <PageHero title={category.name} description={category.headline} breadcrumbPath={`/products/${category.slug}`}>
-        <WhatsAppCTA message={category.whatsappMessage} label={`Contact ${siteConfig.contactPerson} on WhatsApp`} />
+        <WhatsAppCTA
+          message={category.whatsappMessage}
+          label={`Contact ${siteConfig.contactPerson} on WhatsApp`}
+          eventName="click_product_inquiry"
+          eventParams={{ category: category.name, category_slug: category.slug, cta_label: `Contact ${siteConfig.contactPerson} on WhatsApp` }}
+        />
         <ButtonLink href="/products" variant="outline">
           View All Categories
         </ButtonLink>
@@ -157,7 +162,12 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
               For custom development, share reference photos, target market, expected quantity, and any logo or packing requirements. {siteConfig.contactPerson} can help clarify the information needed for a practical quotation path.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <WhatsAppCTA message={category.whatsappMessage} label={`Contact ${siteConfig.contactPerson} on WhatsApp`} />
+              <WhatsAppCTA
+                message={category.whatsappMessage}
+                label={`Contact ${siteConfig.contactPerson} on WhatsApp`}
+                eventName="click_product_inquiry"
+                eventParams={{ category: category.name, category_slug: category.slug, cta_label: `Contact ${siteConfig.contactPerson} on WhatsApp` }}
+              />
               <ButtonLink href="/oem-odm" variant="outline">
                 View OEM/ODM Process
               </ButtonLink>
@@ -223,6 +233,8 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
                       message={product.whatsappMessage ?? category.whatsappMessage}
                       label="Send Product Requirements"
                       className="mt-6"
+                      eventName="click_product_inquiry"
+                      eventParams={{ category: category.name, category_slug: category.slug, cta_label: "Send Product Requirements" }}
                     />
                   </div>
                 </div>

@@ -27,7 +27,12 @@ export default function OemOdmPage() {
         description={`${siteConfig.brandName} supports custom bag projects from idea, material selection, logo application, structure adjustment, and sampling to bulk production, quality control, packing, and export support. Contact ${siteConfig.contactPerson} to clarify your custom bag brief and next-step requirements.`}
         breadcrumbPath="/oem-odm"
       >
-        <WhatsAppCTA message={contactMessage("I want to discuss an OEM/ODM custom bag project. Please tell me what information you need for materials, logo, sample, and order requirements.")} label="Discuss OEM/ODM Project" />
+        <WhatsAppCTA
+          message={contactMessage("I want to discuss an OEM/ODM custom bag project. Please tell me what information you need for materials, logo, sample, and order requirements.")}
+          label="Discuss OEM/ODM Project"
+          eventName="click_oem_odm_inquiry"
+          eventParams={{ cta_label: "Discuss OEM/ODM Project", inquiry_type: "OEM/ODM Custom Project" }}
+        />
       </PageHero>
       <section className="section-y">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">

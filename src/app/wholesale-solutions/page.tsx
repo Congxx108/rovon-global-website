@@ -26,6 +26,8 @@ export default function WholesaleSolutionsPage() {
         <WhatsAppCTA
           message={contactMessage("I want to discuss wholesale bag supply solutions for my market. Please help me clarify catalog options, product categories, and quotation requirements.")}
           label={`Talk to ${siteConfig.contactPerson}`}
+          eventName="click_contact_cason"
+          eventParams={{ cta_label: `Talk to ${siteConfig.contactPerson}`, inquiry_type: "Wholesale Solutions" }}
         />
         <ButtonLink href="/products" variant="outline">
           View Product Categories

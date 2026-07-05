@@ -42,6 +42,8 @@ export default function CatalogPage() {
         <WhatsAppCTA
           message={contactMessage("I want to contact you directly about bag catalog, wholesale sourcing, and OEM/ODM support.")}
           label={`Contact ${siteConfig.contactPerson} Directly`}
+          eventName="click_contact_cason"
+          eventParams={{ cta_label: `Contact ${siteConfig.contactPerson} Directly`, page_path: "/catalog" }}
         />
       </PageHero>
 

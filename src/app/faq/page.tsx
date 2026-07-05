@@ -23,7 +23,13 @@ export default function FaqPage() {
         description={`Answers for importers, distributors, trading companies, and brand buyers sourcing bags from ${siteConfig.brandName}.`}
         breadcrumbPath="/faq"
       >
-        <ButtonLink href="/catalog">Request Latest Catalog</ButtonLink>
+        <ButtonLink
+          href="/catalog"
+          eventName="click_get_catalog"
+          eventParams={{ cta_label: "Request Latest Catalog", page_path: "/faq" }}
+        >
+          Request Latest Catalog
+        </ButtonLink>
       </PageHero>
 
       <section className="section-y">

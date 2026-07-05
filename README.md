@@ -196,6 +196,42 @@ WhatsApp 号码未来如更换，只需要修改 Vercel 环境变量并重新部
 
 如果后续需要把邮箱和地址也改成 Vercel 环境变量，可以继续扩展 `src/data/site.ts`。
 
+## Conversion Tracking Setup
+
+The current site supports lightweight, optional conversion tracking for GA4, Meta Pixel, and TikTok Pixel. No analytics script is loaded unless the matching public environment variable is configured.
+
+Add these variables in Vercel Project Settings -> Environment Variables when tracking is ready:
+
+```text
+NEXT_PUBLIC_GA_MEASUREMENT_ID=
+NEXT_PUBLIC_META_PIXEL_ID=
+NEXT_PUBLIC_TIKTOK_PIXEL_ID=
+```
+
+Rules:
+
+- Leave a value empty to disable that tracking script.
+- Scripts are loaded with delayed Next.js `Script` strategies and no heavy analytics SDK is installed.
+- The tracking helper is located in `src/lib/analytics.ts`.
+- Script rendering is located in `src/components/analytics/analytics-scripts.tsx`.
+
+Current tracked actions:
+
+- Catalog page view: `view_catalog_page`
+- Catalog WhatsApp submit: `submit_catalog_whatsapp`
+- WhatsApp clicks: `click_whatsapp`
+- Contact Cason clicks: `click_contact_cason`
+- Get Latest Catalog clicks: `click_get_catalog`
+- Product category inquiry clicks: `click_product_inquiry`
+- OEM/ODM inquiry clicks: `click_oem_odm_inquiry`
+- Ready Stock inquiry clicks: `click_ready_stock_inquiry`
+
+Privacy boundary:
+
+- Do not send buyer name, phone number, WhatsApp number, email, full free-text message, or complete sourcing notes to analytics platforms.
+- Allowed event parameters should stay non-sensitive, such as `category`, `category_slug`, `page_path`, `cta_label`, `inquiry_type`, `business_type`, `quantity_range`, and `has_customization`.
+- The `/catalog` form still only generates a WhatsApp prefilled message in the browser. It does not submit to a database, backend, or file storage.
+
 ## 工厂数据真实性
 
 工厂能力数据统一在：

@@ -1,7 +1,9 @@
-﻿import Link from "next/link";
+import Link from "next/link";
+import { ButtonLink } from "@/components/button-link";
+import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { productCategories, readyStockInfo } from "@/data/products";
 import { markets } from "@/data/markets";
-import { siteConfig } from "@/data/site";
+import { contactMessage, siteConfig } from "@/data/site";
 
 export function SiteFooter() {
   return (
@@ -20,12 +22,14 @@ export function SiteFooter() {
           <p className="mt-6 max-w-md text-sm leading-7 text-slate-300">
             Factory-backed bag production, wholesale supply, and OEM/ODM custom support for professional global buyers. {siteConfig.contactPerson} is the direct contact for catalog requests and sourcing discussions.
           </p>
-          <Link
+          <ButtonLink
             href="/catalog"
-            className="focus-ring mt-8 inline-flex rounded-md bg-clay-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-clay-700"
+            className="mt-8"
+            eventName="click_get_catalog"
+            eventParams={{ cta_label: "Request Latest Catalog", page_path: "footer" }}
           >
             Request Latest Catalog
-          </Link>
+          </ButtonLink>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -52,7 +56,17 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-3 text-sm text-slate-300">
               <li><Link className="transition hover:text-white" href="/manufacturing">Manufacturing</Link></li>
               <li><Link className="transition hover:text-white" href="/wholesale-solutions">Wholesale Solutions</Link></li>
-              <li><Link className="transition hover:text-white" href="/catalog">Catalog Request</Link></li>
+              <li>
+                <ButtonLink
+                  href="/catalog"
+                  variant="outline"
+                  className="min-h-0 border-white/10 bg-transparent px-0 py-0 text-slate-300 shadow-none hover:bg-transparent hover:text-white"
+                  eventName="click_get_catalog"
+                  eventParams={{ cta_label: "Catalog Request", page_path: "footer" }}
+                >
+                  Catalog Request
+                </ButtonLink>
+              </li>
               <li><Link className="transition hover:text-white" href="/manufacturing/factory-overview">Factory Overview</Link></li>
               <li><Link className="transition hover:text-white" href="/manufacturing/quality-control">Quality Control</Link></li>
               <li><Link className="transition hover:text-white" href="/oem-odm">OEM/ODM</Link></li>
@@ -71,7 +85,17 @@ export function SiteFooter() {
                   </Link>
                 </li>
               ))}
-              <li><Link className="transition hover:text-white" href="/contact">Contact</Link></li>
+              <li>
+                <ButtonLink
+                  href="/contact"
+                  variant="outline"
+                  className="min-h-0 border-white/10 bg-transparent px-0 py-0 text-slate-300 shadow-none hover:bg-transparent hover:text-white"
+                  eventName="click_contact_cason"
+                  eventParams={{ cta_label: "Contact", page_path: "footer" }}
+                >
+                  Contact
+                </ButtonLink>
+              </li>
             </ul>
           </div>
 
@@ -83,6 +107,13 @@ export function SiteFooter() {
               <li>{siteConfig.whatsappDisplay}</li>
               <li>{siteConfig.address}</li>
             </ul>
+            <WhatsAppCTA
+              message={contactMessage("I want to contact you from the website footer about catalog and bag sourcing support.")}
+              label={`Contact ${siteConfig.contactPerson} on WhatsApp`}
+              className="mt-5 w-full border-white/20 bg-white/10 hover:bg-white/15"
+              eventName="click_contact_cason"
+              eventParams={{ page_path: "footer" }}
+            />
           </div>
         </div>
       </div>
@@ -95,4 +126,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-

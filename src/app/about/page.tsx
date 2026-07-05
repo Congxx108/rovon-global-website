@@ -31,6 +31,7 @@ export default function AboutPage() {
       >
         <WhatsAppCTA
           message={contactMessage(`I want to learn more about ${siteConfig.brandName} and discuss bag sourcing support.`)}
+          eventName="click_contact_cason"
         />
       </PageHero>
 
@@ -113,8 +114,14 @@ export default function AboutPage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <WhatsAppCTA
                 message={contactMessage("I want to discuss bag sourcing, catalog options, and OEM/ODM requirements directly.")}
+                eventName="click_contact_cason"
               />
-              <ButtonLink href="/catalog" variant="outline">
+              <ButtonLink
+                href="/catalog"
+                variant="outline"
+                eventName="click_get_catalog"
+                eventParams={{ cta_label: "Request Latest Catalog", page_path: "/about" }}
+              >
                 Request Latest Catalog
               </ButtonLink>
             </div>

@@ -1,5 +1,9 @@
-﻿import Link from "next/link";
+"use client";
+
+import Link from "next/link";
 import type { ReactNode } from "react";
+import type { AnalyticsEventName, AnalyticsParams } from "@/lib/analytics";
+import { trackEvent } from "@/lib/analytics";
 
 type ButtonLinkProps = {
   href: string;
@@ -7,6 +11,8 @@ type ButtonLinkProps = {
   variant?: "primary" | "secondary" | "outline";
   className?: string;
   external?: boolean;
+  eventName?: AnalyticsEventName;
+  eventParams?: AnalyticsParams;
 };
 
 const variants = {
@@ -24,21 +30,27 @@ export function ButtonLink({
   variant = "primary",
   className = "",
   external = false,
+  eventName,
+  eventParams,
 }: ButtonLinkProps) {
   const classes = `focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md border px-5 py-3 text-sm font-semibold transition duration-200 ease-out active:translate-y-px ${variants[variant]} ${className}`;
+  const handleClick = () => {
+    if (eventName) {
+      trackEvent(eventName, eventParams);
+    }
+  };
 
   if (external) {
     return (
-      <a href={href} className={classes} target="_blank" rel="noreferrer">
+      <a href={href} className={classes} target="_blank" rel="noreferrer" onClick={handleClick}>
         {children}
       </a>
     );
   }
 
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} className={classes} onClick={handleClick}>
       {children}
     </Link>
   );
 }
-

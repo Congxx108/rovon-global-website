@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { activeLanguage } from "@/data/languages";
 import { siteConfig, whatsappLink } from "@/data/site";
+import { trackEvent } from "@/lib/analytics";
 
 const navItems = [
   { href: "/catalog", label: "Catalog" },
@@ -23,6 +24,14 @@ export function SiteHeader() {
   const whatsappHref = whatsappLink(
     `Hello ${siteConfig.contactPerson}, I want to learn more about ${siteConfig.brandName} bag manufacturing and wholesale supply.`
   );
+  const trackNavItem = (href: string, label: string) => {
+    if (href === "/catalog") {
+      trackEvent("click_get_catalog", { cta_label: label });
+    }
+    if (href === "/contact") {
+      trackEvent("click_contact_cason", { cta_label: label });
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-stonebrand-200 bg-white/95 shadow-[0_1px_0_rgba(20,34,43,0.04)] backdrop-blur-xl">
@@ -34,10 +43,20 @@ export function SiteHeader() {
             <span>OEM/ODM Support</span>
           </div>
           <div className="flex items-center gap-5">
-            <Link className="transition hover:text-clay-700" href="/catalog">
+            <Link
+              className="transition hover:text-clay-700"
+              href="/catalog"
+              onClick={() => trackEvent("click_get_catalog", { cta_label: "Get Latest Catalog" })}
+            >
               Get Latest Catalog
             </Link>
-            <a className="transition hover:text-clay-700" href={whatsappHref} target="_blank" rel="noreferrer">
+            <a
+              className="transition hover:text-clay-700"
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => trackEvent("click_contact_cason", { cta_label: `Contact ${siteConfig.contactPerson} on WhatsApp` })}
+            >
               Contact {siteConfig.contactPerson} on WhatsApp
             </a>
           </div>
@@ -66,6 +85,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => trackNavItem(item.href, item.label)}
                 className={`focus-ring rounded-md px-3 py-2 text-sm font-medium transition duration-200 ${
                   active ? "bg-sand-100 text-navy-950" : "text-slate-700 hover:bg-sand-50 hover:text-navy-950"
                 }`}
@@ -90,6 +110,7 @@ export function SiteHeader() {
             className="focus-ring inline-flex min-h-10 items-center gap-2 rounded-md border border-clay-600 px-4 py-2 text-sm font-semibold text-clay-700 transition duration-200 hover:bg-clay-600 hover:text-white hover:shadow-card"
             target="_blank"
             rel="noreferrer"
+            onClick={() => trackEvent("click_contact_cason", { cta_label: `Talk to ${siteConfig.contactPerson}` })}
           >
             <MessageCircle className="h-4 w-4" aria-hidden="true" />
             Talk to {siteConfig.contactPerson}
@@ -114,7 +135,10 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  trackNavItem(item.href, item.label);
+                  setIsOpen(false);
+                }}
                 className="focus-ring rounded-md px-3 py-3 text-sm font-semibold text-slate-700 transition hover:bg-sand-50 hover:text-navy-950"
               >
                 {item.label}
@@ -129,6 +153,7 @@ export function SiteHeader() {
               className="focus-ring mt-2 inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-clay-600 px-4 py-3 text-sm font-semibold text-white shadow-sm"
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackEvent("click_contact_cason", { cta_label: `Contact ${siteConfig.contactPerson} on WhatsApp` })}
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
               Contact {siteConfig.contactPerson} on WhatsApp

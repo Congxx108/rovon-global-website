@@ -20,7 +20,13 @@ export default function ProductsPage() {
         description={`${siteConfig.brandName} focuses on multi-category bag manufacturing and B2B supply. These product categories are designed for importers, distributors, trading companies, brand buyers, and regional wholesale partners.`}
         breadcrumbPath="/products"
       >
-        <ButtonLink href="/catalog">Get Latest Catalog</ButtonLink>
+        <ButtonLink
+          href="/catalog"
+          eventName="click_get_catalog"
+          eventParams={{ cta_label: "Get Latest Catalog", page_path: "/products" }}
+        >
+          Get Latest Catalog
+        </ButtonLink>
       </PageHero>
       <section className="section-y">
         <div className="container-shell grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

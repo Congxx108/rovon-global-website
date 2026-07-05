@@ -20,8 +20,16 @@ export default function ContactPage() {
         description={`Share your target product category, quantity range, market, customization needs, and timeline. ${siteConfig.contactPerson} can help you get the right catalog, discuss product requirements, and move your wholesale or OEM/ODM inquiry forward.`}
         breadcrumbPath="/contact"
       >
-        <WhatsAppCTA message={contactMessage(`I want to contact ${siteConfig.brandName} for catalog, quotation, and bag sourcing support.`)} />
-        <ButtonLink href="/catalog" variant="outline">
+        <WhatsAppCTA
+          message={contactMessage(`I want to contact ${siteConfig.brandName} for catalog, quotation, and bag sourcing support.`)}
+          eventName="click_contact_cason"
+        />
+        <ButtonLink
+          href="/catalog"
+          variant="outline"
+          eventName="click_get_catalog"
+          eventParams={{ cta_label: "Prepare Catalog Inquiry", page_path: "/contact" }}
+        >
           Prepare Catalog Inquiry
         </ButtonLink>
       </PageHero>
@@ -39,6 +47,7 @@ export default function ContactPage() {
               message={contactMessage(`please send me the latest ${siteConfig.brandName} catalog and wholesale quotation.`)}
               label={`Contact ${siteConfig.contactPerson} on WhatsApp`}
               className="mt-6"
+              eventName="click_contact_cason"
             />
           </div>
           <div className="panel-card bg-sand-50 p-6">
