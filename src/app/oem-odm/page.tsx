@@ -34,23 +34,24 @@ export default function OemOdmPage() {
           eventParams={{ cta_label: "Discuss OEM/ODM Project", inquiry_type: "OEM/ODM Custom Project" }}
         />
       </PageHero>
-      <section className="section-y">
-        <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+      <section className="section-y bg-white">
+        <div className="container-shell grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
           <div>
-            <h2 className="headline-serif text-4xl font-semibold leading-tight text-navy-950">
-              Custom Options
+            <p className="editorial-eyebrow">Custom development workflow</p>
+            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
+              A structured path for custom bag projects.
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
               Buyers can discuss logo methods, materials, hardware, lining, size, structure, colors, labels, hangtags, packing, carton marks, and market-specific product planning.
             </p>
           </div>
-          <div className="grid gap-4">
+          <div className="grid gap-0 border border-stonebrand-200 bg-white">
             {steps.map((step, index) => (
-              <div key={step} className="panel-card flex gap-4 p-5">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-navy-900 text-sm font-semibold text-white">
-                  {index + 1}
+              <div key={step} className="grid gap-5 border-b border-stonebrand-200 p-6 last:border-b-0 sm:grid-cols-[84px_1fr]">
+                <span className="text-3xl font-semibold text-clay-600">
+                  {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="pt-2 text-sm font-semibold leading-6 text-navy-900">{step}</p>
+                <p className="text-base font-semibold leading-7 text-navy-900">{step}</p>
               </div>
             ))}
           </div>

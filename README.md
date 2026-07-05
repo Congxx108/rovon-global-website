@@ -344,6 +344,14 @@ src/data/factory.ts
 - Catalog 表单：保持移动端易填写，字段清楚，按钮明确，不接数据库、不上传文件、不做下载站。
 - 动效：只使用 CSS transition、hover border、hover shadow、轻微 image zoom，不使用重动画库。
 
+本轮视觉重构重点：
+
+- 首页首屏从插画拼贴改为更克制的产品展示占位系统：大尺寸产品容器、制造商信息条、分类标签和清晰询盘 CTA。
+- 产品分类图由卡通式 SVG 改为灰白棚拍背景、深色产品轮廓和材质/标签线条，更适合后续替换真实产品摄影。
+- 首页模块从普通白卡片堆叠改为制造商站节奏：能力条、产品目录网格、OEM/ODM 流程、制造/质量控制、材料与包装支持、批发客户方案、Cason 直接沟通入口。
+- Manufacturing、OEM/ODM、Wholesale Solutions 和产品分类页统一使用大图区域、细分割线、编号步骤和 B2B 能力矩阵。
+- Catalog 页面被整理成 B2B inquiry desk：左侧说明、右侧表单、字段清晰、移动端易填写，仍然只生成 WhatsApp 预填消息。
+
 性能原则保持不变：不引入 Framer Motion、GSAP、three.js、大型 UI 框架、视频背景或大图片；继续使用 `next/image`、静态数据结构和延迟加载策略。后续替换真实产品图、Cason 图和工厂图时，应保持当前比例和布局，并继续控制图片体积。
 
 ## Vercel Deployment Checklist

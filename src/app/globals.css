@@ -5,13 +5,13 @@
 :root {
   color-scheme: light;
   --background: #ffffff;
-  --foreground: #111827;
+  --foreground: #0f172a;
   --surface: #f8fafc;
-  --surface-strong: #f3f4f6;
-  --border-subtle: #e5e7eb;
-  --accent: #b8642f;
-  --cta: #b8642f;
-  --radius-card: 6px;
+  --surface-strong: #f1f5f9;
+  --border-subtle: #e2e8f0;
+  --accent: #b65f2a;
+  --cta: #b65f2a;
+  --radius-card: 4px;
 }
 
 * {
@@ -26,7 +26,7 @@ body {
   margin: 0;
   background: #ffffff;
   color: var(--foreground);
-  font-family: Inter, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
@@ -41,7 +41,7 @@ a {
 }
 
 .container-shell {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1240px, calc(100% - 32px));
   margin-inline: auto;
 }
 
@@ -50,15 +50,15 @@ a {
 }
 
 .section-y {
-  @apply py-16 md:py-24;
+  @apply py-20 md:py-28;
 }
 
 .panel-card {
-  @apply rounded-md border border-stonebrand-200 bg-white shadow-none transition duration-200 ease-out;
+  @apply rounded-sm border border-stonebrand-200 bg-white shadow-none transition duration-200 ease-out;
 }
 
 .panel-card-hover {
-  @apply hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-card;
+  @apply hover:-translate-y-0.5 hover:border-slate-400 hover:shadow-card;
 }
 
 .editorial-eyebrow {
@@ -80,5 +80,13 @@ a {
 
 .subtle-grid {
   background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.035), transparent);
+}
+
+.industrial-frame {
+  @apply rounded-sm border border-stonebrand-200 bg-slate-100 shadow-soft;
+}
+
+.spec-line {
+  @apply border-t border-stonebrand-200 pt-4;
 }
 

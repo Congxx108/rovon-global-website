@@ -103,7 +103,7 @@ function SelectField({
         id={id}
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        className="focus-ring min-h-12 rounded-sm border border-stonebrand-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 outline-none transition hover:border-slate-300"
+        className="focus-ring min-h-12 rounded-none border border-stonebrand-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 outline-none transition hover:border-slate-400"
       >
         <option value="">Select an option</option>
         {options.map((option) => (
@@ -177,7 +177,7 @@ export function CatalogInquiryForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="panel-card bg-white p-5 md:p-8">
+    <form onSubmit={handleSubmit} className="border border-stonebrand-200 bg-white p-5 md:p-8">
       <div className="grid gap-5 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-semibold text-navy-950" htmlFor="buyer-name">
           Buyer name
@@ -186,7 +186,7 @@ export function CatalogInquiryForm() {
             value={formState.buyerName}
             onChange={(event) => updateField("buyerName", event.target.value)}
             placeholder="Your name"
-            className="focus-ring min-h-12 rounded-sm border border-stonebrand-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 outline-none transition placeholder:text-slate-400 hover:border-slate-300"
+            className="focus-ring min-h-12 rounded-none border border-stonebrand-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 outline-none transition placeholder:text-slate-400 hover:border-slate-400"
           />
         </label>
 
@@ -221,7 +221,7 @@ export function CatalogInquiryForm() {
             value={formState.destinationMarket}
             onChange={(event) => updateField("destinationMarket", event.target.value)}
             placeholder="For example: Ghana, UAE, Philippines, Chile"
-            className="focus-ring min-h-12 rounded-sm border border-stonebrand-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 outline-none transition placeholder:text-slate-400 hover:border-slate-300"
+            className="focus-ring min-h-12 rounded-none border border-stonebrand-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 outline-none transition placeholder:text-slate-400 hover:border-slate-400"
           />
         </label>
 
@@ -240,7 +240,7 @@ export function CatalogInquiryForm() {
           {customizationOptions.map((option) => (
             <label
               key={option}
-              className="flex min-h-12 cursor-pointer items-center gap-3 rounded-sm border border-stonebrand-200 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-white"
+              className="flex min-h-12 cursor-pointer items-center gap-3 border border-stonebrand-200 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-white"
             >
               <input
                 type="checkbox"
@@ -262,7 +262,7 @@ export function CatalogInquiryForm() {
           onChange={(event) => updateField("extraMessage", event.target.value)}
           placeholder="Tell Cason about target styles, materials, logo needs, packing, sample questions, or timeline."
           rows={5}
-          className="focus-ring rounded-sm border border-stonebrand-200 bg-white px-4 py-3 text-sm font-medium leading-6 text-slate-700 outline-none transition placeholder:text-slate-400 hover:border-slate-300"
+          className="focus-ring rounded-none border border-stonebrand-200 bg-white px-4 py-3 text-sm font-medium leading-6 text-slate-700 outline-none transition placeholder:text-slate-400 hover:border-slate-400"
         />
       </label>
 

@@ -34,12 +34,15 @@ export default function WholesaleSolutionsPage() {
         </ButtonLink>
       </PageHero>
 
-      <section className="section-y">
+      <section className="section-y bg-white">
         <div className="container-shell">
-          <div className="grid gap-6 md:grid-cols-2">
-            {wholesaleSegments.map((segment) => (
-              <article key={segment.title} className="panel-card panel-card-hover p-6">
-                <h2 className="headline-serif text-3xl font-semibold leading-tight text-navy-950">
+          <div className="grid gap-0 border border-stonebrand-200 bg-white md:grid-cols-2">
+            {wholesaleSegments.map((segment, index) => (
+              <article key={segment.title} className="border-b border-stonebrand-200 p-7 md:border-r md:[&:nth-child(2n)]:border-r-0 md:[&:nth-last-child(-n+2)]:border-b-0">
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-clay-600">
+                  {String(index + 1).padStart(2, "0")} / Buyer type
+                </p>
+                <h2 className="mt-7 text-3xl font-semibold leading-tight text-navy-950">
                   For {segment.title}
                 </h2>
                 <p className="mt-3 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
@@ -51,10 +54,10 @@ export default function WholesaleSolutionsPage() {
         </div>
       </section>
 
-      <section className="section-y soft-section">
+      <section className="section-y border-y border-stonebrand-200 bg-slate-50">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
-            <h2 className="headline-serif text-4xl font-semibold leading-tight text-navy-950">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
               Factory-Backed Supply Advantages
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
@@ -63,7 +66,7 @@ export default function WholesaleSolutionsPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {factoryStrengths.map((item) => (
-              <div key={item.title} className="panel-card panel-card-hover p-5">
+              <div key={item.title} className="border border-stonebrand-200 bg-white p-5 transition hover:border-slate-400">
                 <CheckCircle2 className="h-5 w-5 text-clay-600" aria-hidden="true" />
                 <h3 className="mt-4 text-base font-semibold text-navy-950">{item.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-600">{item.description}</p>
@@ -76,7 +79,7 @@ export default function WholesaleSolutionsPage() {
       <section className="section-y">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <h2 className="headline-serif text-4xl font-semibold leading-tight text-navy-950">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
               Inquiry Process
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
@@ -89,11 +92,11 @@ export default function WholesaleSolutionsPage() {
           </div>
           <div className="grid gap-4">
             {inquiryProcess.map((step, index) => (
-              <div key={step} className="panel-card flex gap-4 p-5">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-navy-900 text-sm font-semibold text-white">
-                  {index + 1}
+              <div key={step} className="grid gap-5 border-t border-stonebrand-200 pt-5 sm:grid-cols-[72px_1fr]">
+                <span className="text-3xl font-semibold text-clay-600">
+                  {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="pt-2 text-sm font-semibold leading-6 text-navy-900">{step}</p>
+                <p className="text-sm font-semibold leading-6 text-navy-900">{step}</p>
               </div>
             ))}
           </div>

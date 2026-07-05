@@ -61,9 +61,9 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
         </ButtonLink>
       </PageHero>
 
-      <section className="section-y">
-        <div className="container-shell grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-          <div className="panel-card relative aspect-[4/3] overflow-hidden bg-stonebrand-100">
+      <section className="section-y bg-white">
+        <div className="container-shell grid gap-12 lg:grid-cols-[1.04fr_0.96fr] lg:items-center">
+          <div className="industrial-frame relative aspect-[4/3] overflow-hidden bg-stonebrand-100">
             <Image
               src={category.image}
               alt={`${category.name} manufacturing category`}
@@ -75,11 +75,11 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           </div>
           <div>
             <p className="editorial-eyebrow">Category capability overview</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
+            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
               {category.description}
             </h2>
             <p className="mt-6 text-base leading-8 text-slate-600">{category.buyerUseCase}</p>
-            <div className="mt-7 rounded-lg border border-stonebrand-200 bg-sand-50 p-5">
+            <div className="mt-7 border border-stonebrand-200 bg-slate-50 p-5">
               <p className="text-sm font-semibold text-navy-950">MOQ note</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">{category.moqNote}</p>
             </div>
@@ -87,11 +87,11 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
         </div>
       </section>
 
-      <section className="section-y soft-section">
+      <section className="section-y border-y border-stonebrand-200 bg-slate-50">
         <div className="container-shell grid gap-8 lg:grid-cols-[0.78fr_1.22fr]">
           <div>
             <p className="editorial-eyebrow">B2B sourcing fit</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
+            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
               Built for wholesale buyers, not retail product browsing.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
@@ -100,7 +100,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           </div>
           <div className="grid gap-6">
             <div className="grid gap-5 md:grid-cols-2">
-              <div className="panel-card p-6">
+              <div className="border border-stonebrand-200 bg-white p-6">
                 <h3 className="text-lg font-semibold text-navy-950">Suitable Buyers</h3>
                 <div className="mt-5 grid gap-3">
                   {category.suitableBuyers.map((buyer) => (
@@ -111,7 +111,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
                   ))}
                 </div>
               </div>
-              <div className="panel-card p-6">
+              <div className="border border-stonebrand-200 bg-white p-6">
                 <h3 className="text-lg font-semibold text-navy-950">Common Use Cases</h3>
                 <div className="mt-5 grid gap-3">
                   {category.commonUseCases.map((useCase) => (
@@ -124,7 +124,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
               </div>
             </div>
             <div className="grid gap-5 md:grid-cols-2">
-              <div className="panel-card p-6">
+              <div className="border border-stonebrand-200 bg-white p-6">
                 <h3 className="text-lg font-semibold text-navy-950">Product Highlights</h3>
                 <div className="mt-5 grid gap-3">
                   {category.productHighlights.map((highlight) => (
@@ -135,7 +135,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
                   ))}
                 </div>
               </div>
-              <div className="panel-card p-6">
+              <div className="border border-stonebrand-200 bg-white p-6">
                 <h3 className="text-lg font-semibold text-navy-950">Production / Sourcing Support</h3>
                 <div className="mt-5 grid gap-3">
                   {category.sourcingSupport.map((support) => (
@@ -155,7 +155,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
         <div className="container-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div>
             <p className="editorial-eyebrow">Customization options</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
+            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
               Discuss the right materials, structure, logo, and packing before quotation.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
@@ -175,7 +175,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {category.customizationOptions.map((option) => (
-              <div key={option} className="panel-card panel-card-hover p-4 text-sm font-semibold text-navy-900">
+              <div key={option} className="border border-stonebrand-200 bg-white p-4 text-sm font-semibold text-navy-900 transition hover:border-slate-400">
                 {option}
               </div>
             ))}
@@ -183,11 +183,11 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
         </div>
       </section>
 
-      <section className="section-y soft-section">
+      <section className="section-y border-y border-stonebrand-200 bg-slate-50">
         <div className="container-shell">
           <div className="max-w-3xl">
             <p className="editorial-eyebrow">Product direction example</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
+            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
               First-phase product data for future catalog expansion.
             </h2>
             <p className="mt-4 text-sm leading-6 text-slate-600">
@@ -196,9 +196,9 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           </div>
           <div className="mt-8 grid gap-6">
             {categoryProducts.map((product) => (
-              <article key={product.id} className="panel-card p-6">
+              <article key={product.id} className="border border-stonebrand-200 bg-white p-6">
                 <div className="grid gap-6 md:grid-cols-[1fr_1.3fr]">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-stonebrand-100">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-stonebrand-100">
                     <Image
                       src={product.images[0]}
                       alt={product.name}
@@ -249,7 +249,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           <div className="container-shell">
             <div className="max-w-3xl">
               <p className="editorial-eyebrow">Related categories</p>
-              <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
+              <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
                 Build a broader wholesale bag program.
               </h2>
             </div>
@@ -258,7 +258,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
                 <Link
                   key={relatedCategory.slug}
                   href={`/products/${relatedCategory.slug}`}
-                  className="focus-ring panel-card panel-card-hover group p-6"
+                  className="focus-ring group border border-stonebrand-200 bg-white p-6 transition hover:border-slate-400 hover:shadow-card"
                 >
                   <h3 className="text-lg font-semibold text-navy-950">{relatedCategory.name}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{relatedCategory.headline}</p>
