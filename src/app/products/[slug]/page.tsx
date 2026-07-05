@@ -1,5 +1,7 @@
-﻿import type { Metadata } from "next";
+import { ArrowRight, Check } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/button-link";
 import { CtaBand } from "@/components/cta-band";
@@ -41,6 +43,9 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
   }
 
   const categoryProducts = getProductsByCategory(category.slug);
+  const relatedCategories = category.relatedCategorySlugs
+    .map((relatedSlug) => getCategoryBySlug(relatedSlug))
+    .filter((relatedCategory): relatedCategory is NonNullable<typeof relatedCategory> => Boolean(relatedCategory));
 
   return (
     <>
@@ -52,8 +57,8 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
       </PageHero>
 
       <section className="section-y">
-        <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="panel-card relative aspect-[4/3] overflow-hidden bg-navy-50">
+        <div className="container-shell grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+          <div className="panel-card relative aspect-[4/3] overflow-hidden bg-stonebrand-100">
             <Image
               src={category.image}
               alt={`${category.name} manufacturing category`}
@@ -64,40 +69,100 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
             />
           </div>
           <div>
-            <h2 className="headline-serif text-4xl font-normal leading-tight text-navy-950">
+            <p className="editorial-eyebrow">Category capability overview</p>
+            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
               {category.description}
             </h2>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {[
-                "Wholesale supply",
-                "OEM/ODM support",
-                "Material options",
-                "Logo and packing customization",
-                "Export-ready QC",
-                "Global market support",
-              ].map((item) => (
-                <div key={item} className="panel-card panel-card-hover p-4 text-sm font-semibold text-navy-900">
-                  {item}
-                </div>
-              ))}
+            <p className="mt-6 text-base leading-8 text-slate-600">{category.buyerUseCase}</p>
+            <div className="mt-7 rounded-lg border border-stonebrand-200 bg-sand-50 p-5">
+              <p className="text-sm font-semibold text-navy-950">MOQ note</p>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{category.moqNote}</p>
             </div>
           </div>
         </div>
       </section>
 
       <section className="section-y soft-section">
+        <div className="container-shell grid gap-8 lg:grid-cols-[0.78fr_1.22fr]">
+          <div>
+            <p className="editorial-eyebrow">B2B sourcing fit</p>
+            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+              Built for wholesale buyers, not retail checkout.
+            </h2>
+            <p className="mt-5 text-base leading-7 text-slate-600">
+              This page shows category capability and product direction. It is not a live inventory list, and it does not include retail prices, cart logic, or SKU-style ecommerce features.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2">
+            <div className="panel-card p-6">
+              <h3 className="text-lg font-semibold text-navy-950">Suitable Buyers</h3>
+              <div className="mt-5 grid gap-3">
+                {category.suitableBuyers.map((buyer) => (
+                  <p key={buyer} className="flex items-center gap-3 text-sm font-semibold text-slate-700">
+                    <Check className="h-4 w-4 text-clay-600" aria-hidden="true" />
+                    {buyer}
+                  </p>
+                ))}
+              </div>
+            </div>
+            <div className="panel-card p-6">
+              <h3 className="text-lg font-semibold text-navy-950">Product Highlights</h3>
+              <div className="mt-5 grid gap-3">
+                {category.productHighlights.map((highlight) => (
+                  <p key={highlight} className="flex items-start gap-3 text-sm leading-6 text-slate-700">
+                    <Check className="mt-1 h-4 w-4 shrink-0 text-clay-600" aria-hidden="true" />
+                    {highlight}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-y bg-white">
+        <div className="container-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div>
+            <p className="editorial-eyebrow">Customization options</p>
+            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+              Discuss the right materials, structure, logo, and packing before quotation.
+            </h2>
+            <p className="mt-5 text-base leading-7 text-slate-600">
+              For custom development, share reference photos, target market, expected quantity, and any logo or packing requirements. {siteConfig.contactPerson} can help clarify the information needed for a practical quotation path.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <WhatsAppCTA message={category.whatsappMessage} label={category.ctaLabel} />
+              <ButtonLink href="/oem-odm" variant="outline">
+                View OEM/ODM Process
+              </ButtonLink>
+            </div>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {category.customizationOptions.map((option) => (
+              <div key={option} className="panel-card panel-card-hover p-4 text-sm font-semibold text-navy-900">
+                {option}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-y soft-section">
         <div className="container-shell">
-          <h2 className="headline-serif text-4xl font-normal leading-tight text-navy-950">
-            Sample Data Structure
-          </h2>
-          <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">
-            This first phase uses local static product data. Future product lists can support pagination or Load More when a larger catalog is added.
-          </p>
+          <div className="max-w-3xl">
+            <p className="editorial-eyebrow">Product direction example</p>
+            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+              First-phase product data for future catalog expansion.
+            </h2>
+            <p className="mt-4 text-sm leading-6 text-slate-600">
+              The current page uses local static data to describe category capability. When real product photos and detailed specifications are ready, this section can expand into a paginated catalog or Load More product list.
+            </p>
+          </div>
           <div className="mt-8 grid gap-6">
             {categoryProducts.map((product) => (
               <article key={product.id} className="panel-card p-6">
                 <div className="grid gap-6 md:grid-cols-[1fr_1.3fr]">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-navy-50">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-stonebrand-100">
                     <Image
                       src={product.images[0]}
                       alt={product.name}
@@ -124,8 +189,8 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
                         <dd className="mt-1 text-slate-600">{product.targetMarkets?.join(", ")}</dd>
                       </div>
                       <div>
-                        <dt className="font-semibold text-navy-950">Buyers</dt>
-                        <dd className="mt-1 text-slate-600">{product.suitableBuyers?.join(", ")}</dd>
+                        <dt className="font-semibold text-navy-950">MOQ</dt>
+                        <dd className="mt-1 text-slate-600">{product.moqNote}</dd>
                       </div>
                     </dl>
                     <WhatsAppCTA
@@ -141,6 +206,35 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
         </div>
       </section>
 
+      {relatedCategories.length > 0 ? (
+        <section className="section-y bg-white">
+          <div className="container-shell">
+            <div className="max-w-3xl">
+              <p className="editorial-eyebrow">Related categories</p>
+              <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+                Build a broader wholesale bag program.
+              </h2>
+            </div>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {relatedCategories.map((relatedCategory) => (
+                <Link
+                  key={relatedCategory.slug}
+                  href={`/products/${relatedCategory.slug}`}
+                  className="focus-ring panel-card panel-card-hover group p-6"
+                >
+                  <h3 className="text-lg font-semibold text-navy-950">{relatedCategory.name}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{relatedCategory.headline}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-clay-600 transition group-hover:text-navy-950">
+                    Explore category
+                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <CtaBand
         title={`Discuss ${category.name} Supply`}
         description={`Share your market, target quantity, material preferences, and packing needs. ${siteConfig.brandName} can recommend a practical sourcing path.`}
@@ -149,4 +243,3 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
     </>
   );
 }
-

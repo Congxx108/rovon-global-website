@@ -77,6 +77,12 @@ src/data/products.ts
 - `name`
 - `headline`
 - `description`
+- `buyerUseCase`
+- `suitableBuyers`
+- `productHighlights`
+- `customizationOptions`
+- `moqNote`
+- `relatedCategorySlugs`
 - `image`
 - `ctaLabel`
 - `whatsappMessage`
@@ -461,3 +467,19 @@ Latest production verification notes:
 - WhatsApp links use `https://wa.me/8615302605504` with prefilled inquiry text.
 - Contact details match the approved Cason email, WhatsApp display number, and Baigou address.
 - Lighthouse sample results were within current-stage targets, but homepage mobile performance is close to the lower target and should be watched when replacing placeholder images.
+
+## Content Enhancement Roadmap
+
+Current phase still uses local static data and lightweight placeholder images. The next content phase should replace placeholders with verified ROVON Global materials and add more buyer-ready information without changing the site into a retail ecommerce store.
+
+Priority content to prepare:
+
+1. Real product images for every core category.
+2. Real factory images, including exterior, workshop, sewing, inspection, and team-related views where available.
+3. Real packing and warehouse images.
+4. Real product examples for each category: travel bags, men's bags, women's backpacks, chest bags, waist bags, crossbody bags, and OEM/ODM custom bags.
+5. Verified FAQ details for MOQ, samples, lead time, payment terms, logo methods, materials, packing, and shipping.
+6. A downloadable catalog or structured inquiry form for buyers who want a faster quotation path.
+7. A future product data workflow using Google Sheets or Supabase if the local data file becomes difficult to maintain.
+
+The current site does not use a backend. Product and category content is managed in `src/data/products.ts` for this phase. Google Sheets or Supabase can be evaluated later after real product photos, category details, and catalog structure are clearer.

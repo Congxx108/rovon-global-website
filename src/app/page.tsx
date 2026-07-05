@@ -53,6 +53,64 @@ const oemSteps = [
   "Quality Check & Packing",
 ];
 
+const sourcingSupport = [
+  {
+    title: "Wholesale bag sourcing",
+    description: "Discuss target categories, market positioning, materials, and practical catalog directions for wholesale buying.",
+  },
+  {
+    title: "OEM/ODM custom development",
+    description: "Support custom bag projects with material, structure, logo, sample, and packing communication.",
+  },
+  {
+    title: "Product category planning",
+    description: "Build a focused product mix across travel bags, men's bags, backpacks, chest bags, waist bags, and crossbody bags.",
+  },
+  {
+    title: "Logo and material customization",
+    description: "Coordinate logo methods, fabric choices, zipper, lining, color, label, and packaging requirements.",
+  },
+  {
+    title: "Sample communication",
+    description: "Clarify reference samples, design notes, specification details, and quotation requirements before bulk discussion.",
+  },
+  {
+    title: "Packing and export coordination",
+    description: "Support carton, polybag, label, and export packing communication for B2B orders.",
+  },
+];
+
+const homepageInquirySteps = [
+  {
+    title: "Share your target categories",
+    description: "Tell us the bag categories, target buyers, and market you are planning for.",
+  },
+  {
+    title: "Get catalog and quotation",
+    description: "Receive suitable catalog directions and a quotation path based on the information shared.",
+  },
+  {
+    title: "Confirm materials and customization",
+    description: "Clarify material, logo, color, size, structure, and packing requirements.",
+  },
+  {
+    title: "Sample or order confirmation",
+    description: "Confirm whether the next step is sample discussion or direct order planning.",
+  },
+  {
+    title: "Production, packing and delivery support",
+    description: "Coordinate production follow-up, quality check, packing, and delivery communication.",
+  },
+];
+
+const whyWorkItems = [
+  "Factory-backed sourcing support",
+  "Multi-category bag supply",
+  "OEM/ODM communication support",
+  "Flexible cooperation for different markets",
+  `Direct contact with ${siteConfig.contactPerson} on WhatsApp`,
+];
+
 export default function HomePage() {
   const featuredCategories = productCategories.slice(0, 6);
 
@@ -157,6 +215,31 @@ export default function HomePage() {
       </section>
 
       <section className="section-y soft-section">
+        <div className="container-shell">
+          <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+            <div>
+              <p className="editorial-eyebrow">Sourcing support</p>
+              <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950 md:text-5xl">
+                What We Support for B2B Buyers
+              </h2>
+            </div>
+            <p className="text-base leading-8 text-slate-600">
+              {siteConfig.brandName} helps buyers move from category interest to a clearer sourcing plan, including catalog discussion, custom options, sample communication, and export packing coordination.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {sourcingSupport.map((item) => (
+              <div key={item.title} className="panel-card panel-card-hover p-6">
+                <Check className="h-5 w-5 text-clay-600" aria-hidden="true" />
+                <h3 className="mt-6 text-lg font-semibold text-navy-950">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-y soft-section">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="group relative aspect-[16/11] overflow-hidden rounded-lg bg-stonebrand-100 shadow-lift">
             <Image
@@ -249,6 +332,33 @@ export default function HomePage() {
 
       <section className="section-y soft-section">
         <div className="container-shell">
+          <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr]">
+            <div>
+              <p className="editorial-eyebrow">Inquiry process</p>
+              <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950 md:text-5xl">
+                A simple path from sourcing request to production discussion.
+              </h2>
+              <p className="mt-5 text-base leading-7 text-slate-600">
+                Share practical details first: target category, market, quantity range, material preference, logo needs, and packing requirements. This helps the quotation discussion stay realistic.
+              </p>
+            </div>
+            <div className="grid gap-4">
+              {homepageInquirySteps.map((step, index) => (
+                <div key={step.title} className="grid gap-4 border-t border-stonebrand-200 pt-5 sm:grid-cols-[72px_1fr]">
+                  <p className="headline-serif text-4xl text-clay-600">{String(index + 1).padStart(2, "0")}</p>
+                  <div>
+                    <h3 className="text-lg font-semibold text-navy-950">{step.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-y soft-section">
+        <div className="container-shell">
           <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
             <div>
               <p className="editorial-eyebrow">Regional supply</p>
@@ -272,6 +382,37 @@ export default function HomePage() {
                 <p className="mt-4 text-sm leading-6 text-slate-600">{market.headline}</p>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-y bg-sand-50">
+        <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="editorial-eyebrow">Why work with us</p>
+            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950 md:text-5xl">
+              Practical support for buyers who need a reliable bag supply partner.
+            </h2>
+            <p className="mt-5 text-base leading-7 text-slate-600">
+              The goal is not to push retail checkout. It is to help importers, distributors, trading companies, and brand buyers communicate sourcing needs clearly and move toward a workable wholesale or OEM/ODM plan.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            {whyWorkItems.map((item) => (
+              <div key={item} className="flex items-center gap-4 border-t border-stonebrand-200 pt-5">
+                <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white text-clay-600 shadow-sm">
+                  <Check className="h-4 w-4" aria-hidden="true" />
+                </span>
+                <p className="font-semibold text-navy-950">{item}</p>
+              </div>
+            ))}
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <ButtonLink href="/wholesale-solutions" variant="secondary">
+                Explore Wholesale Solutions
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </ButtonLink>
+              <WhatsAppCTA message={contactMessage("I want to discuss wholesale bag sourcing and OEM/ODM support. Please send the latest catalog and quotation path.")} />
+            </div>
           </div>
         </div>
       </section>
