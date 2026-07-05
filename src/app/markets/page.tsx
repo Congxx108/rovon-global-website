@@ -29,7 +29,7 @@ export default function MarketsPage() {
               href={`/markets/${market.slug}`}
               className="focus-ring panel-card panel-card-hover group p-6"
             >
-              <h2 className="headline-serif text-3xl font-normal leading-tight text-navy-950">{market.name}</h2>
+              <h2 className="headline-serif text-3xl font-semibold leading-tight text-navy-950">{market.name}</h2>
               <p className="mt-3 text-base leading-7 text-slate-600">{market.description}</p>
               <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-navy-800">
                 View market support

@@ -39,7 +39,7 @@ export default function WholesaleSolutionsPage() {
           <div className="grid gap-6 md:grid-cols-2">
             {wholesaleSegments.map((segment) => (
               <article key={segment.title} className="panel-card panel-card-hover p-6">
-                <h2 className="headline-serif text-3xl font-normal leading-tight text-navy-950">
+                <h2 className="headline-serif text-3xl font-semibold leading-tight text-navy-950">
                   For {segment.title}
                 </h2>
                 <p className="mt-3 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
@@ -54,7 +54,7 @@ export default function WholesaleSolutionsPage() {
       <section className="section-y soft-section">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
-            <h2 className="headline-serif text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif text-4xl font-semibold leading-tight text-navy-950">
               Factory-Backed Supply Advantages
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
@@ -76,7 +76,7 @@ export default function WholesaleSolutionsPage() {
       <section className="section-y">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <h2 className="headline-serif text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif text-4xl font-semibold leading-tight text-navy-950">
               Inquiry Process
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">

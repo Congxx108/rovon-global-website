@@ -39,7 +39,7 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div>
             <p className="editorial-eyebrow">About ROVON Global</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
               A factory-backed supply partner for professional bag buyers.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
@@ -65,7 +65,7 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.76fr_1.24fr]">
           <div>
             <p className="editorial-eyebrow">What we focus on</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
               Core bag categories for global wholesale sourcing.
             </h2>
           </div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
           <div>
             <p className="editorial-eyebrow">How we support buyers</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
               From product category discussion to packing coordination.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
@@ -105,7 +105,7 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="editorial-eyebrow">Direct contact</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
               Meet {siteConfig.contactPerson}, Your Direct Contact at {siteConfig.brandName}
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
@@ -42,7 +42,7 @@ export default async function MarketDetailPage({ params }: MarketDetailProps) {
       </PageHero>
       <section className="section-y">
         <div className="container-shell max-w-4xl">
-          <h2 className="headline-serif text-4xl font-normal leading-tight text-navy-950">
+          <h2 className="headline-serif text-4xl font-semibold leading-tight text-navy-950">
             Market-Fit Supply Focus
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">

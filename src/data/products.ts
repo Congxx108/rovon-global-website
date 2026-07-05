@@ -56,7 +56,7 @@ export const productCategories: ProductCategory[] = [
     name: "Travel Bags",
     headline: "Travel bag manufacturing for wholesale and regional distribution",
     description:
-      "Factory-backed duffel bags, travel organizers, luggage-style soft bags, and multi-function travel products for importers and distributors.",
+      "Factory-backed duffel bags, travel organizers, multi-function travel bags, and export-ready travel products for importers and distributors.",
     buyerUseCase:
       "Suitable for buyers building travel goods programs, seasonal wholesale lines, promotional travel collections, or regional distribution categories.",
     suitableBuyers: ["Importers", "Travel goods wholesalers", "Regional distributors", "Promotional buyers"],

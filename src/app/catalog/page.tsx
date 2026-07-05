@@ -50,9 +50,9 @@ export default function CatalogPage() {
       <section className="section-y bg-white">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <aside className="grid gap-5">
-            <div className="panel-card bg-sand-50 p-6">
+            <div className="panel-card bg-slate-50 p-6">
               <ClipboardList className="h-7 w-7 text-clay-600" aria-hidden="true" />
-              <h2 className="headline-serif mt-5 text-3xl font-normal leading-tight text-navy-950">
+              <h2 className="headline-serif mt-5 text-2xl font-semibold leading-tight tracking-tight text-navy-950">
                 Prepare a clearer B2B inquiry.
               </h2>
               <p className="mt-3 text-sm leading-6 text-slate-600">
@@ -62,7 +62,7 @@ export default function CatalogPage() {
 
             <div className="panel-card p-6">
               <MessageCircle className="h-7 w-7 text-clay-600" aria-hidden="true" />
-              <h2 className="headline-serif mt-5 text-3xl font-normal leading-tight text-navy-950">
+              <h2 className="headline-serif mt-5 text-2xl font-semibold leading-tight tracking-tight text-navy-950">
                 What you can request
               </h2>
               <ul className="mt-5 grid gap-3 text-sm leading-6 text-slate-700">
@@ -74,9 +74,9 @@ export default function CatalogPage() {
               </ul>
             </div>
 
-            <div className="panel-card bg-clay-900 p-6 text-white">
-              <ShieldCheck className="h-7 w-7 text-sand-200" aria-hidden="true" />
-              <h2 className="headline-serif mt-5 text-3xl font-normal leading-tight">
+            <div className="panel-card bg-navy-950 p-6 text-white">
+              <ShieldCheck className="h-7 w-7 text-clay-400" aria-hidden="true" />
+              <h2 className="headline-serif mt-5 text-2xl font-semibold leading-tight tracking-tight">
                 Direct contact at {siteConfig.brandName}
               </h2>
               <p className="mt-3 text-sm leading-6 text-slate-200">
@@ -93,7 +93,7 @@ export default function CatalogPage() {
           <div>
             <div className="mb-6">
               <p className="editorial-eyebrow">WhatsApp inquiry builder</p>
-              <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950 md:text-5xl">
+              <h2 className="headline-serif mt-4 text-3xl font-semibold leading-tight tracking-tight text-navy-950 md:text-5xl">
                 Share the basics, then send them to {siteConfig.contactPerson}.
               </h2>
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">

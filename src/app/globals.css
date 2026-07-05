@@ -4,14 +4,14 @@
 
 :root {
   color-scheme: light;
-  --background: #faf5ec;
-  --foreground: #2c2520;
-  --surface: #f7f3ed;
-  --surface-strong: #eee6db;
-  --border-subtle: #d9cbbb;
-  --accent: #8f5a3f;
-  --cta: #a7613f;
-  --radius-card: 8px;
+  --background: #ffffff;
+  --foreground: #111827;
+  --surface: #f8fafc;
+  --surface-strong: #f3f4f6;
+  --border-subtle: #e5e7eb;
+  --accent: #b8642f;
+  --cta: #b8642f;
+  --radius-card: 6px;
 }
 
 * {
@@ -24,16 +24,16 @@ html {
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, #faf5ec 0%, #f7f3ed 42%, #fffaf3 100%);
+  background: #ffffff;
   color: var(--foreground);
-  font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-family: Inter, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #a7613f;
-  color: #fffaf3;
+  background: #b8642f;
+  color: #ffffff;
 }
 
 a {
@@ -50,38 +50,35 @@ a {
 }
 
 .section-y {
-  @apply py-20 md:py-28;
+  @apply py-16 md:py-24;
 }
 
 .panel-card {
-  @apply rounded-lg border border-stonebrand-200/80 bg-white/95 shadow-card transition duration-200 ease-out;
+  @apply rounded-md border border-stonebrand-200 bg-white shadow-none transition duration-200 ease-out;
 }
 
 .panel-card-hover {
-  @apply hover:-translate-y-1 hover:border-clay-500/35 hover:shadow-lift;
+  @apply hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-card;
 }
 
 .editorial-eyebrow {
-  @apply text-xs font-semibold uppercase tracking-normal text-clay-600;
+  @apply text-[11px] font-bold uppercase tracking-[0.16em] text-clay-600;
 }
 
 .headline-serif {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Inter, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0;
 }
 
 .soft-section {
-  @apply bg-stonebrand-50;
+  @apply bg-slate-50;
 }
 
 .sand-section {
-  @apply bg-sand-50;
+  @apply bg-slate-50;
 }
 
 .subtle-grid {
-  background-image:
-    linear-gradient(rgba(85, 50, 41, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(85, 50, 41, 0.045) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.035), transparent);
 }
 

@@ -34,24 +34,24 @@ export function SiteHeader() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-stonebrand-200 bg-white/95 shadow-[0_1px_0_rgba(20,34,43,0.04)] backdrop-blur-xl">
-      <div className="hidden border-b border-stonebrand-200 bg-sand-100 text-navy-950 lg:block">
-        <div className="container-shell flex min-h-9 items-center justify-between gap-4 text-xs">
-          <div className="flex items-center gap-5 text-navy-800">
+    <header className="sticky top-0 z-50 border-b border-stonebrand-200 bg-white/95 backdrop-blur-xl">
+      <div className="hidden border-b border-stonebrand-200 bg-slate-50 text-navy-950 lg:block">
+        <div className="container-shell flex min-h-8 items-center justify-between gap-4 text-[11px]">
+          <div className="flex items-center gap-4 font-medium text-slate-600">
             <span>China-based Bag Manufacturing & Wholesale Supply</span>
-            <span className="text-clay-500/50">/</span>
+            <span className="text-slate-300">/</span>
             <span>OEM/ODM Support</span>
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 font-semibold">
             <Link
-              className="transition hover:text-clay-700"
+              className="text-navy-950 transition hover:text-clay-600"
               href="/catalog"
               onClick={() => trackEvent("click_get_catalog", { cta_label: "Get Latest Catalog" })}
             >
               Get Latest Catalog
             </Link>
             <a
-              className="transition hover:text-clay-700"
+              className="text-navy-950 transition hover:text-clay-600"
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
@@ -63,22 +63,22 @@ export function SiteHeader() {
         </div>
       </div>
 
-      <div className="container-shell flex min-h-16 items-center justify-between gap-4">
+      <div className="container-shell flex min-h-14 items-center justify-between gap-4">
         <Link href="/" className="focus-ring flex items-center gap-3 rounded-md py-2">
-          <span className="flex h-10 w-10 items-center justify-center rounded-md bg-navy-950 text-sm font-bold tracking-normal text-white shadow-sm">
+          <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-navy-950 text-xs font-bold tracking-normal text-white">
             RG
           </span>
           <span>
-            <span className="block text-base font-semibold tracking-normal text-navy-950">
+            <span className="block text-sm font-bold tracking-normal text-navy-950">
               {siteConfig.brandName}
             </span>
-            <span className="block text-xs font-medium text-slate-500">
+            <span className="block text-[11px] font-medium uppercase tracking-[0.08em] text-slate-500">
               Bag Manufacturer & Supplier
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Main navigation">
           {navItems.map((item) => {
             const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
@@ -86,8 +86,8 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={() => trackNavItem(item.href, item.label)}
-                className={`focus-ring rounded-md px-3 py-2 text-sm font-medium transition duration-200 ${
-                  active ? "bg-sand-100 text-navy-950" : "text-slate-700 hover:bg-sand-50 hover:text-navy-950"
+                className={`focus-ring rounded-sm px-3 py-2 text-sm font-semibold transition duration-200 ${
+                  active ? "bg-slate-100 text-navy-950" : "text-slate-600 hover:bg-slate-50 hover:text-navy-950"
                 }`}
               >
                 {item.label}
@@ -98,16 +98,16 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <span
-            className="inline-flex min-h-10 items-center gap-2 rounded-md border border-stonebrand-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600"
+            className="inline-flex min-h-9 items-center gap-2 rounded-sm border border-stonebrand-200 bg-white px-3 py-2 text-xs font-semibold text-slate-600"
             title="Multi-language support planned for a future phase"
             aria-label="Current language: English. Multi-language support planned for a future phase."
           >
-            <Globe2 className="h-4 w-4 text-clay-600" aria-hidden="true" />
+            <Globe2 className="h-4 w-4 text-slate-500" aria-hidden="true" />
             {activeLanguage.label}
           </span>
           <a
             href={whatsappHref}
-            className="focus-ring inline-flex min-h-10 items-center gap-2 rounded-md border border-clay-600 px-4 py-2 text-sm font-semibold text-clay-700 transition duration-200 hover:bg-clay-600 hover:text-white hover:shadow-card"
+            className="focus-ring inline-flex min-h-9 items-center gap-2 rounded-sm border border-clay-600 px-4 py-2 text-sm font-semibold text-clay-700 transition duration-200 hover:bg-clay-600 hover:text-white"
             target="_blank"
             rel="noreferrer"
             onClick={() => trackEvent("click_contact_cason", { cta_label: `Talk to ${siteConfig.contactPerson}` })}
@@ -119,7 +119,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-md border border-stonebrand-200 text-navy-950 lg:hidden"
+          className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-sm border border-stonebrand-200 text-navy-950 lg:hidden"
           onClick={() => setIsOpen((value) => !value)}
           aria-label="Toggle navigation"
           aria-expanded={isOpen}
@@ -129,7 +129,7 @@ export function SiteHeader() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-stonebrand-200 bg-white shadow-card lg:hidden">
+        <div className="border-t border-stonebrand-200 bg-white lg:hidden">
           <nav className="container-shell grid gap-1 py-4" aria-label="Mobile navigation">
             {navItems.map((item) => (
               <Link
@@ -139,18 +139,18 @@ export function SiteHeader() {
                   trackNavItem(item.href, item.label);
                   setIsOpen(false);
                 }}
-                className="focus-ring rounded-md px-3 py-3 text-sm font-semibold text-slate-700 transition hover:bg-sand-50 hover:text-navy-950"
+                className="focus-ring rounded-sm px-3 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:text-navy-950"
               >
                 {item.label}
               </Link>
             ))}
-            <span className="mt-2 inline-flex min-h-11 items-center gap-2 rounded-md border border-stonebrand-200 px-3 py-3 text-sm font-semibold text-slate-600">
-              <Globe2 className="h-4 w-4 text-clay-600" aria-hidden="true" />
+            <span className="mt-2 inline-flex min-h-11 items-center gap-2 rounded-sm border border-stonebrand-200 px-3 py-3 text-sm font-semibold text-slate-600">
+              <Globe2 className="h-4 w-4 text-slate-500" aria-hidden="true" />
               {activeLanguage.label}
             </span>
             <a
               href={whatsappHref}
-              className="focus-ring mt-2 inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-clay-600 px-4 py-3 text-sm font-semibold text-white shadow-sm"
+              className="focus-ring mt-2 inline-flex min-h-11 items-center justify-center gap-2 rounded-sm bg-clay-600 px-4 py-3 text-sm font-semibold text-white"
               target="_blank"
               rel="noreferrer"
               onClick={() => trackEvent("click_contact_cason", { cta_label: `Contact ${siteConfig.contactPerson} on WhatsApp` })}

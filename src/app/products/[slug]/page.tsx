@@ -75,7 +75,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           </div>
           <div>
             <p className="editorial-eyebrow">Category capability overview</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
               {category.description}
             </h2>
             <p className="mt-6 text-base leading-8 text-slate-600">{category.buyerUseCase}</p>
@@ -91,7 +91,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
         <div className="container-shell grid gap-8 lg:grid-cols-[0.78fr_1.22fr]">
           <div>
             <p className="editorial-eyebrow">B2B sourcing fit</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
               Built for wholesale buyers, not retail product browsing.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
@@ -155,7 +155,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
         <div className="container-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div>
             <p className="editorial-eyebrow">Customization options</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
               Discuss the right materials, structure, logo, and packing before quotation.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
@@ -187,7 +187,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
         <div className="container-shell">
           <div className="max-w-3xl">
             <p className="editorial-eyebrow">Product direction example</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
               First-phase product data for future catalog expansion.
             </h2>
             <p className="mt-4 text-sm leading-6 text-slate-600">
@@ -249,7 +249,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           <div className="container-shell">
             <div className="max-w-3xl">
               <p className="editorial-eyebrow">Related categories</p>
-              <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+              <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
                 Build a broader wholesale bag program.
               </h2>
             </div>

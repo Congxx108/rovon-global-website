@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
@@ -39,7 +39,7 @@ export default async function ManufacturingDetailPage({ params }: ManufacturingD
       <PageHero title={page.title} description={page.description} breadcrumbPath={`/manufacturing/${page.slug}`} />
       <section className="section-y">
         <div className="container-shell max-w-4xl">
-          <h2 className="headline-serif text-4xl font-normal leading-tight text-navy-950">
+          <h2 className="headline-serif text-4xl font-semibold leading-tight text-navy-950">
             What Buyers Can Discuss With {siteConfig.brandName}
           </h2>
           <p className="mt-4 text-base leading-7 text-slate-600">

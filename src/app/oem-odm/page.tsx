@@ -37,7 +37,7 @@ export default function OemOdmPage() {
       <section className="section-y">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <h2 className="headline-serif text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif text-4xl font-semibold leading-tight text-navy-950">
               Custom Options
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">

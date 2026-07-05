@@ -14,14 +14,13 @@ export function CtaBand({
   message = contactMessage(`I want to discuss bag sourcing with ${siteConfig.brandName}. Please send catalog and quotation details.`),
 }: CtaBandProps) {
   return (
-    <section className="bg-navy-950 py-16 text-white md:py-20">
-      <div className="container-shell relative overflow-hidden rounded-lg border border-white/10 bg-clay-900 p-8 shadow-lift md:p-12">
-        <div className="absolute inset-0 subtle-grid opacity-10" aria-hidden="true" />
+    <section className="border-y border-stonebrand-200 bg-slate-50 py-14 text-navy-950 md:py-20">
+      <div className="container-shell relative overflow-hidden rounded-md border border-stonebrand-200 bg-white p-7 md:p-10">
         <div className="relative flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl">
-            <p className="editorial-eyebrow mb-4 text-sand-200">Wholesale inquiry</p>
-            <h2 className="headline-serif text-4xl font-normal leading-tight md:text-5xl">{title}</h2>
-            <p className="mt-4 text-sm leading-6 text-slate-300 md:text-base md:leading-7">{description}</p>
+            <p className="editorial-eyebrow mb-4">Wholesale inquiry</p>
+            <h2 className="headline-serif text-3xl font-semibold leading-tight tracking-tight md:text-5xl">{title}</h2>
+            <p className="mt-4 text-sm leading-6 text-slate-600 md:text-base md:leading-7">{description}</p>
           </div>
           <div className="flex flex-wrap gap-3">
             <ButtonLink
@@ -39,7 +38,7 @@ export function CtaBand({
             <ButtonLink
               href="/contact"
               variant="outline"
-              className="border-white/20 bg-white/10 text-white hover:bg-white/15"
+              className="bg-white"
               eventName="click_contact_cason"
               eventParams={{ cta_label: "Contact Page" }}
             >

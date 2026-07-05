@@ -8,7 +8,7 @@ export function SectionHeading({ title, description, align = "left" }: SectionHe
   return (
     <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       <p className="editorial-eyebrow mb-4">ROVON Global</p>
-      <h2 className="headline-serif text-4xl font-normal leading-tight text-navy-950 md:text-5xl">
+      <h2 className="headline-serif text-3xl font-semibold leading-tight tracking-tight text-navy-950 md:text-5xl">
         {title}
       </h2>
       {description ? (

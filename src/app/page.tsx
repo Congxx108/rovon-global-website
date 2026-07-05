@@ -1,4 +1,4 @@
-﻿import {
+import {
   ArrowRight,
   BriefcaseBusiness,
   Check,
@@ -83,24 +83,24 @@ const sourcingSupport = [
 
 const homepageInquirySteps = [
   {
-    title: "Share your target categories",
-    description: "Tell us the bag categories, target buyers, and market you are planning for.",
+    title: "Watch Cason's video",
+    description: "Many buyers first discover ROVON Global through Cason's Facebook or TikTok product videos.",
   },
   {
-    title: "Get catalog and quotation",
-    description: "Receive suitable catalog directions and a quotation path based on the information shared.",
+    title: "Visit ROVON Global",
+    description: "Use the website to confirm product categories, factory-backed supply direction, and inquiry paths.",
   },
   {
-    title: "Confirm materials and customization",
-    description: "Clarify material, logo, color, size, structure, and packing requirements.",
+    title: "Request Catalog",
+    description: "Share target categories, market, quantity range, and customization needs through the catalog page.",
   },
   {
-    title: "Sample or order confirmation",
-    description: "Confirm whether the next step is sample discussion or direct order planning.",
+    title: "Discuss Requirements",
+    description: "Talk with Cason about materials, logo, size, structure, packing, sample, or quotation direction.",
   },
   {
-    title: "Production, packing and delivery support",
-    description: "Coordinate production follow-up, quality check, packing, and delivery communication.",
+    title: "Production / Supply Follow-up",
+    description: "Move into sample, order, packing, quality check, and delivery communication when requirements are clear.",
   },
 ];
 
@@ -124,16 +124,15 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-sand-50">
-        <div className="absolute inset-0 subtle-grid opacity-45" aria-hidden="true" />
-        <div className="container-shell relative grid min-h-[calc(100vh-100px)] items-center gap-12 py-14 md:min-h-[760px] md:py-20 lg:grid-cols-[0.88fr_1.12fr]">
+      <section className="relative overflow-hidden border-b border-stonebrand-200 bg-white">
+        <div className="container-shell relative grid min-h-[calc(100vh-92px)] items-center gap-12 py-12 md:min-h-[720px] md:py-18 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="max-w-3xl">
             <p className="editorial-eyebrow">China-based Bag Manufacturing & Wholesale Supply</p>
-            <h1 className="headline-serif mt-5 text-5xl font-normal leading-[1.02] text-navy-950 md:text-7xl">
-              Factory-Backed Bag Manufacturing for Global Wholesale Buyers
+            <h1 className="headline-serif mt-5 text-5xl font-semibold leading-[1.02] tracking-tight text-navy-950 md:text-7xl">
+              Bag Manufacturing & Wholesale Supply from China
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-700">
-              {siteConfig.brandName} supports importers, distributors, trading companies, and brand buyers with factory-backed bag production, multi-category wholesale supply, and OEM/ODM custom solutions. Contact {siteConfig.contactPerson} directly to discuss catalogs, product requirements, and sourcing plans.
+              {siteConfig.brandName} supports importers, distributors, trading companies, and brand buyers with travel bags, men bag lines, women backpack lines, chest bags, waist bags, crossbody bags, and OEM/ODM custom bag solutions. Contact {siteConfig.contactPerson} directly to discuss catalogs, product requirements, and sourcing plans.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <ButtonLink
@@ -158,51 +157,44 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-[1.05fr_0.72fr] md:items-end">
-            <div className="group relative aspect-[4/5] overflow-hidden rounded-lg bg-stonebrand-100 shadow-lift">
+          <div className="relative">
+            <div className="group relative aspect-[16/11] overflow-hidden rounded-md border border-stonebrand-200 bg-slate-100">
               <Image
                 src="/images/hero/rovon-hero-supply.svg"
                 alt="ROVON Global bag manufacturing and wholesale supply visual"
                 fill
                 priority
-                sizes="(min-width: 1024px) 48vw, 100vw"
-                className="object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
+                sizes="(min-width: 1024px) 52vw, 100vw"
+                className="object-cover grayscale-[0.15] transition duration-700 ease-out group-hover:scale-[1.02]"
                 unoptimized
               />
-              <div className="absolute bottom-5 left-5 right-5 rounded-lg border border-white/60 bg-white/95 p-5 shadow-card backdrop-blur">
-                <p className="text-sm font-semibold text-navy-950">B2B inquiry path</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">Catalog, quote, OEM/ODM discussion, production planning, and export support.</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-white/55 via-transparent to-transparent" aria-hidden="true" />
+              <div className="absolute bottom-4 left-4 right-4 grid gap-2 sm:grid-cols-3">
+                {["Catalog", "OEM/ODM", "Wholesale"].map((item) => (
+                  <div key={item} className="rounded-sm border border-stonebrand-200 bg-white/95 px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-navy-950 backdrop-blur">
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="grid gap-4">
-              {productCategories.slice(0, 2).map((category) => (
-                <Link
-                  key={category.slug}
-                  href={`/products/${category.slug}`}
-                  className="focus-ring group relative aspect-[4/3] overflow-hidden rounded-lg bg-stonebrand-100 shadow-card"
-                >
-                  <Image
-                    src={category.image}
-                    alt={`${category.name} category preview`}
-                    fill
-                    sizes="(min-width: 1024px) 22vw, 50vw"
-                    className="object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
-                    unoptimized
-                  />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/75 to-transparent p-5 text-white">
-                    <p className="headline-serif text-2xl">{category.name}</p>
-                  </div>
-                </Link>
-              ))}
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-md border border-stonebrand-200 bg-white p-4">
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-clay-600">Main categories</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Travel, men bag, backpack, chest, waist, crossbody, OEM/ODM.</p>
+              </div>
+              <div className="rounded-md border border-stonebrand-200 bg-white p-4">
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-clay-600">Inquiry route</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Catalog request, quotation path, product requirements, WhatsApp follow-up.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-stonebrand-200 bg-white">
-        <div className="container-shell grid gap-4 py-6 md:grid-cols-4">
+      <section className="border-b border-stonebrand-200 bg-slate-50">
+        <div className="container-shell grid gap-0 divide-y divide-stonebrand-200 py-0 md:grid-cols-4 md:divide-x md:divide-y-0">
           {trustItems.map((item) => (
-            <p key={item} className="text-sm font-semibold text-navy-950">
+            <p key={item} className="py-4 text-sm font-bold text-navy-950 md:px-5">
               {item}
             </p>
           ))}
@@ -236,7 +228,7 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
             <div>
               <p className="editorial-eyebrow">Sourcing support</p>
-              <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950 md:text-5xl">
+              <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950 md:text-5xl">
                 What We Support for B2B Buyers
               </h2>
             </div>
@@ -308,7 +300,7 @@ export default function HomePage() {
                   className="focus-ring panel-card panel-card-hover group p-6"
                 >
                   <Icon className="h-7 w-7 text-clay-600" aria-hidden="true" />
-                  <h3 className="headline-serif mt-8 text-2xl font-normal text-navy-950">{segment.title}</h3>
+                  <h3 className="headline-serif mt-8 text-2xl font-semibold text-navy-950">{segment.title}</h3>
                   <p className="mt-4 text-sm leading-6 text-slate-600">{segment.description}</p>
                   <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-clay-600 transition group-hover:text-navy-950">
                     Explore program
@@ -352,7 +344,7 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr]">
             <div>
               <p className="editorial-eyebrow">Inquiry process</p>
-              <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950 md:text-5xl">
+              <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950 md:text-5xl">
                 A simple path from sourcing request to production discussion.
               </h2>
               <p className="mt-5 text-base leading-7 text-slate-600">
@@ -379,7 +371,7 @@ export default function HomePage() {
           <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
             <div>
               <p className="editorial-eyebrow">Regional supply</p>
-              <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950 md:text-5xl">
+              <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950 md:text-5xl">
                 Global market support without narrowing the brand to one region.
               </h2>
             </div>
@@ -395,7 +387,7 @@ export default function HomePage() {
                 className="focus-ring panel-card panel-card-hover p-6"
               >
                 <Globe2 className="h-6 w-6 text-clay-600" aria-hidden="true" />
-                <h3 className="headline-serif mt-8 text-2xl font-normal text-navy-950">{market.name}</h3>
+                <h3 className="headline-serif mt-8 text-2xl font-semibold text-navy-950">{market.name}</h3>
                 <p className="mt-4 text-sm leading-6 text-slate-600">{market.headline}</p>
               </Link>
             ))}
@@ -407,7 +399,7 @@ export default function HomePage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="editorial-eyebrow">Why work with us</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950 md:text-5xl">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950 md:text-5xl">
               Practical support for buyers who need a reliable bag supply partner.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
@@ -441,7 +433,7 @@ export default function HomePage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="editorial-eyebrow">Direct buyer communication</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950 md:text-5xl">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950 md:text-5xl">
               Work Directly With {siteConfig.contactPerson}
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
@@ -469,7 +461,7 @@ export default function HomePage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <div className="rounded-lg border border-stonebrand-200 bg-sand-50 p-8 md:p-10">
             <p className="editorial-eyebrow">Supplementary channel</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
               Ready Stock stays secondary to factory-backed supply.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">

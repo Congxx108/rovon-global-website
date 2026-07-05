@@ -25,7 +25,7 @@ export default function ManufacturingPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
             <p className="editorial-eyebrow">Professional factory support</p>
-            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
               Built around practical bag production communication.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">

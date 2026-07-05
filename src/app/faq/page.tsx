@@ -37,7 +37,7 @@ export default function FaqPage() {
           <div className="grid gap-5">
             {faqItems.map((item) => (
               <article key={item.question} className="panel-card p-6">
-                <h2 className="headline-serif text-2xl font-normal leading-tight text-navy-950">
+                <h2 className="headline-serif text-2xl font-semibold leading-tight text-navy-950">
                   {item.question}
                 </h2>
                 <p className="mt-3 text-sm leading-6 text-slate-600 md:text-base md:leading-7">

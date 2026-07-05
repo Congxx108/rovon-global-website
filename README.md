@@ -327,24 +327,24 @@ src/data/factory.ts
 
 性能原则保持不变：不引入 Framer Motion、GSAP、three.js、第三方 UI 框架或视频背景，不新增大图片，继续使用 `next/image` 和静态数据结构。
 
-## Warm Editorial B2B Visual System
+## Clean B2B Manufacturer Visual System
 
-当前视觉系统已经从蓝橙企业站方向，重建为 warm neutral / clay / stone / charcoal 的国际 B2B 品牌官网风格。
-
-本系统参考 Fireclay Tile 的高级品牌站气质，包括大面积留白、成熟中性色、图片主导模块、细腻分割线、克制 CTA 和自然 hover 动效；但不复制其内容、图片、Logo、文案、业务逻辑或可识别页面组合。ROVON Global 仍然是 B2B 包袋制造工厂与全球批发供应商官网。
+当前视觉系统已经从 warm editorial / clay / stone 方向进一步调整为更简洁、更冷静、更像成熟国际制造商官网的风格。视觉参考 Aluvox 这类简约制造商网站的气质，但不复制其内容、图片、Logo、文案、产品范围、业务逻辑、购物车或任何可识别页面组合。ROVON Global 仍然是 B2B 包袋制造工厂、全球批发供应商和 OEM/ODM 合作伙伴。
 
 当前视觉原则：
 
-- 背景：warm ivory、soft cream、off-white，用于全站主背景和页面 Hero。
-- 主文字：deep charcoal / ink brown，避免强企业蓝控制页面。
-- 辅助色：clay、terracotta、warm taupe、sand、stone、muted olive。
-- CTA：clay / terracotta，克制、温暖，不使用亮橙促销感按钮。
-- 深色区块：charcoal brown / deep clay，用于 Final CTA 和 Footer。
-- 卡片：细 warm gray / stone 边框，低强度阴影，8px 圆角。
-- 动效：只使用 CSS transition、hover transform、opacity 和轻量 shadow，不引入重动画库。
-- 图片：保持当前比例和布局，后续替换真实产品图、工厂图时不需要大改结构。
+- 背景：以 white、soft gray、light slate 为主，减少复古和手作感。
+- 主文字：deep charcoal / near black，提升专业制造商官网的清晰度。
+- 辅助文字：中灰色，用于说明文案、标签和次级信息。
+- CTA：克制的 burnt orange / clay orange，用于 Get Latest Catalog、Contact Cason、Request Quote 等关键询盘按钮。
+- 边框：浅灰细线，减少厚重阴影和装饰感。
+- 卡片：白底、细边框、轻阴影或无阴影，强调信息层级而不是模板装饰。
+- Header：更紧凑、更干净，保留轻量 utility bar，主导航突出 B2B 分类和询盘路径。
+- Hero：更直接的制造商官网节奏，使用大图容器、简洁分类标签和清晰 CTA，不做复杂插画拼贴。
+- Catalog 表单：保持移动端易填写，字段清楚，按钮明确，不接数据库、不上传文件、不做下载站。
+- 动效：只使用 CSS transition、hover border、hover shadow、轻微 image zoom，不使用重动画库。
 
-性能原则保持不变：不引入 Framer Motion、GSAP、three.js、大型 UI 框架、视频背景或大图片；继续使用 `next/image`、静态数据结构和延迟加载策略。
+性能原则保持不变：不引入 Framer Motion、GSAP、three.js、大型 UI 框架、视频背景或大图片；继续使用 `next/image`、静态数据结构和延迟加载策略。后续替换真实产品图、Cason 图和工厂图时，应保持当前比例和布局，并继续控制图片体积。
 
 ## Vercel Deployment Checklist
 
