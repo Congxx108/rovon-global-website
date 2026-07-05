@@ -436,3 +436,28 @@ After deployment, check:
 12. Mobile navigation menu opens and closes correctly.
 13. There is no horizontal scrolling on mobile.
 14. Lighthouse checks Performance, SEO, and Best Practices.
+
+## Production Verification Notes
+
+Current SEO target domain:
+
+```text
+https://rovonglobal.com
+```
+
+Vercel Domains must use `rovonglobal.com` as the Primary Domain. If Vercel shows `https://rovonglobal.com` redirecting to `https://www.rovonglobal.com`, change the Primary Domain in Vercel Project Settings -> Domains to `rovonglobal.com`. The expected final behavior is:
+
+```text
+https://rovonglobal.com        -> 200 primary domain
+https://www.rovonglobal.com    -> redirects to https://rovonglobal.com
+```
+
+Keep `NEXT_PUBLIC_SITE_URL=https://rovonglobal.com` so canonical URLs, Open Graph URLs, robots.txt, and sitemap.xml stay aligned with the primary domain.
+
+Latest production verification notes:
+- All static pages returned 200 when checked through the live domain.
+- Current Vercel domain setting still needs attention if apex redirects to www.
+- Sitemap and robots output use `https://rovonglobal.com`.
+- WhatsApp links use `https://wa.me/8615302605504` with prefilled inquiry text.
+- Contact details match the approved Cason email, WhatsApp display number, and Baigou address.
+- Lighthouse sample results were within current-stage targets, but homepage mobile performance is close to the lower target and should be watched when replacing placeholder images.
