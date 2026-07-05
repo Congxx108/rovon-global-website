@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { getManufacturingPageBySlug, manufacturingPages } from "@/data/manufacturing";
-import { contactMessage } from "@/data/site";
+import { contactMessage, siteConfig } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 type ManufacturingDetailProps = {
@@ -40,8 +40,11 @@ export default async function ManufacturingDetailPage({ params }: ManufacturingD
       <section className="section-y">
         <div className="container-shell max-w-4xl">
           <h2 className="headline-serif text-4xl font-normal leading-tight text-navy-950">
-            What Buyers Can Discuss
+            What Buyers Can Discuss With {siteConfig.brandName}
           </h2>
+          <p className="mt-4 text-base leading-7 text-slate-600">
+            This page focuses on professional factory communication for global B2B buyers. It does not use unverified factory scale numbers; the goal is to clarify what can be discussed before catalog, sample, production, or packing decisions.
+          </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {page.points.map((point) => (
               <div key={point} className="panel-card p-5 text-sm font-semibold text-navy-900">
@@ -52,8 +55,9 @@ export default async function ManufacturingDetailPage({ params }: ManufacturingD
         </div>
       </section>
       <CtaBand
-        title={`Discuss ${page.title}`}
-        message={contactMessage(`I want to discuss ${page.title.toLowerCase()} for my bag sourcing project.`)}
+        title={`Discuss ${page.title} With ${siteConfig.contactPerson}`}
+        description={`Talk to ${siteConfig.contactPerson} about your target bag category, material requirements, customization needs, quantity range, and packing plan.`}
+        message={contactMessage(`I want to discuss ${page.title.toLowerCase()} for my bag sourcing project. Please help me clarify category, material, customization, and packing requirements.`)}
       />
     </>
   );

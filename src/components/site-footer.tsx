@@ -18,7 +18,7 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="mt-6 max-w-md text-sm leading-7 text-slate-300">
-            Factory-backed bag production, wholesale supply, and OEM/ODM custom support for professional global buyers.
+            Factory-backed bag production, wholesale supply, and OEM/ODM custom support for professional global buyers. {siteConfig.contactPerson} is the direct contact for catalog requests and sourcing discussions.
           </p>
           <a
             href={whatsappLink(`Hello ${siteConfig.contactPerson}, please send me the latest ${siteConfig.brandName} catalog and wholesale quotation.`)}
@@ -26,7 +26,7 @@ export function SiteFooter() {
             target="_blank"
             rel="noreferrer"
           >
-            Get Latest Catalog
+            Request Latest Catalog
           </a>
         </div>
 
@@ -90,7 +90,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10 py-5">
         <div className="container-shell flex flex-col gap-2 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright {new Date().getFullYear()} {siteConfig.brandName}. All rights reserved.</p>
-          <p>B2B inquiry website. No cart, ratings, or retail checkout.</p>
+          <p>B2B inquiry website for catalog requests, sourcing discussion, and OEM/ODM communication.</p>
         </div>
       </div>
     </footer>

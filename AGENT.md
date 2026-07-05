@@ -682,7 +682,7 @@ Send Product Inquiry
 | Travel Bags | Request Travel Bag Quote |
 | Men’s Bags | Ask for Men’s Bag Catalog |
 | Women’s Backpacks | Request Backpack Catalog |
-| Chest Bags | Ask for Chest Bag Price |
+| Chest Bags | Ask for Chest Bag Quote |
 | Waist Bags | Request Waist Bag Quote |
 | OEM/ODM | Start Custom Bag Project |
 | Manufacturing | Discuss Production Capability |
@@ -874,3 +874,22 @@ Mixed 产品 > 低价批发 > WhatsApp 快速成交 > 工厂形象
 8. 网站打开速度快，移动端体验好，视觉专业可信
 
 以上原则优先级高于任何局部页面美化或短期产品展示需求。
+
+---
+
+## 21. Cason Personal Business IP Positioning
+
+ROVON Global must remain the main brand and factory-backed supplier positioning. Cason is the direct buyer communication entry point and trust enhancer, not a replacement for the ROVON Global brand.
+
+Use Cason content to communicate:
+
+- Your direct contact for bag sourcing from China
+- WhatsApp-based communication for global B2B buyers
+- Catalog requests, wholesale quotation discussion, OEM/ODM requirement clarification, and product requirement follow-up
+- Help with category, quantity range, material, logo, packing, sample, and delivery-plan communication
+
+Do not invent personal claims:
+
+- Do not call Cason founder, CEO, factory owner, or senior executive unless verified information is provided.
+- Do not invent Cason's experience years, awards, work history, factory ownership, or personal story.
+- Do not turn the website into a personal blog. Cason supports trust and conversion; ROVON Global remains the professional China-based bag manufacturer, global wholesale supplier, and OEM/ODM custom bag partner.

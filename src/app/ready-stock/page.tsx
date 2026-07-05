@@ -42,7 +42,7 @@ export default function ReadyStockPage() {
       </section>
       <CtaBand
         title="Ask for Available Stock List"
-        description={`Ready stock details change quickly. Contact ${siteConfig.contactPerson} on WhatsApp to request the latest available options.`}
+        description={`Ready stock details change quickly and remain supplementary to manufacturing and OEM/ODM. Contact ${siteConfig.contactPerson} on WhatsApp to request current available options.`}
         message={readyStockInfo.whatsappMessage}
       />
     </>

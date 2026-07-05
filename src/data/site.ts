@@ -8,7 +8,7 @@ export const siteConfig = {
   siteUrl,
   url: siteUrl,
   description:
-    "ROVON Global is a China-based bag manufacturer and wholesale supplier for global importers, distributors, trading companies, and brand buyers.",
+    "ROVON Global is a China-based professional bag manufacturer, factory-backed wholesale supplier, and OEM/ODM partner for global importers, distributors, trading companies, and brand buyers.",
   contactPerson: "Cason",
   contactName: "Cason",
   email: "cason@rovonglobal.com",

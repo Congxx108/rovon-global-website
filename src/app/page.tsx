@@ -23,8 +23,9 @@ import { inquiryProcess, wholesaleSegments } from "@/data/wholesale";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "China Bag Manufacturer & Wholesale Supplier",
-  description: siteConfig.description,
+  title: "ROVON Global | China Bag Manufacturer & Wholesale Supplier",
+  description:
+    `${siteConfig.brandName} is a China-based professional bag manufacturer, factory-backed wholesale supplier, and OEM/ODM partner for global B2B buyers.`,
   path: "/",
 });
 
@@ -111,6 +112,13 @@ const whyWorkItems = [
   `Direct contact with ${siteConfig.contactPerson} on WhatsApp`,
 ];
 
+const casonSupportItems = [
+  "Direct WhatsApp communication",
+  "Catalog and quotation coordination",
+  "Product category and material discussion",
+  "OEM/ODM requirement follow-up",
+];
+
 export default function HomePage() {
   const featuredCategories = productCategories.slice(0, 6);
 
@@ -122,10 +130,10 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <p className="editorial-eyebrow">China-based Bag Manufacturing & Wholesale Supply</p>
             <h1 className="headline-serif mt-5 text-5xl font-normal leading-[1.02] text-navy-950 md:text-7xl">
-              Global Bag Manufacturer & Wholesale Supplier
+              Factory-Backed Bag Manufacturing for Global Wholesale Buyers
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-700">
-              {siteConfig.brandName} supports global importers, distributors, trading companies, and brand buyers with factory-backed bag production, wholesale supply, and OEM/ODM custom development.
+              {siteConfig.brandName} supports importers, distributors, trading companies, and brand buyers with factory-backed bag production, multi-category wholesale supply, and OEM/ODM custom solutions. Contact {siteConfig.contactPerson} directly to discuss catalogs, product requirements, and sourcing plans.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/products">Get Latest Catalog</ButtonLink>
@@ -394,7 +402,7 @@ export default function HomePage() {
               Practical support for buyers who need a reliable bag supply partner.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
-              The goal is not to push retail checkout. It is to help importers, distributors, trading companies, and brand buyers communicate sourcing needs clearly and move toward a workable wholesale or OEM/ODM plan.
+              The goal is professional B2B inquiry, not retail transaction. It is to help importers, distributors, trading companies, and brand buyers communicate sourcing needs clearly and move toward a workable wholesale or OEM/ODM plan.
             </p>
           </div>
           <div className="grid gap-4">
@@ -413,6 +421,33 @@ export default function HomePage() {
               </ButtonLink>
               <WhatsAppCTA message={contactMessage("I want to discuss wholesale bag sourcing and OEM/ODM support. Please send the latest catalog and quotation path.")} />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-y bg-white">
+        <div className="container-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div>
+            <p className="editorial-eyebrow">Direct buyer communication</p>
+            <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950 md:text-5xl">
+              Work Directly With {siteConfig.contactPerson}
+            </h2>
+            <p className="mt-5 text-base leading-7 text-slate-600">
+              {siteConfig.contactPerson} is your direct contact at {siteConfig.brandName} for wholesale bag sourcing, OEM/ODM communication, catalog requests, and product requirement discussions. Instead of sending a generic inquiry, buyers can talk directly through WhatsApp to clarify categories, quantities, materials, customization needs, and delivery plans.
+            </p>
+            <WhatsAppCTA
+              message={contactMessage("I want to discuss my bag sourcing plan. Please help me with catalog options, product requirements, and OEM/ODM communication.")}
+              label={`Contact ${siteConfig.contactPerson} on WhatsApp`}
+              className="mt-8"
+            />
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {casonSupportItems.map((item) => (
+              <div key={item} className="panel-card panel-card-hover p-6">
+                <Check className="h-5 w-5 text-clay-600" aria-hidden="true" />
+                <p className="mt-5 text-sm font-semibold leading-6 text-navy-950">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

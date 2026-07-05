@@ -9,8 +9,10 @@ export type ProductCategory = {
   description: string;
   buyerUseCase: string;
   suitableBuyers: string[];
+  commonUseCases: string[];
   productHighlights: string[];
   customizationOptions: string[];
+  sourcingSupport: string[];
   moqNote: string;
   relatedCategorySlugs: string[];
   image: string;
@@ -58,6 +60,7 @@ export const productCategories: ProductCategory[] = [
     buyerUseCase:
       "Suitable for buyers building travel goods programs, seasonal wholesale lines, promotional travel collections, or regional distribution categories.",
     suitableBuyers: ["Importers", "Travel goods wholesalers", "Regional distributors", "Promotional buyers"],
+    commonUseCases: ["Regional travel goods programs", "Promotional travel bag projects", "Wholesale duffel bag sourcing", "Private label travel accessories"],
     productHighlights: [
       "Durable material directions for travel use",
       "Multiple capacity and structure options",
@@ -65,13 +68,14 @@ export const productCategories: ProductCategory[] = [
       "Packing support for export orders",
     ],
     customizationOptions: ["Material", "Logo", "Zipper", "Lining", "Size", "Color", "Packaging"],
+    sourcingSupport: ["Catalog selection", "Material and capacity discussion", "Logo and packing requirements", "Sample or order confirmation"],
     moqNote: defaultMoqNote,
     relatedCategorySlugs: ["mens-bags", "crossbody-bags", "oem-odm-custom-bags"],
     image: "/images/products/travel-bags/travel-bag-001-main.svg",
     priority: 1,
     ctaLabel: "Request Travel Bag Quote",
     whatsappMessage:
-      contactMessage("I am interested in travel bags for wholesale supply. Please send catalog options, materials, and quotation details."),
+      contactMessage("I am interested in your travel bags. Please send me the latest catalog and wholesale quotation options. I would also like to discuss materials, logo customization, and order requirements."),
     seoTitle: `Travel Bag Manufacturer in China | ${siteConfig.brandName}`,
     seoDescription:
       `Source travel bags from ${siteConfig.brandName}, a China-based travel bag manufacturer and wholesale bag supplier supporting OEM/ODM custom projects.`,
@@ -85,6 +89,7 @@ export const productCategories: ProductCategory[] = [
     buyerUseCase:
       "Built for men's accessory distributors, trading companies, importers, and private label buyers who need practical styles for daily and business use.",
     suitableBuyers: ["Men's bag importers", "Accessory distributors", "Trading companies", "Private label buyers"],
+    commonUseCases: ["Men's daily bag programs", "Business and casual bag sourcing", "Private label accessory projects", "Regional wholesale distribution"],
     productHighlights: [
       "Business and casual style directions",
       "Adjustable strap and compartment options",
@@ -92,13 +97,14 @@ export const productCategories: ProductCategory[] = [
       "Logo label, metal logo, and packing discussion",
     ],
     customizationOptions: ["Material", "Logo method", "Hardware", "Strap", "Compartments", "Color", "Carton packing"],
+    sourcingSupport: ["Style matching", "Material and hardware discussion", "Logo method coordination", "Wholesale quotation preparation"],
     moqNote: defaultMoqNote,
     relatedCategorySlugs: ["crossbody-bags", "chest-bags", "oem-odm-custom-bags"],
     image: "/images/products/mens-bags/mens-bag-001-main.svg",
     priority: 2,
     ctaLabel: "Ask for Men's Bag Catalog",
     whatsappMessage:
-      contactMessage("I am looking for men's bags for wholesale distribution. Please send catalog options, materials, and quotation details."),
+      contactMessage("I am interested in your men's bags. Please send me the latest catalog and wholesale quotation options. I would also like to discuss materials, logo customization, and order requirements."),
     seoTitle: `Men's Bag Manufacturer and Supplier | ${siteConfig.brandName}`,
     seoDescription:
       `${siteConfig.brandName} is a men's bag manufacturer and wholesale supplier for importers, distributors, trading companies, and OEM/ODM buyers worldwide.`,
@@ -112,6 +118,7 @@ export const productCategories: ProductCategory[] = [
     buyerUseCase:
       "Designed for buyers sourcing daily backpacks, fashion backpack lines, regional retail supply, or private label backpack programs.",
     suitableBuyers: ["Backpack importers", "Fashion accessory wholesalers", "Regional distributors", "Brand buyers"],
+    commonUseCases: ["Women's daily backpack sourcing", "Fashion backpack programs", "Private label backpack development", "Regional wholesale replenishment"],
     productHighlights: [
       "Daily and fashion-oriented structure options",
       "Color and lining coordination support",
@@ -119,13 +126,14 @@ export const productCategories: ProductCategory[] = [
       "Wholesale-ready category planning",
     ],
     customizationOptions: ["Outer material", "Lining", "Logo", "Puller", "Shoulder strap", "Color", "Hangtag"],
+    sourcingSupport: ["Catalog and color direction", "Lining and puller discussion", "Logo and hangtag coordination", "Sample requirement follow-up"],
     moqNote: defaultMoqNote,
     relatedCategorySlugs: ["travel-bags", "crossbody-bags", "oem-odm-custom-bags"],
     image: "/images/products/womens-backpacks/women-backpack-001-main.svg",
     priority: 3,
     ctaLabel: "Request Backpack Catalog",
     whatsappMessage:
-      contactMessage("I am interested in women's backpacks. Please send catalog options, material choices, and wholesale quotation details."),
+      contactMessage("I am interested in your women's backpacks. Please send me the latest catalog and wholesale quotation options. I would also like to discuss materials, logo customization, and order requirements."),
     seoTitle: `Women's Backpack Supplier in China | ${siteConfig.brandName}`,
     seoDescription:
       `Find women's backpacks from ${siteConfig.brandName}, a China wholesale bag supplier supporting distribution, private label, and OEM/ODM customization.`,
@@ -139,6 +147,7 @@ export const productCategories: ProductCategory[] = [
     buyerUseCase:
       "A practical category for buyers sourcing compact daily bags, lifestyle sling products, sports-inspired accessories, or fast-moving wholesale lines.",
     suitableBuyers: ["Importers", "Lifestyle bag wholesalers", "Market distributors", "Trading companies"],
+    commonUseCases: ["Urban sling bag sourcing", "Sports-inspired accessory programs", "Compact daily bag wholesale", "Market-ready product matching"],
     productHighlights: [
       "Compact structure for daily carry",
       "Urban, outdoor, and sports-inspired directions",
@@ -146,13 +155,14 @@ export const productCategories: ProductCategory[] = [
       "Logo and packaging customization support",
     ],
     customizationOptions: ["Material", "Strap", "Buckle", "Pocket layout", "Logo", "Color", "Packing"],
+    sourcingSupport: ["Design direction matching", "Strap and pocket structure discussion", "Logo and packing coordination", "Quotation requirement clarification"],
     moqNote: defaultMoqNote,
     relatedCategorySlugs: ["waist-bags", "mens-bags", "crossbody-bags"],
     image: "/images/products/chest-bags/chest-bag-001-main.svg",
     priority: 4,
-    ctaLabel: "Ask for Chest Bag Price",
+    ctaLabel: "Ask for Chest Bag Quote",
     whatsappMessage:
-      contactMessage("I want to source chest bags. Please send available design directions, materials, MOQ notes, and wholesale quotation details."),
+      contactMessage("I am interested in your chest bags. Please send me the latest catalog and wholesale quotation options. I would also like to discuss materials, logo customization, and order requirements."),
     seoTitle: `Chest Bag Manufacturer and Wholesale Supplier | ${siteConfig.brandName}`,
     seoDescription:
       `${siteConfig.brandName} is a chest bag manufacturer and wholesale supplier for global importers, distributors, and private label buyers.`,
@@ -166,6 +176,7 @@ export const productCategories: ProductCategory[] = [
     buyerUseCase:
       "Suitable for buyers planning travel accessories, outdoor-inspired products, daily waist bag ranges, or replenishment programs for regional markets.",
     suitableBuyers: ["Travel accessory importers", "Sports bag distributors", "Wholesale market buyers", "Promotional buyers"],
+    commonUseCases: ["Travel accessory programs", "Outdoor-inspired waist bag sourcing", "Daily-use wholesale lines", "Promotional bag projects"],
     productHighlights: [
       "Lightweight structure for easy daily use",
       "Travel, outdoor, and casual style directions",
@@ -173,13 +184,14 @@ export const productCategories: ProductCategory[] = [
       "Flexible packing discussion for wholesale orders",
     ],
     customizationOptions: ["Fabric", "Buckle", "Strap", "Pocket structure", "Logo", "Color", "Polybag or carton packing"],
+    sourcingSupport: ["Fabric and buckle discussion", "Logo and strap requirement follow-up", "Packing coordination", "Wholesale quotation preparation"],
     moqNote: defaultMoqNote,
     relatedCategorySlugs: ["chest-bags", "crossbody-bags", "travel-bags"],
     image: "/images/products/waist-bags/waist-bag-001-main.svg",
     priority: 5,
     ctaLabel: "Request Waist Bag Quote",
     whatsappMessage:
-      contactMessage("I am interested in waist bags. Please send catalog options, customization choices, and wholesale quotation details."),
+      contactMessage("I am interested in your waist bags. Please send me the latest catalog and wholesale quotation options. I would also like to discuss materials, logo customization, and order requirements."),
     seoTitle: `Waist Bag Supplier and Manufacturer | ${siteConfig.brandName}`,
     seoDescription:
       `Source waist bags from ${siteConfig.brandName}, a China wholesale bag supplier supporting OEM bag manufacturing and export packing discussion.`,
@@ -193,6 +205,7 @@ export const productCategories: ProductCategory[] = [
     buyerUseCase:
       "A versatile product direction for buyers who need daily-use bag ranges, men's accessory programs, travel-related small bags, or private label development.",
     suitableBuyers: ["Bag importers", "Accessory wholesalers", "Regional distributors", "Brand buyers"],
+    commonUseCases: ["Daily crossbody bag programs", "Men's accessory sourcing", "Travel small-bag projects", "Private label crossbody development"],
     productHighlights: [
       "Daily, casual, travel, and men's style directions",
       "Adjustable strap and compartment planning",
@@ -200,13 +213,14 @@ export const productCategories: ProductCategory[] = [
       "Suitable for multi-category wholesale programs",
     ],
     customizationOptions: ["Material", "Logo", "Hardware", "Strap length", "Interior structure", "Color", "Packaging"],
+    sourcingSupport: ["Category and style planning", "Hardware and strap discussion", "Logo and structure coordination", "Catalog and quotation follow-up"],
     moqNote: defaultMoqNote,
     relatedCategorySlugs: ["mens-bags", "chest-bags", "waist-bags"],
     image: "/images/products/crossbody-bags/crossbody-bag-001-main.svg",
     priority: 6,
     ctaLabel: "Request Crossbody Bag Quote",
     whatsappMessage:
-      contactMessage("I need crossbody bags for wholesale supply. Please share catalog options, customization choices, and quotation details."),
+      contactMessage("I am interested in your crossbody bags. Please send me the latest catalog and wholesale quotation options. I would also like to discuss materials, logo customization, and order requirements."),
     seoTitle: `Crossbody Bag Manufacturer and Supplier | ${siteConfig.brandName}`,
     seoDescription:
       `${siteConfig.brandName} supports crossbody bag manufacturing, wholesale supply, and OEM/ODM custom bag projects for global buyers.`,
@@ -220,6 +234,7 @@ export const productCategories: ProductCategory[] = [
     buyerUseCase:
       "For brand buyers, importers, and trading companies that need a customized bag project based on a target market, reference sample, design brief, or private label plan.",
     suitableBuyers: ["Brand buyers", "Private label importers", "Trading companies", "Custom project buyers"],
+    commonUseCases: ["Private label bag development", "Custom logo bag programs", "Material and structure customization", "Sample-to-production project follow-up"],
     productHighlights: [
       "Design brief and product direction discussion",
       "Material, hardware, structure, and logo planning",
@@ -227,13 +242,14 @@ export const productCategories: ProductCategory[] = [
       "Quality check and export packing coordination",
     ],
     customizationOptions: ["Bag type", "Material", "Logo method", "Hardware", "Structure", "Size", "Packaging"],
+    sourcingSupport: ["Design brief review", "Material and logo method discussion", "Sample requirement follow-up", "Bulk production and packing communication"],
     moqNote: defaultMoqNote,
     relatedCategorySlugs: ["travel-bags", "mens-bags", "womens-backpacks"],
     image: "/images/products/oem-odm/oem-odm-bag-001-main.svg",
     priority: 7,
     ctaLabel: "Start Custom Bag Project",
     whatsappMessage:
-      contactMessage("I want to discuss an OEM/ODM custom bag project. Please tell me what information you need for catalog, sample, and quotation discussion."),
+      contactMessage("I am interested in an OEM/ODM custom bag project. Please tell me what information you need for catalog, sample, materials, logo customization, and order requirement discussion."),
     seoTitle: `OEM ODM Custom Bag Manufacturer | ${siteConfig.brandName}`,
     seoDescription:
       `Start OEM/ODM custom bag projects with ${siteConfig.brandName}, a China custom bag manufacturer supporting samples, materials, logo methods, production, QC, and packing.`,

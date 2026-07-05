@@ -7,6 +7,16 @@ export type FaqItem = {
 
 export const faqItems: FaqItem[] = [
   {
+    question: "Can I talk directly with Cason on WhatsApp?",
+    answer:
+      `Yes. ${siteConfig.contactPerson} is the direct contact at ${siteConfig.brandName} for catalog requests, wholesale inquiries, OEM/ODM discussions, and product requirement follow-up. WhatsApp is the fastest way to clarify your category, quantity range, market, material needs, logo requirements, and packing plan.`,
+  },
+  {
+    question: "What information should I prepare before asking for a quote?",
+    answer:
+      "Please prepare your target bag category, estimated quantity, destination market, preferred material or quality level, logo or customization needs, packing requirements, and expected delivery timeline. Clear information helps us recommend the right catalog direction and quotation path.",
+  },
+  {
     question: "What types of bags do you manufacture or supply?",
     answer:
       `${siteConfig.brandName} focuses on travel bags, men's bags, women's backpacks, chest bags, waist bags, crossbody bags, and OEM/ODM custom bag projects. Ready stock and mixed wholesale can also be discussed as a supplementary option for selected fast-moving markets.`,
@@ -24,7 +34,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "What materials and accessories can be customized?",
     answer:
-      "Materials, lining, zippers, buckles, webbing, hardware, straps, labels, colors, and packing can be discussed. The final options depend on the product category, target price level, and production feasibility.",
+      "Materials, lining, zippers, buckles, webbing, hardware, straps, labels, colors, and packing can be discussed. The final options depend on the product category, target quality level, and production feasibility.",
   },
   {
     question: "Can I request samples before bulk production?",
@@ -42,6 +52,11 @@ export const faqItems: FaqItem[] = [
       `Ready Stock & Mixed Wholesale is a flexible supplement for fast-moving markets, while ${siteConfig.brandName}'s main focus is factory-backed bag manufacturing, wholesale supply, and OEM/ODM solutions.`,
   },
   {
+    question: `Is Ready Stock the main business of ${siteConfig.brandName}?`,
+    answer:
+      `No. Ready Stock & Mixed Wholesale is only a supplementary channel. The main positioning of ${siteConfig.brandName} remains factory-backed bag manufacturing, wholesale supply, and OEM/ODM custom bag solutions for global B2B buyers.`,
+  },
+  {
     question: "How do you control quality?",
     answer:
       "Quality control can include material review, production checks, stitching and workmanship inspection, logo and hardware confirmation, packing review, and final shipment checks before export.",
@@ -52,9 +67,9 @@ export const faqItems: FaqItem[] = [
       "Yes. Packing can be discussed for wholesale cartons, private label packing, regional distribution, and export needs. Shipping coordination depends on destination, order volume, and buyer requirements.",
   },
   {
-    question: "How can I get the latest catalog and price list?",
+    question: "Do you provide catalogs for different bag categories?",
     answer:
-      `The fastest way is to contact ${siteConfig.contactPerson} on WhatsApp with your target category, market, quantity, and customization needs. We can then share relevant catalog options and quotation direction.`,
+      `Yes. Contact ${siteConfig.contactPerson} on WhatsApp with your target category, market, quantity range, and customization needs. We can then share relevant catalog options for travel bags, men's bags, women's backpacks, chest bags, waist bags, crossbody bags, or OEM/ODM custom projects.`,
   },
 ];
 

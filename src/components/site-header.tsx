@@ -91,7 +91,7 @@ export function SiteHeader() {
             rel="noreferrer"
           >
             <MessageCircle className="h-4 w-4" aria-hidden="true" />
-            WhatsApp
+            Talk to {siteConfig.contactPerson}
           </a>
         </div>
 

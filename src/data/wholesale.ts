@@ -7,22 +7,22 @@ export const wholesaleSegments: WholesaleSegment[] = [
   {
     title: "Importers",
     description:
-      "Support for buyers sourcing multi-category bag products from China for regional wholesale or retail distribution channels.",
+      "Support product category planning, catalog selection, wholesale quotation communication, and export-ready packing coordination for buyers importing bag products from China.",
   },
   {
     title: "Distributors",
     description:
-      "Stable product category planning and catalog support for distributors serving local markets and repeat wholesale customers.",
+      "Support multi-category bag supply for local market channels, with flexible product discussions based on market demand, customer segments, and repeat wholesale needs.",
   },
   {
     title: "Trading Companies",
     description:
-      "Factory-backed coordination for product selection, quotation, sampling, production follow-up, packing, and shipment communication.",
+      "Support fast communication, product matching, quotation coordination, and OEM/ODM requirement clarification for end buyers and sourcing projects.",
   },
   {
     title: "Brand Buyers",
     description:
-      "OEM/ODM support for logo, material, structure, color, label, packing, and market-fit product development.",
+      "Support custom logo, materials, structure, sample discussion, and production follow-up for private label and market-fit bag projects.",
   },
 ];
 

@@ -11,7 +11,7 @@ import { inquiryProcess, wholesaleSegments } from "@/data/wholesale";
 export const metadata = createPageMetadata({
   title: "Wholesale Solutions",
   description:
-    `Wholesale bag supply solutions for importers, distributors, trading companies, and brand buyers. ${siteConfig.brandName} supports multi-category bag supply, catalog support, and OEM/ODM customization.`,
+    `Wholesale bag supply solutions from ${siteConfig.brandName} for importers, distributors, trading companies, and brand buyers sourcing factory-backed bags from China.`,
   path: "/wholesale-solutions",
 });
 
@@ -20,12 +20,12 @@ export default function WholesaleSolutionsPage() {
     <>
       <PageHero
         title="Wholesale Bag Supply Solutions for Global Buyers"
-        description={`${siteConfig.brandName} is not a retail shop. We support global wholesale buyers with multi-category bag supply, OEM/ODM customization, catalog support, and flexible cooperation for different markets.`}
+        description={`${siteConfig.brandName} is not a retail shop. We support global wholesale buyers with factory-backed multi-category bag supply, OEM/ODM customization, catalog support, and flexible cooperation for different markets. Talk to ${siteConfig.contactPerson} to discuss your buyer type and sourcing plan.`}
         breadcrumbPath="/wholesale-solutions"
       >
         <WhatsAppCTA
-          message={contactMessage("I want to discuss wholesale bag supply solutions for my market.")}
-          label="Request Wholesale Quote"
+          message={contactMessage("I want to discuss wholesale bag supply solutions for my market. Please help me clarify catalog options, product categories, and quotation requirements.")}
+          label={`Talk to ${siteConfig.contactPerson}`}
         />
         <ButtonLink href="/products" variant="outline">
           View Product Categories
@@ -56,7 +56,7 @@ export default function WholesaleSolutionsPage() {
               Factory-Backed Supply Advantages
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              The cooperation model is built for B2B sourcing, not retail checkout. Buyers can discuss product category planning, OEM/ODM requirements, catalog support, packing, and market-fit supply.
+              The cooperation model is built for B2B sourcing, not retail transaction. Buyers can discuss product category planning, OEM/ODM requirements, catalog support, packing, and market-fit supply directly with {siteConfig.contactPerson}.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -100,8 +100,8 @@ export default function WholesaleSolutionsPage() {
 
       <CtaBand
         title="Explore Wholesale Cooperation"
-        description={`Send your target category, market, quantity, and customization needs. ${siteConfig.contactPerson} can help you choose the right sourcing direction.`}
-        message={contactMessage("I want to explore wholesale cooperation for bag supply.")}
+        description={`Send your buyer type, target category, market, quantity, and customization needs. ${siteConfig.contactPerson} can help you choose the right sourcing direction.`}
+        message={contactMessage("I want to explore wholesale cooperation for bag supply. Please help me clarify my buyer type, category needs, and quotation path.")}
       />
     </>
   );

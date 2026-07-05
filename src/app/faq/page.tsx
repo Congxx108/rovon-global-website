@@ -10,7 +10,7 @@ import { faqPageJsonLd } from "@/lib/seo";
 export const metadata = createPageMetadata({
   title: "FAQ",
   description:
-    "B2B bag sourcing FAQ for global buyers covering product categories, OEM/ODM, logo customization, samples, MOQ, ready stock, quality control, packing, shipping, catalog, and prices.",
+    `B2B bag sourcing FAQ for global buyers covering ${siteConfig.brandName} product categories, OEM/ODM, samples, MOQ, ready stock, catalogs, quality control, packing, shipping, and how to contact ${siteConfig.contactPerson}.`,
   path: "/faq",
 });
 
@@ -24,8 +24,8 @@ export default function FaqPage() {
         breadcrumbPath="/faq"
       >
         <WhatsAppCTA
-          message={contactMessage("please send me the latest bag catalog and price list.")}
-          label="Get Latest Catalog"
+          message={contactMessage("please send me the latest bag catalog and help me clarify the right quotation path.")}
+          label="Request Latest Catalog"
         />
       </PageHero>
 

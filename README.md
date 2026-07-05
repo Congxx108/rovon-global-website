@@ -483,3 +483,20 @@ Priority content to prepare:
 7. A future product data workflow using Google Sheets or Supabase if the local data file becomes difficult to maintain.
 
 The current site does not use a backend. Product and category content is managed in `src/data/products.ts` for this phase. Google Sheets or Supabase can be evaluated later after real product photos, category details, and catalog structure are clearer.
+
+## Cason Personal Business IP Positioning
+
+ROVON Global remains the main brand and the factory-backed supplier positioning. Cason is the buyer communication entry point and a trust enhancer, not a replacement for the company brand.
+
+How Cason should be presented:
+
+- Cason is the direct contact for global B2B buyers.
+- Buyers can contact Cason to request catalogs, discuss wholesale quotations, clarify OEM/ODM requirements, and follow up product needs.
+- Cason helps buyers communicate efficiently through WhatsApp, especially when they need to explain categories, quantity range, materials, logo needs, packing requirements, and timeline.
+- Cason-related content should stay professional, practical, and restrained.
+
+Do not invent or imply unverified personal information:
+
+- Do not describe Cason as founder, CEO, factory owner, or senior executive unless verified information is provided.
+- Do not invent Cason's work history, awards, years of experience, factory ownership, or personal story.
+- Do not turn the website into a personal blog. Cason supports trust and conversion, while ROVON Global remains the core manufacturing and wholesale supply brand.

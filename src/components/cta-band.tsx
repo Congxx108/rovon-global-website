@@ -26,7 +26,7 @@ export function CtaBand({
           <div className="flex flex-wrap gap-3">
             <WhatsAppCTA message={message} />
             <ButtonLink href="/contact" variant="outline" className="border-white/20 bg-white/10 text-white hover:bg-white/15">
-              Contact Page
+              Contact {siteConfig.contactPerson}
             </ButtonLink>
           </div>
         </div>

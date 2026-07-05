@@ -50,7 +50,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
   return (
     <>
       <PageHero title={category.name} description={category.headline} breadcrumbPath={`/products/${category.slug}`}>
-        <WhatsAppCTA message={category.whatsappMessage} label={category.ctaLabel} />
+        <WhatsAppCTA message={category.whatsappMessage} label={`Contact ${siteConfig.contactPerson} on WhatsApp`} />
         <ButtonLink href="/products" variant="outline">
           View All Categories
         </ButtonLink>
@@ -87,33 +87,59 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           <div>
             <p className="editorial-eyebrow">B2B sourcing fit</p>
             <h2 className="headline-serif mt-4 text-4xl font-normal leading-tight text-navy-950">
-              Built for wholesale buyers, not retail checkout.
+              Built for wholesale buyers, not retail product browsing.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-600">
-              This page shows category capability and product direction. It is not a live inventory list, and it does not include retail prices, cart logic, or SKU-style ecommerce features.
+              This page shows category capability and product direction. It is not a live inventory list, and it keeps the experience focused on catalog requests, product requirements, and B2B sourcing discussion.
             </p>
           </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            <div className="panel-card p-6">
-              <h3 className="text-lg font-semibold text-navy-950">Suitable Buyers</h3>
-              <div className="mt-5 grid gap-3">
-                {category.suitableBuyers.map((buyer) => (
-                  <p key={buyer} className="flex items-center gap-3 text-sm font-semibold text-slate-700">
-                    <Check className="h-4 w-4 text-clay-600" aria-hidden="true" />
-                    {buyer}
-                  </p>
-                ))}
+          <div className="grid gap-6">
+            <div className="grid gap-5 md:grid-cols-2">
+              <div className="panel-card p-6">
+                <h3 className="text-lg font-semibold text-navy-950">Suitable Buyers</h3>
+                <div className="mt-5 grid gap-3">
+                  {category.suitableBuyers.map((buyer) => (
+                    <p key={buyer} className="flex items-center gap-3 text-sm font-semibold text-slate-700">
+                      <Check className="h-4 w-4 text-clay-600" aria-hidden="true" />
+                      {buyer}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <div className="panel-card p-6">
+                <h3 className="text-lg font-semibold text-navy-950">Common Use Cases</h3>
+                <div className="mt-5 grid gap-3">
+                  {category.commonUseCases.map((useCase) => (
+                    <p key={useCase} className="flex items-start gap-3 text-sm leading-6 text-slate-700">
+                      <Check className="mt-1 h-4 w-4 shrink-0 text-clay-600" aria-hidden="true" />
+                      {useCase}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="panel-card p-6">
-              <h3 className="text-lg font-semibold text-navy-950">Product Highlights</h3>
-              <div className="mt-5 grid gap-3">
-                {category.productHighlights.map((highlight) => (
-                  <p key={highlight} className="flex items-start gap-3 text-sm leading-6 text-slate-700">
-                    <Check className="mt-1 h-4 w-4 shrink-0 text-clay-600" aria-hidden="true" />
-                    {highlight}
-                  </p>
-                ))}
+            <div className="grid gap-5 md:grid-cols-2">
+              <div className="panel-card p-6">
+                <h3 className="text-lg font-semibold text-navy-950">Product Highlights</h3>
+                <div className="mt-5 grid gap-3">
+                  {category.productHighlights.map((highlight) => (
+                    <p key={highlight} className="flex items-start gap-3 text-sm leading-6 text-slate-700">
+                      <Check className="mt-1 h-4 w-4 shrink-0 text-clay-600" aria-hidden="true" />
+                      {highlight}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <div className="panel-card p-6">
+                <h3 className="text-lg font-semibold text-navy-950">Production / Sourcing Support</h3>
+                <div className="mt-5 grid gap-3">
+                  {category.sourcingSupport.map((support) => (
+                    <p key={support} className="flex items-start gap-3 text-sm leading-6 text-slate-700">
+                      <Check className="mt-1 h-4 w-4 shrink-0 text-clay-600" aria-hidden="true" />
+                      {support}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -131,7 +157,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
               For custom development, share reference photos, target market, expected quantity, and any logo or packing requirements. {siteConfig.contactPerson} can help clarify the information needed for a practical quotation path.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <WhatsAppCTA message={category.whatsappMessage} label={category.ctaLabel} />
+              <WhatsAppCTA message={category.whatsappMessage} label={`Contact ${siteConfig.contactPerson} on WhatsApp`} />
               <ButtonLink href="/oem-odm" variant="outline">
                 View OEM/ODM Process
               </ButtonLink>
@@ -195,7 +221,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
                     </dl>
                     <WhatsAppCTA
                       message={product.whatsappMessage ?? category.whatsappMessage}
-                      label="Send Product Inquiry"
+                      label="Send Product Requirements"
                       className="mt-6"
                     />
                   </div>
@@ -237,7 +263,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
 
       <CtaBand
         title={`Discuss ${category.name} Supply`}
-        description={`Share your market, target quantity, material preferences, and packing needs. ${siteConfig.brandName} can recommend a practical sourcing path.`}
+        description={`Share your market, target quantity, material preferences, and packing needs. ${siteConfig.contactPerson} can help clarify catalog options, customization requirements, and a practical sourcing path.`}
         message={category.whatsappMessage}
       />
     </>

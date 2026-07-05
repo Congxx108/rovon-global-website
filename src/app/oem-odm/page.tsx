@@ -24,10 +24,10 @@ export default function OemOdmPage() {
     <>
       <PageHero
         title="OEM/ODM Custom Bag Solutions"
-        description={`${siteConfig.brandName} supports custom bag projects from idea, material selection, logo application, structure adjustment, and sampling to bulk production, quality control, packing, and export support.`}
+        description={`${siteConfig.brandName} supports custom bag projects from idea, material selection, logo application, structure adjustment, and sampling to bulk production, quality control, packing, and export support. Contact ${siteConfig.contactPerson} to clarify your custom bag brief and next-step requirements.`}
         breadcrumbPath="/oem-odm"
       >
-        <WhatsAppCTA message={contactMessage("I want to start an OEM/ODM custom bag project. Please tell me what information you need.")} label="Start Custom Bag Project" />
+        <WhatsAppCTA message={contactMessage("I want to discuss an OEM/ODM custom bag project. Please tell me what information you need for materials, logo, sample, and order requirements.")} label="Discuss OEM/ODM Project" />
       </PageHero>
       <section className="section-y">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
@@ -52,9 +52,9 @@ export default function OemOdmPage() {
         </div>
       </section>
       <CtaBand
-        title="Prepare Your Custom Bag Brief"
-        description="Send your reference images, category, material ideas, target market, logo needs, and estimated quantity to start a practical discussion."
-        message={contactMessage("I want to prepare a custom bag brief for OEM/ODM production.")}
+        title={`Prepare Your Custom Bag Brief With ${siteConfig.contactPerson}`}
+        description="Send your reference images, category, material ideas, target market, logo needs, and estimated quantity to start a practical OEM/ODM discussion."
+        message={contactMessage("I want to prepare a custom bag brief for OEM/ODM production. Please help me clarify materials, logo, sample, and order requirements.")}
       />
     </>
   );
