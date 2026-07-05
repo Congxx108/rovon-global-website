@@ -114,7 +114,7 @@ export default function AboutPage() {
               <WhatsAppCTA
                 message={contactMessage("I want to discuss bag sourcing, catalog options, and OEM/ODM requirements directly.")}
               />
-              <ButtonLink href="/products" variant="outline">
+              <ButtonLink href="/catalog" variant="outline">
                 Request Latest Catalog
               </ButtonLink>
             </div>

@@ -1,8 +1,8 @@
+import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
 import { ProductCard } from "@/components/product-card";
-import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { productCategories } from "@/data/products";
-import { contactMessage, siteConfig } from "@/data/site";
+import { siteConfig } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -20,7 +20,7 @@ export default function ProductsPage() {
         description={`${siteConfig.brandName} focuses on multi-category bag manufacturing and B2B supply. These product categories are designed for importers, distributors, trading companies, brand buyers, and regional wholesale partners.`}
         breadcrumbPath="/products"
       >
-        <WhatsAppCTA message={contactMessage(`please send me the latest product catalog from ${siteConfig.brandName}.`)} label="Get Latest Catalog" />
+        <ButtonLink href="/catalog">Get Latest Catalog</ButtonLink>
       </PageHero>
       <section className="section-y">
         <div className="container-shell grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

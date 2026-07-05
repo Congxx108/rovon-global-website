@@ -6,6 +6,7 @@ import { siteConfig } from "@/data/site";
 
 const staticRoutes = [
   "",
+  "/catalog",
   "/products",
   "/ready-stock",
   "/manufacturing",

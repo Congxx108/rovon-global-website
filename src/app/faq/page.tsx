@@ -1,7 +1,7 @@
 import { CtaBand } from "@/components/cta-band";
+import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
 import { JsonLd } from "@/components/seo/json-ld";
-import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { faqItems } from "@/data/faq";
 import { contactMessage, siteConfig } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
@@ -23,10 +23,7 @@ export default function FaqPage() {
         description={`Answers for importers, distributors, trading companies, and brand buyers sourcing bags from ${siteConfig.brandName}.`}
         breadcrumbPath="/faq"
       >
-        <WhatsAppCTA
-          message={contactMessage("please send me the latest bag catalog and help me clarify the right quotation path.")}
-          label="Request Latest Catalog"
-        />
+        <ButtonLink href="/catalog">Request Latest Catalog</ButtonLink>
       </PageHero>
 
       <section className="section-y">

@@ -21,6 +21,9 @@ export default function ContactPage() {
         breadcrumbPath="/contact"
       >
         <WhatsAppCTA message={contactMessage(`I want to contact ${siteConfig.brandName} for catalog, quotation, and bag sourcing support.`)} />
+        <ButtonLink href="/catalog" variant="outline">
+          Prepare Catalog Inquiry
+        </ButtonLink>
       </PageHero>
       <section className="section-y">
         <div className="container-shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">

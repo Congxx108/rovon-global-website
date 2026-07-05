@@ -1,7 +1,7 @@
 ﻿import Link from "next/link";
 import { productCategories, readyStockInfo } from "@/data/products";
 import { markets } from "@/data/markets";
-import { siteConfig, whatsappLink } from "@/data/site";
+import { siteConfig } from "@/data/site";
 
 export function SiteFooter() {
   return (
@@ -20,14 +20,12 @@ export function SiteFooter() {
           <p className="mt-6 max-w-md text-sm leading-7 text-slate-300">
             Factory-backed bag production, wholesale supply, and OEM/ODM custom support for professional global buyers. {siteConfig.contactPerson} is the direct contact for catalog requests and sourcing discussions.
           </p>
-          <a
-            href={whatsappLink(`Hello ${siteConfig.contactPerson}, please send me the latest ${siteConfig.brandName} catalog and wholesale quotation.`)}
+          <Link
+            href="/catalog"
             className="focus-ring mt-8 inline-flex rounded-md bg-clay-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-clay-700"
-            target="_blank"
-            rel="noreferrer"
           >
             Request Latest Catalog
-          </a>
+          </Link>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -54,6 +52,7 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-3 text-sm text-slate-300">
               <li><Link className="transition hover:text-white" href="/manufacturing">Manufacturing</Link></li>
               <li><Link className="transition hover:text-white" href="/wholesale-solutions">Wholesale Solutions</Link></li>
+              <li><Link className="transition hover:text-white" href="/catalog">Catalog Request</Link></li>
               <li><Link className="transition hover:text-white" href="/manufacturing/factory-overview">Factory Overview</Link></li>
               <li><Link className="transition hover:text-white" href="/manufacturing/quality-control">Quality Control</Link></li>
               <li><Link className="transition hover:text-white" href="/oem-odm">OEM/ODM</Link></li>

@@ -8,6 +8,7 @@ import { activeLanguage } from "@/data/languages";
 import { siteConfig, whatsappLink } from "@/data/site";
 
 const navItems = [
+  { href: "/catalog", label: "Catalog" },
   { href: "/products", label: "Products" },
   { href: "/manufacturing", label: "Manufacturing" },
   { href: "/wholesale-solutions", label: "Wholesale" },
@@ -33,7 +34,7 @@ export function SiteHeader() {
             <span>OEM/ODM Support</span>
           </div>
           <div className="flex items-center gap-5">
-            <Link className="transition hover:text-clay-700" href="/products">
+            <Link className="transition hover:text-clay-700" href="/catalog">
               Get Latest Catalog
             </Link>
             <a className="transition hover:text-clay-700" href={whatsappHref} target="_blank" rel="noreferrer">

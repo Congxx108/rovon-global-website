@@ -39,6 +39,7 @@ npm run build
 ## 当前页面结构
 
 - `/`
+- `/catalog`
 - `/products`
 - `/products/travel-bags`
 - `/products/mens-bags`
@@ -429,19 +430,20 @@ DNS propagation can take a few minutes to 24 hours. After Vercel verifies the do
 After deployment, check:
 
 1. `/` opens correctly.
-2. `/products` opens correctly.
-3. `/manufacturing` opens correctly.
-4. `/wholesale-solutions` opens correctly.
-5. `/oem-odm` opens correctly.
-6. `/faq` opens correctly.
-7. `/contact` opens correctly.
-8. `/sitemap.xml` opens correctly.
-9. `/robots.txt` opens correctly.
-10. WhatsApp buttons open `https://wa.me/8615302605504` with a prefilled inquiry message.
-11. Contact page shows `cason@rovonglobal.com`, `+86 153 0260 5504`, and `No. 378, Wuyi Road, Baigou, Baoding, Hebei, China`.
-12. Mobile navigation menu opens and closes correctly.
-13. There is no horizontal scrolling on mobile.
-14. Lighthouse checks Performance, SEO, and Best Practices.
+2. `/catalog` opens correctly and generates a WhatsApp prefilled inquiry message.
+3. `/products` opens correctly.
+4. `/manufacturing` opens correctly.
+5. `/wholesale-solutions` opens correctly.
+6. `/oem-odm` opens correctly.
+7. `/faq` opens correctly.
+8. `/contact` opens correctly.
+9. `/sitemap.xml` opens correctly.
+10. `/robots.txt` opens correctly.
+11. WhatsApp buttons open `https://wa.me/8615302605504` with a prefilled inquiry message.
+12. Contact page shows `cason@rovonglobal.com`, `+86 153 0260 5504`, and `No. 378, Wuyi Road, Baigou, Baoding, Hebei, China`.
+13. Mobile navigation menu opens and closes correctly.
+14. There is no horizontal scrolling on mobile.
+15. Lighthouse checks Performance, SEO, and Best Practices.
 
 ## Production Verification Notes
 

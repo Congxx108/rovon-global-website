@@ -136,7 +136,7 @@ export default function HomePage() {
               {siteConfig.brandName} supports importers, distributors, trading companies, and brand buyers with factory-backed bag production, multi-category wholesale supply, and OEM/ODM custom solutions. Contact {siteConfig.contactPerson} directly to discuss catalogs, product requirements, and sourcing plans.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/products">Get Latest Catalog</ButtonLink>
+              <ButtonLink href="/catalog">Get Latest Catalog</ButtonLink>
               <WhatsAppCTA message={contactMessage(`please send me the latest ${siteConfig.brandName} catalog and wholesale quotation.`)} />
             </div>
             <div className="mt-10 grid gap-3 sm:grid-cols-2">
