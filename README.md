@@ -484,6 +484,43 @@ Priority content to prepare:
 
 The current site does not use a backend. Product and category content is managed in `src/data/products.ts` for this phase. Google Sheets or Supabase can be evaluated later after real product photos, category details, and catalog structure are clearer.
 
+## Next Real Assets Replacement Plan
+
+The next phase should replace placeholder visuals with verified ROVON Global assets. Do not use fake factory photos, unrelated stock portraits, or AI-generated people to represent Cason.
+
+Please prepare:
+
+1. One clear Cason profile photo for About, Contact, and CTA modules.
+2. Two to four Cason video screenshots from real Facebook / TikTok product or sourcing videos.
+3. One to three homepage hero product combination images.
+4. Real product images for each core category: travel bags, men's bags, women's backpacks, chest bags, waist bags, crossbody bags, and OEM/ODM custom bags.
+5. Factory, sewing, material, quality inspection, packing, warehouse, and shipping-related images.
+
+Recommended image format and size:
+
+- Use WebP or AVIF whenever possible.
+- Hero images: 200KB - 400KB.
+- Cason profile photo: 80KB - 150KB.
+- Category images: 100KB - 250KB.
+- Normal content images: 100KB - 300KB.
+
+Prepared asset folders:
+
+```text
+public/images/cason
+public/images/hero
+public/images/products/travel-bags
+public/images/products/mens-bags
+public/images/products/womens-backpacks
+public/images/products/chest-bags
+public/images/products/waist-bags
+public/images/products/crossbody-bags
+public/images/factory
+public/images/materials
+public/images/packing-shipping
+public/images/markets
+```
+
 ## Cason Personal Business IP Positioning
 
 ROVON Global remains the main brand and the factory-backed supplier positioning. Cason is the buyer communication entry point and a trust enhancer, not a replacement for the company brand.
