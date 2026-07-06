@@ -1,6 +1,7 @@
 import { Mail, MessageCircle } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
+import { SocialLinks } from "@/components/social-links";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { contactMessage, siteConfig } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
@@ -49,6 +50,12 @@ export default function ContactPage() {
               className="mt-6"
               eventName="click_contact_cason"
             />
+            <div className="mt-7 border-t border-[#dedede] pt-6">
+              <p className="text-sm leading-7 text-graphite-600">
+                You can also follow ROVON Global on Facebook, TikTok and Instagram for product updates, factory scenes and sourcing videos.
+              </p>
+              <SocialLinks className="mt-4" />
+            </div>
           </div>
           <div className="rounded-md border border-[#dddddd] bg-[#f7f7f7] p-6">
             <Mail className="h-8 w-8 text-graphite-950" aria-hidden="true" />

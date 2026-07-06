@@ -1,6 +1,24 @@
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://rovonglobal.com").replace(/\/+$/, "");
 const whatsappNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "8615302605504").replace(/\D/g, "");
 
+export const socialLinks = [
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61574281337883",
+    icon: "facebook",
+  },
+  {
+    name: "TikTok",
+    href: "https://www.tiktok.com/@cason.wholesale_bag",
+    icon: "tiktok",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/cason.wholesale_bag",
+    icon: "instagram",
+  },
+];
+
 export const siteConfig = {
   companyName: "ROVON Global",
   brandName: "ROVON Global",
@@ -15,6 +33,7 @@ export const siteConfig = {
   whatsappNumber,
   whatsappDisplay: process.env.NEXT_PUBLIC_WHATSAPP_DISPLAY ?? "+86 153 0260 5504",
   address: "No. 378, Wuyi Road, Baigou, Baoding, Hebei, China",
+  socialLinks,
 };
 
 export function whatsappLink(message: string) {

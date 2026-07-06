@@ -1,4 +1,5 @@
-﻿import { ButtonLink } from "@/components/button-link";
+import { ButtonLink } from "@/components/button-link";
+import { SocialLinks } from "@/components/social-links";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { contactMessage, siteConfig } from "@/data/site";
 
@@ -32,16 +33,21 @@ export function CtaBand({
             <ButtonLink
               href="/catalog"
               variant="outline"
-              className="w-full border-white/25 bg-transparent text-white hover:border-white hover:bg-white hover:!text-graphite-950 md:w-[260px]"
+              className="w-full border-white/25 !bg-transparent !text-white hover:border-white hover:!bg-white hover:!text-graphite-950 md:w-[260px]"
               eventName="click_get_catalog"
               eventParams={{ cta_label: "Get Latest Catalog" }}
             >
               Get Latest Catalog
             </ButtonLink>
+            <div className="pt-3 text-left md:w-[260px]">
+              <p className="text-xs leading-5 text-graphite-400">
+                Found us through Facebook or TikTok? Continue the conversation with Cason on WhatsApp.
+              </p>
+              <SocialLinks tone="light" className="mt-3" />
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
-

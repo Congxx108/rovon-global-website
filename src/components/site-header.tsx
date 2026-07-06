@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { SocialLinks } from "@/components/social-links";
 import { siteConfig, whatsappLink } from "@/data/site";
 import { trackEvent } from "@/lib/analytics";
 
@@ -61,6 +62,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <div className="hidden xl:block">
+            <SocialLinks />
+          </div>
           <Link
             href="/catalog"
             className="focus-ring inline-flex min-h-9 items-center justify-center rounded border border-[#d8d8d8] bg-white px-4 text-[11px] font-bold tracking-[0.08em] text-graphite-950 transition hover:border-graphite-950"
@@ -125,6 +129,7 @@ export function SiteHeader() {
             >
               Contact {siteConfig.contactPerson} on WhatsApp
             </a>
+            <SocialLinks label="Follow ROVON Global" className="mt-4 border-t border-stonebrand-200 pt-4" />
           </nav>
         </div>
       ) : null}

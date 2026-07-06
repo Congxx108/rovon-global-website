@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialLinks } from "@/components/social-links";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { productCategories, readyStockInfo } from "@/data/products";
 import { contactMessage, siteConfig } from "@/data/site";
@@ -20,6 +21,7 @@ export function SiteFooter() {
           <p className="mt-6 max-w-sm text-sm leading-7 text-graphite-300">
             Factory-backed bag production, wholesale supply, and OEM/ODM custom support for global B2B buyers.
           </p>
+          <SocialLinks label="Follow ROVON Global" tone="light" className="mt-7" />
         </div>
 
         <div>

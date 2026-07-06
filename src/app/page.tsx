@@ -17,6 +17,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/components/button-link";
 import { CtaBand } from "@/components/cta-band";
+import { HomeProcessTabs } from "@/components/home-process-tabs";
 import { SectionHeading } from "@/components/section-heading";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { productCategories } from "@/data/products";
@@ -34,29 +35,6 @@ export const metadata = createPageMetadata({
 const buyerMarks = ["IMPORTERS", "DISTRIBUTORS", "TRADING COMPANIES", "PRIVATE LABEL", "OEM BUYERS", "WHOLESALE"];
 
 const productIcons = [BriefcaseBusiness, Store, Layers3, PackageCheck, Ruler, Scissors, Factory];
-
-const processSteps = [
-  {
-    title: "Start with your idea",
-    text: "Share your target market, product category, quantity range, reference style, and expected quality level.",
-  },
-  {
-    title: "Confirm materials and structure",
-    text: "Align fabric, hardware, lining, logo method, capacity, compartments, and export packing direction.",
-  },
-  {
-    title: "Sample development",
-    text: "Prepare sample requirements and check practical details before moving toward bulk production.",
-  },
-  {
-    title: "Bulk production",
-    text: "Coordinate production communication around confirmed material, logo, color, and packing details.",
-  },
-  {
-    title: "Quality inspection and packing",
-    text: "Check stitching, zipper, hardware, labels, carton details, and shipment-ready packing before delivery.",
-  },
-];
 
 const materialItems = [
   { title: "Materials", text: "Oxford, nylon, polyester, PU, lining, and project-based material choices.", icon: Layers3 },
@@ -101,7 +79,7 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative min-h-[560px] overflow-hidden bg-black text-white md:min-h-[660px]">
+      <section className="relative min-h-[680px] overflow-hidden bg-black text-white md:min-h-[760px] xl:min-h-[820px]">
         <Image
           src="/images/generated/luggage-factory-hero.png"
           alt="Modern bag and luggage factory production line"
@@ -111,7 +89,7 @@ export default function HomePage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/48 to-black/55" />
-        <div className="container-shell relative flex min-h-[560px] flex-col items-center justify-center py-20 text-center md:min-h-[660px]">
+        <div className="container-shell relative flex min-h-[680px] flex-col items-center justify-center py-24 text-center md:min-h-[760px] xl:min-h-[820px]">
           <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-white/75">
             Factory-backed bag supplier from China
           </p>
@@ -172,7 +150,7 @@ export default function HomePage() {
                   <Link
                     href={`/products/${category.slug}`}
                     key={category.slug}
-                    className="focus-ring group flex min-h-[330px] flex-col rounded-md border border-[#dedede] bg-white p-4 text-center transition hover:-translate-y-0.5 hover:border-graphite-400"
+                    className="focus-ring group flex min-h-[330px] flex-col rounded-md border border-[#dedede] bg-white p-4 text-center shadow-[0_12px_34px_rgba(0,0,0,0.055)] transition hover:-translate-y-0.5 hover:border-graphite-400 hover:shadow-[0_18px_48px_rgba(0,0,0,0.08)]"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-[linear-gradient(135deg,#fafafa_0%,#f0f0f0_52%,#f8f8f8_100%)]" role="img" aria-label={`${category.name} product direction`}>
                       <div className="absolute left-4 top-4 text-[10px] font-bold uppercase tracking-[0.1em] text-graphite-500">
@@ -207,45 +185,7 @@ export default function HomePage() {
             description="A stable workflow for custom bags, wholesale programs, catalog selection, sample confirmation, production, inspection, and packing."
             align="center"
           />
-          <div className="mt-10 grid overflow-hidden rounded-md border border-[#dedede] text-center text-[11px] font-bold uppercase tracking-[0.05em] text-graphite-500 sm:grid-cols-5">
-            {processSteps.map((step, index) => (
-              <div
-                key={step.title}
-                className={`border-b border-[#dedede] px-4 py-3 sm:border-b-0 sm:border-r sm:last:border-r-0 ${index === 0 ? "bg-white text-graphite-950" : "bg-[#f7f7f7]"}`}
-              >
-                {step.title}
-              </div>
-            ))}
-          </div>
-          <div className="mx-auto grid max-w-5xl gap-8 rounded-b-md border-x border-b border-[#dedede] bg-white p-6 shadow-[0_18px_48px_rgba(0,0,0,0.08)] md:grid-cols-[0.95fr_1.05fr] md:p-10">
-            <div className="self-center">
-              <p className="editorial-eyebrow mb-3">OEM/ODM communication</p>
-              <h3 className="text-2xl font-black leading-tight text-graphite-950 md:text-3xl">Confirm the brief before quotation.</h3>
-              <p className="mt-4 text-sm leading-7 text-graphite-600">
-                Cason helps buyers organize product direction, material expectations, logo needs, quantity range, packing details, and sample questions before moving into production discussion.
-              </p>
-              <div className="mt-6 grid gap-3">
-                {processSteps.slice(0, 3).map((step) => (
-                  <div key={step.title} className="flex gap-3 text-sm leading-6 text-graphite-700">
-                    <Check className="mt-1 h-4 w-4 shrink-0 text-graphite-950" aria-hidden="true" />
-                    <span>{step.text}</span>
-                  </div>
-                ))}
-              </div>
-              <ButtonLink href="/oem-odm" className="mt-7">
-                View OEM/ODM Process
-              </ButtonLink>
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-[#f5f5f5]">
-              <Image
-                src="/images/generated/factory-process-detail.png"
-                alt="Bag component inspection and OEM material discussion"
-                fill
-                sizes="(min-width: 768px) 520px, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
+          <HomeProcessTabs />
         </div>
       </section>
 
@@ -260,7 +200,7 @@ export default function HomePage() {
             {materialItems.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="rounded-md border border-[#e2e2e2] bg-white p-6">
+                <div key={item.title} className="rounded-md border border-[#e2e2e2] bg-white p-6 shadow-[0_12px_34px_rgba(0,0,0,0.045)]">
                   <div className="flex aspect-[5/3] items-center justify-center rounded-sm bg-[linear-gradient(135deg,#f8f8f8_0%,#eeeeee_50%,#f7f7f7_100%)]">
                     <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#d8d8d8] bg-white text-graphite-900">
                       <Icon className="h-6 w-6" aria-hidden="true" />
@@ -286,7 +226,7 @@ export default function HomePage() {
               className="object-cover"
             />
           </div>
-          <div className="rounded-md border border-[#dedede] bg-white p-7 md:p-10">
+          <div className="rounded-md border border-[#dedede] bg-white p-7 shadow-[0_18px_48px_rgba(0,0,0,0.07)] md:p-10">
             <p className="editorial-eyebrow mb-3">Factory capability</p>
             <h2 className="text-3xl font-black leading-[1.08] text-graphite-950 md:text-4xl">
               Factory-backed Supply Capability
@@ -332,7 +272,7 @@ export default function HomePage() {
                 <Link
                   href="/wholesale-solutions"
                   key={segment.title}
-                  className="focus-ring group rounded-md border border-[#dedede] bg-white p-5 transition hover:-translate-y-0.5 hover:border-graphite-400"
+                  className="focus-ring group rounded-md border border-[#dedede] bg-white p-5 shadow-[0_12px_34px_rgba(0,0,0,0.045)] transition hover:-translate-y-0.5 hover:border-graphite-400 hover:shadow-[0_18px_48px_rgba(0,0,0,0.075)]"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-[#e9e9e9]">
                     <Image
@@ -358,7 +298,7 @@ export default function HomePage() {
           <h2 className="text-center text-4xl font-black text-graphite-950">FAQ</h2>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {faqItems.map((item) => (
-              <div key={item.question} className="rounded-md border border-[#e2e2e2] bg-white p-6">
+              <div key={item.question} className="rounded-md border border-[#e2e2e2] bg-white p-6 shadow-[0_10px_28px_rgba(0,0,0,0.04)]">
                 <div className="flex items-start gap-3">
                   <Check className="mt-1 h-4 w-4 shrink-0 text-graphite-950" aria-hidden="true" />
                   <div>

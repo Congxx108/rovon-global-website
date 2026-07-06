@@ -196,6 +196,28 @@ WhatsApp 号码未来如更换，只需要修改 Vercel 环境变量并重新部
 
 如果后续需要把邮箱和地址也改成 Vercel 环境变量，可以继续扩展 `src/data/site.ts`。
 
+## Social Links Configuration
+
+Facebook, TikTok, and Instagram links are configured in:
+
+```text
+src/data/site.ts
+```
+
+Update the `socialLinks` array with the official ROVON Global or Cason product-update URLs:
+
+```ts
+export const socialLinks = [
+  { name: "Facebook", href: "https://...", icon: "facebook" },
+  { name: "TikTok", href: "https://...", icon: "tiktok" },
+  { name: "Instagram", href: "https://...", icon: "instagram" },
+];
+```
+
+If a link is empty, the matching icon will not render. Do not add fake or guessed social URLs.
+
+Current social links are plain external links only. The site does not load Facebook, TikTok, or Instagram SDKs, does not embed social feeds, and does not autoplay social videos. This keeps WhatsApp as the main inquiry path and preserves page performance.
+
 ## Conversion Tracking Setup
 
 The current site supports lightweight, optional conversion tracking for GA4, Meta Pixel, and TikTok Pixel. No analytics script is loaded unless the matching public environment variable is configured.
