@@ -1,6 +1,7 @@
 import { Mail, MessageCircle } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
+import { GoogleMap } from "@/components/site/google-map";
 import { SocialLinks } from "@/components/social-links";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { contactMessage, siteConfig } from "@/data/site";
@@ -78,6 +79,27 @@ export default function ContactPage() {
               <p><span className="font-semibold text-graphite-950">Address:</span> {siteConfig.address}</p>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="section-y border-t border-stonebrand-200 bg-graphite-50">
+        <div className="container-shell grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+          <div>
+            <p className="editorial-eyebrow">Company location</p>
+            <h2 className="headline-serif mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
+              Visit / Locate {siteConfig.brandName}
+            </h2>
+            <p className="mt-5 text-base leading-7 text-graphite-600">
+              {siteConfig.brandName} is based in Baigou, Baoding, Hebei, China. Buyers can contact {siteConfig.contactPerson} on WhatsApp before visiting or discussing sourcing requirements.
+            </p>
+            <p className="mt-5 text-sm font-semibold leading-6 text-graphite-900">
+              {siteConfig.address}
+            </p>
+          </div>
+          <GoogleMap
+            address={siteConfig.address}
+            embedUrl={siteConfig.googleMapsEmbedUrl}
+            externalUrl={siteConfig.googleMapsExternalUrl}
+          />
         </div>
       </section>
     </>

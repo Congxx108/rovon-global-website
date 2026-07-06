@@ -57,6 +57,18 @@ export default function AboutPage() {
                 {item}
               </div>
             ))}
+            <div className="rounded-md border border-[#dddddd] bg-white p-5 text-sm text-graphite-900 shadow-[0_6px_18px_rgba(0,0,0,0.04)] sm:col-span-2">
+              <p className="muted-label">Production Base Location</p>
+              <p className="mt-3 font-bold">Baigou, Baoding, Hebei, China</p>
+              <a
+                href={siteConfig.googleMapsExternalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex text-sm font-bold text-graphite-950 underline underline-offset-4 transition hover:text-graphite-600"
+              >
+                View on Google Maps
+              </a>
+            </div>
           </div>
         </div>
       </section>

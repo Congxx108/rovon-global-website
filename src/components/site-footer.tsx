@@ -72,6 +72,16 @@ export function SiteFooter() {
             <li><a className="transition hover:text-white" href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a></li>
             <li>{siteConfig.whatsappDisplay}</li>
             <li>{siteConfig.address}</li>
+            <li>
+              <a
+                className="inline-flex font-semibold text-white underline decoration-white/25 underline-offset-4 transition hover:decoration-white"
+                href={siteConfig.googleMapsExternalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Google Maps
+              </a>
+            </li>
           </ul>
           <WhatsAppCTA
             message={contactMessage("I want to contact you from the website footer about catalog and bag sourcing support.")}

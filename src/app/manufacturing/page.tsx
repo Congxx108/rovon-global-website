@@ -57,6 +57,18 @@ export default function ManufacturingPage() {
                 </div>
               ))}
             </div>
+            <div className="mt-6 rounded-md border border-stonebrand-200 bg-graphite-50 p-5">
+              <p className="text-sm font-black text-graphite-950">Factory-backed supply from Baigou, China</p>
+              <p className="mt-2 text-sm leading-6 text-graphite-600">{siteConfig.address}</p>
+              <a
+                href={siteConfig.googleMapsExternalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex text-sm font-bold text-graphite-950 underline underline-offset-4 transition hover:text-graphite-600"
+              >
+                View on Google Maps
+              </a>
+            </div>
           </div>
         </div>
       </section>

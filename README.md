@@ -218,6 +218,35 @@ If a link is empty, the matching icon will not render. Do not add fake or guesse
 
 Current social links are plain external links only. The site does not load Facebook, TikTok, or Instagram SDKs, does not embed social feeds, and does not autoplay social videos. This keeps WhatsApp as the main inquiry path and preserves page performance.
 
+## Google Maps Location Setup
+
+Google Maps location information is configured in:
+
+```text
+src/data/site.ts
+```
+
+The shared fields are:
+
+```ts
+address
+googleMapsQuery
+googleMapsEmbedUrl
+googleMapsExternalUrl
+```
+
+The Contact page embeds a Google Maps iframe through the lightweight `GoogleMap` component. The iframe uses `loading="lazy"` and does not load on the homepage.
+
+Footer, About, and Manufacturing only use normal external Google Maps links. They do not embed a map iframe.
+
+If the exact street address is unstable in Google Maps, update `googleMapsQuery` to a broader location such as:
+
+```text
+Baigou, Baoding, Hebei, China
+```
+
+The site does not use the Google Maps JavaScript SDK, does not install a map library, and does not require a Google Maps API key.
+
 ## Conversion Tracking Setup
 
 The current site supports lightweight, optional conversion tracking for GA4, Meta Pixel, and TikTok Pixel. No analytics script is loaded unless the matching public environment variable is configured.

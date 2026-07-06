@@ -1,5 +1,8 @@
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://rovonglobal.com").replace(/\/+$/, "");
 const whatsappNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "8615302605504").replace(/\D/g, "");
+const companyAddress = "No. 378, Wuyi Road, Baigou, Baoding, Hebei, China";
+const googleMapsQuery = "Baigou, Baoding, Hebei, China";
+const encodedGoogleMapsQuery = encodeURIComponent(googleMapsQuery);
 
 export const socialLinks = [
   {
@@ -32,7 +35,10 @@ export const siteConfig = {
   email: "cason@rovonglobal.com",
   whatsappNumber,
   whatsappDisplay: process.env.NEXT_PUBLIC_WHATSAPP_DISPLAY ?? "+86 153 0260 5504",
-  address: "No. 378, Wuyi Road, Baigou, Baoding, Hebei, China",
+  address: companyAddress,
+  googleMapsQuery,
+  googleMapsEmbedUrl: `https://www.google.com/maps?q=${encodedGoogleMapsQuery}&output=embed`,
+  googleMapsExternalUrl: `https://www.google.com/maps/search/?api=1&query=${encodedGoogleMapsQuery}`,
   socialLinks,
 };
 
