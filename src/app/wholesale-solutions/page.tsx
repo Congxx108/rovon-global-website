@@ -36,13 +36,13 @@ export default function WholesaleSolutionsPage() {
 
       <section className="section-y bg-white">
         <div className="container-shell">
-          <div className="grid gap-0 border border-stonebrand-200 bg-white md:grid-cols-2">
+          <div className="grid gap-0 overflow-hidden rounded-md border border-[#dddddd] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.04)] md:grid-cols-2">
             {wholesaleSegments.map((segment, index) => (
               <article key={segment.title} className="border-b border-stonebrand-200 p-7 md:border-r md:[&:nth-child(2n)]:border-r-0 md:[&:nth-last-child(-n+2)]:border-b-0">
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-clay-600">
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-graphite-500">
                   {String(index + 1).padStart(2, "0")} / Buyer type
                 </p>
-                <h2 className="mt-7 text-3xl font-semibold leading-tight text-graphite-950">
+                <h2 className="mt-7 text-3xl font-black leading-tight text-graphite-950">
                   For {segment.title}
                 </h2>
                 <p className="mt-3 text-sm leading-6 text-graphite-600 md:text-base md:leading-7">
@@ -57,7 +57,7 @@ export default function WholesaleSolutionsPage() {
       <section className="section-y border-y border-stonebrand-200 bg-graphite-50">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
+            <h2 className="text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
               Factory-Backed Supply Advantages
             </h2>
             <p className="mt-4 text-base leading-7 text-graphite-600">
@@ -66,9 +66,9 @@ export default function WholesaleSolutionsPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {factoryStrengths.map((item) => (
-              <div key={item.title} className="border border-stonebrand-200 bg-white p-5 transition hover:border-graphite-400">
-                <CheckCircle2 className="h-5 w-5 text-clay-600" aria-hidden="true" />
-                <h3 className="mt-4 text-base font-semibold text-graphite-950">{item.title}</h3>
+              <div key={item.title} className="rounded-md border border-[#dddddd] bg-white p-5 shadow-[0_6px_18px_rgba(0,0,0,0.04)] transition hover:border-graphite-300">
+                <CheckCircle2 className="h-5 w-5 text-graphite-950" aria-hidden="true" />
+                <h3 className="mt-4 text-base font-black text-graphite-950">{item.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-graphite-600">{item.description}</p>
               </div>
             ))}
@@ -79,7 +79,7 @@ export default function WholesaleSolutionsPage() {
       <section className="section-y">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
+            <h2 className="text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
               Inquiry Process
             </h2>
             <p className="mt-4 text-base leading-7 text-graphite-600">
@@ -93,7 +93,7 @@ export default function WholesaleSolutionsPage() {
           <div className="grid gap-4">
             {inquiryProcess.map((step, index) => (
               <div key={step} className="grid gap-5 border-t border-stonebrand-200 pt-5 sm:grid-cols-[72px_1fr]">
-                <span className="text-3xl font-semibold text-clay-600">
+                <span className="text-3xl font-black text-graphite-950">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <p className="text-sm font-semibold leading-6 text-graphite-900">{step}</p>

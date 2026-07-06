@@ -39,7 +39,7 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div>
             <p className="editorial-eyebrow">About ROVON Global</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-graphite-950">
+            <h2 className="headline-serif mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
               A factory-backed supply partner for professional bag buyers.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
@@ -53,7 +53,7 @@ export default function AboutPage() {
               "OEM/ODM custom bag partner",
               "WhatsApp-first B2B inquiry path",
             ].map((item) => (
-              <div key={item} className="panel-card panel-card-hover p-5 text-sm font-semibold text-graphite-900">
+              <div key={item} className="rounded-md border border-[#dddddd] bg-white p-5 text-sm font-bold text-graphite-900 shadow-[0_6px_18px_rgba(0,0,0,0.04)]">
                 {item}
               </div>
             ))}
@@ -65,14 +65,14 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.76fr_1.24fr]">
           <div>
             <p className="editorial-eyebrow">What we focus on</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-graphite-950">
+            <h2 className="headline-serif mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
               Core bag categories for global wholesale sourcing.
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {productCategories.map((category) => (
-              <div key={category.slug} className="panel-card p-5">
-                <p className="text-sm font-semibold text-graphite-950">{category.name}</p>
+              <div key={category.slug} className="rounded-md border border-[#dddddd] bg-white p-5 shadow-[0_6px_18px_rgba(0,0,0,0.04)]">
+                <p className="text-sm font-black text-graphite-950">{category.name}</p>
                 <p className="mt-2 text-xs leading-5 text-graphite-600">{category.headline}</p>
               </div>
             ))}
@@ -84,7 +84,7 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
           <div>
             <p className="editorial-eyebrow">How we support buyers</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-graphite-950">
+            <h2 className="headline-serif mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
               From product category discussion to packing coordination.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
@@ -105,7 +105,7 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="editorial-eyebrow">Direct contact</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-graphite-950">
+            <h2 className="headline-serif mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
               Meet {siteConfig.contactPerson}, Your Direct Contact at {siteConfig.brandName}
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
@@ -126,8 +126,8 @@ export default function AboutPage() {
               </ButtonLink>
             </div>
           </div>
-          <div className="panel-card bg-sand-50 p-6">
-            <h3 className="text-lg font-semibold text-graphite-950">What to discuss with {siteConfig.contactPerson}</h3>
+          <div className="rounded-md border border-[#dddddd] bg-[#f7f7f7] p-6">
+            <h3 className="text-lg font-black text-graphite-950">What to discuss with {siteConfig.contactPerson}</h3>
             <ul className="mt-5 grid gap-3 text-sm leading-6 text-graphite-700">
               <li>Target bag category and destination market</li>
               <li>Quantity range and catalog needs</li>

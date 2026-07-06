@@ -38,20 +38,20 @@ export default function OemOdmPage() {
         <div className="container-shell grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
           <div>
             <p className="editorial-eyebrow">Custom development workflow</p>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
+            <h2 className="mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
               A structured path for custom bag projects.
             </h2>
             <p className="mt-4 text-base leading-7 text-graphite-600">
               Buyers can discuss logo methods, materials, hardware, lining, size, structure, colors, labels, hangtags, packing, carton marks, and market-specific product planning.
             </p>
           </div>
-          <div className="grid gap-0 border border-stonebrand-200 bg-white">
+          <div className="grid gap-0 overflow-hidden rounded-md border border-[#dddddd] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.04)]">
             {steps.map((step, index) => (
               <div key={step} className="grid gap-5 border-b border-stonebrand-200 p-6 last:border-b-0 sm:grid-cols-[84px_1fr]">
-                <span className="text-3xl font-semibold text-clay-600">
+                <span className="text-3xl font-black text-graphite-950">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="text-base font-semibold leading-7 text-graphite-900">{step}</p>
+                <p className="text-base font-bold leading-7 text-graphite-900">{step}</p>
               </div>
             ))}
           </div>

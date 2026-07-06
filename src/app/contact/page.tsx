@@ -35,9 +35,9 @@ export default function ContactPage() {
       </PageHero>
       <section className="section-y">
         <div className="container-shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="panel-card panel-card-hover p-6">
-            <MessageCircle className="h-8 w-8 text-clay-600" aria-hidden="true" />
-            <h2 className="headline-serif mt-5 text-3xl font-semibold leading-tight text-graphite-950">
+          <div className="rounded-md border border-[#dddddd] bg-white p-6 shadow-[0_6px_18px_rgba(0,0,0,0.05)]">
+            <MessageCircle className="h-8 w-8 text-graphite-950" aria-hidden="true" />
+            <h2 className="headline-serif mt-5 text-3xl font-black leading-tight text-graphite-950">
               Contact {siteConfig.contactPerson} on WhatsApp
             </h2>
             <p className="mt-3 text-sm leading-6 text-graphite-600">
@@ -50,9 +50,9 @@ export default function ContactPage() {
               eventName="click_contact_cason"
             />
           </div>
-          <div className="panel-card bg-sand-50 p-6">
-            <Mail className="h-8 w-8 text-clay-600" aria-hidden="true" />
-            <h2 className="headline-serif mt-5 text-3xl font-semibold leading-tight text-graphite-950">
+          <div className="rounded-md border border-[#dddddd] bg-[#f7f7f7] p-6">
+            <Mail className="h-8 w-8 text-graphite-950" aria-hidden="true" />
+            <h2 className="headline-serif mt-5 text-3xl font-black leading-tight text-graphite-950">
               Before contacting, prepare:
             </h2>
             <ul className="mt-5 grid gap-3 text-sm leading-6 text-graphite-700 sm:grid-cols-2">

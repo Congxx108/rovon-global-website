@@ -23,7 +23,7 @@ export function WhatsAppCTA({
   return (
     <a
       href={whatsappLink(message)}
-      className={`focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-sm border border-clay-600 bg-clay-600 px-5 py-3 text-sm font-semibold tracking-tight text-white shadow-none transition duration-200 ease-out hover:border-graphite-950 hover:bg-graphite-950 active:translate-y-px ${className}`}
+      className={`focus-ring inline-flex min-h-10 items-center justify-center gap-2 rounded border border-graphite-950 bg-graphite-950 px-6 py-2.5 text-[12px] font-bold tracking-[0.03em] text-white shadow-none transition duration-200 ease-out hover:border-graphite-800 hover:bg-graphite-800 active:translate-y-px ${className}`}
       target="_blank"
       rel="noreferrer"
       onClick={() => trackEvent(eventName, { cta_label: label, ...eventParams })}

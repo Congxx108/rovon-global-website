@@ -24,21 +24,20 @@ export default function ManufacturingPage() {
       />
       <section className="section-y">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div className="industrial-frame overflow-hidden">
+          <div className="overflow-hidden rounded-md border border-[#dddddd] bg-white shadow-[0_8px_22px_rgba(0,0,0,0.06)]">
             <div className="relative aspect-[16/10] bg-graphite-100">
               <Image
-                src="/images/hero/rovon-hero-supply.svg"
-                alt="Factory-backed bag manufacturing support placeholder"
+                src="/images/generated/factory-process-detail.png"
+                alt="Factory-backed luggage manufacturing support"
                 fill
                 sizes="(min-width: 1024px) 52vw, 100vw"
                 className="object-cover"
-                unoptimized
               />
             </div>
           </div>
           <div>
             <p className="editorial-eyebrow">Professional factory support</p>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
+            <h2 className="mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
               Built around practical bag production communication.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
@@ -67,9 +66,9 @@ export default function ManufacturingPage() {
             <Link
               key={page.slug}
               href={`/manufacturing/${page.slug}`}
-              className="focus-ring group border border-stonebrand-200 bg-white p-7 transition hover:-translate-y-0.5 hover:border-graphite-400 hover:shadow-card"
+              className="focus-ring group rounded-md border border-[#dddddd] bg-white p-7 shadow-[0_6px_18px_rgba(0,0,0,0.04)] transition hover:-translate-y-0.5 hover:border-graphite-300"
             >
-              <h2 className="text-xl font-semibold text-graphite-950">{page.title}</h2>
+              <h2 className="text-xl font-black text-graphite-950">{page.title}</h2>
               <p className="mt-3 text-sm leading-6 text-graphite-600">{page.description}</p>
               <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-graphite-800">
                 Learn more
