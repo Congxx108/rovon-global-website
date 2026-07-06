@@ -55,11 +55,11 @@ a {
 }
 
 .panel-card {
-  @apply rounded-md border border-stonebrand-200 bg-white shadow-[0_6px_18px_rgba(0,0,0,0.05)] transition duration-200 ease-out;
+  @apply rounded-md border border-stonebrand-200 bg-white shadow-[0_6px_18px_rgba(0,0,0,0.05)] transition duration-300 ease-out;
 }
 
 .panel-card-hover {
-  @apply hover:-translate-y-0.5 hover:border-graphite-300 hover:shadow-card;
+  @apply hover:border-graphite-300 hover:shadow-card;
 }
 
 .editorial-eyebrow {
@@ -100,7 +100,7 @@ a {
 }
 
 .industrial-card {
-  @apply rounded-md border border-stonebrand-200 bg-white transition duration-200 ease-out hover:border-graphite-300;
+  @apply rounded-md border border-stonebrand-200 bg-white transition duration-300 ease-out hover:border-graphite-300;
 }
 
 .muted-label {
@@ -131,6 +131,14 @@ a {
   box-shadow: none;
 }
 
+.interactive-button:disabled,
+.interactive-button[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.55;
+  transform: none;
+  box-shadow: none;
+}
+
 .interactive-card {
   transition:
     transform 300ms var(--ease-out-soft),
@@ -142,6 +150,26 @@ a {
 .interactive-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 52px rgba(0, 0, 0, 0.08);
+}
+
+.panel-card,
+.industrial-card,
+.media-frame,
+.motion-card {
+  transition:
+    transform 300ms var(--ease-out-soft),
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    background-color 240ms ease;
+}
+
+.panel-card:hover,
+.industrial-card:hover,
+.media-frame:hover,
+.motion-card:hover {
+  transform: translateY(-4px);
+  border-color: #b7b7b7;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.075);
 }
 
 .interactive-media {
@@ -182,7 +210,7 @@ a {
 
 .reveal-hidden {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(var(--reveal-y, 24px));
 }
 
 .reveal-visible {
@@ -191,6 +219,38 @@ a {
   transition:
     opacity 760ms var(--ease-out-soft) var(--reveal-delay, 0ms),
     transform 760ms var(--ease-out-soft) var(--reveal-delay, 0ms);
+}
+
+.motion-observed {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 24px));
+  transition:
+    opacity 760ms var(--ease-out-soft) var(--reveal-delay, 0ms),
+    transform 760ms var(--ease-out-soft) var(--reveal-delay, 0ms),
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    background-color 240ms ease;
+}
+
+.motion-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+input,
+select,
+textarea {
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #111111;
+  box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.08);
 }
 
 .hero-media {
@@ -309,11 +369,18 @@ a {
   .reveal,
   .reveal-hidden,
   .reveal-visible,
+  .motion-observed,
+  .motion-visible,
+  .motion-card,
   .interactive-button,
   .interactive-card,
   .interactive-media,
   .interactive-card:hover,
-  .interactive-card:hover .interactive-media {
+  .interactive-card:hover .interactive-media,
+  .panel-card:hover,
+  .industrial-card:hover,
+  .media-frame:hover,
+  .motion-card:hover {
     opacity: 1 !important;
     transform: none !important;
   }

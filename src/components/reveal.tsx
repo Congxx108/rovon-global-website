@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import type { CSSProperties, ReactNode } from "react";
 
 type RevealProps = {
-  as?: "div" | "section" | "footer";
+  as?: "div" | "section" | "article" | "aside" | "footer" | "header" | "li";
   children: ReactNode;
   className?: string;
   delay?: number;
+  yOffset?: number;
 };
 
 export function Reveal({
@@ -15,6 +16,7 @@ export function Reveal({
   children,
   className = "",
   delay = 0,
+  yOffset = 24,
 }: RevealProps) {
   const Component = as ?? "div";
   const ref = useRef<HTMLElement | null>(null);
@@ -49,11 +51,14 @@ export function Reveal({
     return () => observer.disconnect();
   }, []);
 
-  const style = { "--reveal-delay": `${delay}ms` } as CSSProperties;
+  const style = {
+    "--reveal-delay": `${delay}ms`,
+    "--reveal-y": `${yOffset}px`,
+  } as CSSProperties;
 
   return (
     <Component
-      ref={(node) => {
+      ref={(node: HTMLElement | null) => {
         ref.current = node;
       }}
       style={style}

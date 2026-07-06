@@ -2,6 +2,7 @@
 import { AnalyticsScripts } from "@/components/analytics/analytics-scripts";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { SiteMotion } from "@/components/site-motion";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/data/site";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body>
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         <AnalyticsScripts />
+        <SiteMotion />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

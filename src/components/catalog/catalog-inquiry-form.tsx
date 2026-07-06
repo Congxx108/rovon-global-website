@@ -269,7 +269,7 @@ export function CatalogInquiryForm() {
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
         <button
           type="submit"
-          className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-sm border border-clay-600 bg-clay-600 px-5 py-3 text-sm font-semibold text-white transition duration-200 ease-out hover:border-graphite-950 hover:bg-graphite-950 active:translate-y-px"
+          className="focus-ring interactive-button inline-flex min-h-12 items-center justify-center gap-2 rounded-sm border border-graphite-950 bg-graphite-950 px-5 py-3 text-sm font-semibold text-white hover:border-graphite-800 hover:bg-graphite-800"
         >
           <MessageCircle className="h-4 w-4" aria-hidden="true" />
           Send Inquiry to {siteConfig.contactPerson} on WhatsApp

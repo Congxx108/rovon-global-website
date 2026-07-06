@@ -86,7 +86,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="focus-ring inline-flex h-8 w-8 items-center justify-center rounded border border-stonebrand-200 text-graphite-950 lg:hidden"
+          className="focus-ring interactive-button inline-flex h-8 w-8 items-center justify-center rounded border border-stonebrand-200 text-graphite-950 lg:hidden"
           onClick={() => setIsOpen((value) => !value)}
           aria-label="Toggle navigation"
           aria-expanded={isOpen}
@@ -109,7 +109,7 @@ export function SiteHeader() {
                   trackNavItem(item.href, item.label);
                   setIsOpen(false);
                 }}
-                className="focus-ring rounded px-3 py-3 text-sm font-semibold text-graphite-700 transition hover:bg-graphite-50 hover:text-graphite-950"
+                className="focus-ring interactive-button rounded px-3 py-3 text-sm font-semibold text-graphite-700 hover:bg-graphite-50 hover:text-graphite-950"
               >
                 {item.label}
               </Link>
@@ -120,13 +120,13 @@ export function SiteHeader() {
                 trackEvent("click_get_catalog", { cta_label: "Mobile Get Catalog" });
                 setIsOpen(false);
               }}
-              className="focus-ring rounded border border-stonebrand-200 px-3 py-3 text-sm font-semibold text-graphite-950 transition hover:border-graphite-950"
+              className="focus-ring interactive-button rounded border border-stonebrand-200 px-3 py-3 text-sm font-semibold text-graphite-950 hover:border-graphite-950"
             >
               Get Catalog
             </Link>
             <a
               href={whatsappHref}
-              className="focus-ring mt-2 inline-flex min-h-11 items-center justify-center rounded bg-graphite-950 px-4 py-3 text-sm font-semibold text-white"
+              className="focus-ring interactive-button mt-2 inline-flex min-h-11 items-center justify-center rounded bg-graphite-950 px-4 py-3 text-sm font-semibold text-white"
               target="_blank"
               rel="noreferrer"
               onClick={() => trackEvent("click_contact_cason", { cta_label: `Contact ${siteConfig.contactPerson} on WhatsApp` })}
