@@ -42,10 +42,10 @@ export default function WholesaleSolutionsPage() {
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-clay-600">
                   {String(index + 1).padStart(2, "0")} / Buyer type
                 </p>
-                <h2 className="mt-7 text-3xl font-semibold leading-tight text-navy-950">
+                <h2 className="mt-7 text-3xl font-semibold leading-tight text-graphite-950">
                   For {segment.title}
                 </h2>
-                <p className="mt-3 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
+                <p className="mt-3 text-sm leading-6 text-graphite-600 md:text-base md:leading-7">
                   {segment.description}
                 </p>
               </article>
@@ -54,22 +54,22 @@ export default function WholesaleSolutionsPage() {
         </div>
       </section>
 
-      <section className="section-y border-y border-stonebrand-200 bg-slate-50">
+      <section className="section-y border-y border-stonebrand-200 bg-graphite-50">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
               Factory-Backed Supply Advantages
             </h2>
-            <p className="mt-4 text-base leading-7 text-slate-600">
+            <p className="mt-4 text-base leading-7 text-graphite-600">
               The cooperation model is built for B2B sourcing, not retail transaction. Buyers can discuss product category planning, OEM/ODM requirements, catalog support, packing, and market-fit supply directly with {siteConfig.contactPerson}.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {factoryStrengths.map((item) => (
-              <div key={item.title} className="border border-stonebrand-200 bg-white p-5 transition hover:border-slate-400">
+              <div key={item.title} className="border border-stonebrand-200 bg-white p-5 transition hover:border-graphite-400">
                 <CheckCircle2 className="h-5 w-5 text-clay-600" aria-hidden="true" />
-                <h3 className="mt-4 text-base font-semibold text-navy-950">{item.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{item.description}</p>
+                <h3 className="mt-4 text-base font-semibold text-graphite-950">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-graphite-600">{item.description}</p>
               </div>
             ))}
           </div>
@@ -79,10 +79,10 @@ export default function WholesaleSolutionsPage() {
       <section className="section-y">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
               Inquiry Process
             </h2>
-            <p className="mt-4 text-base leading-7 text-slate-600">
+            <p className="mt-4 text-base leading-7 text-graphite-600">
               A clear inquiry helps the team recommend suitable categories, catalog direction, quotation logic, and customization options.
             </p>
             <ButtonLink href="/contact" variant="secondary" className="mt-8">
@@ -96,7 +96,7 @@ export default function WholesaleSolutionsPage() {
                 <span className="text-3xl font-semibold text-clay-600">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="text-sm font-semibold leading-6 text-navy-900">{step}</p>
+                <p className="text-sm font-semibold leading-6 text-graphite-900">{step}</p>
               </div>
             ))}
           </div>

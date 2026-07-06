@@ -37,10 +37,10 @@ export default function ContactPage() {
         <div className="container-shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="panel-card panel-card-hover p-6">
             <MessageCircle className="h-8 w-8 text-clay-600" aria-hidden="true" />
-            <h2 className="headline-serif mt-5 text-3xl font-semibold leading-tight text-navy-950">
+            <h2 className="headline-serif mt-5 text-3xl font-semibold leading-tight text-graphite-950">
               Contact {siteConfig.contactPerson} on WhatsApp
             </h2>
-            <p className="mt-3 text-sm leading-6 text-slate-600">
+            <p className="mt-3 text-sm leading-6 text-graphite-600">
               WhatsApp is the fastest way to discuss catalogs, wholesale quotation direction, OEM/ODM requirements, product categories, and order follow-up with a real contact at {siteConfig.brandName}.
             </p>
             <WhatsAppCTA
@@ -52,10 +52,10 @@ export default function ContactPage() {
           </div>
           <div className="panel-card bg-sand-50 p-6">
             <Mail className="h-8 w-8 text-clay-600" aria-hidden="true" />
-            <h2 className="headline-serif mt-5 text-3xl font-semibold leading-tight text-navy-950">
+            <h2 className="headline-serif mt-5 text-3xl font-semibold leading-tight text-graphite-950">
               Before contacting, prepare:
             </h2>
-            <ul className="mt-5 grid gap-3 text-sm leading-6 text-slate-700 sm:grid-cols-2">
+            <ul className="mt-5 grid gap-3 text-sm leading-6 text-graphite-700 sm:grid-cols-2">
               <li>Target bag category</li>
               <li>Estimated quantity</li>
               <li>Destination market</li>
@@ -66,9 +66,9 @@ export default function ContactPage() {
             <ButtonLink href={`mailto:${siteConfig.email}`} variant="outline" className="mt-6">
               Email {siteConfig.contactPerson}
             </ButtonLink>
-            <div className="mt-6 grid gap-2 text-sm leading-6 text-slate-600">
-              <p><span className="font-semibold text-navy-950">WhatsApp:</span> {siteConfig.whatsappDisplay}</p>
-              <p><span className="font-semibold text-navy-950">Address:</span> {siteConfig.address}</p>
+            <div className="mt-6 grid gap-2 text-sm leading-6 text-graphite-600">
+              <p><span className="font-semibold text-graphite-950">WhatsApp:</span> {siteConfig.whatsappDisplay}</p>
+              <p><span className="font-semibold text-graphite-950">Address:</span> {siteConfig.address}</p>
             </div>
           </div>
         </div>

@@ -25,10 +25,10 @@ export default function ReadyStockPage() {
       </PageHero>
       <section className="section-y">
         <div className="container-shell max-w-4xl">
-          <h2 className="headline-serif text-4xl font-semibold leading-tight text-navy-950">
+          <h2 className="headline-serif text-4xl font-semibold leading-tight text-graphite-950">
             Supplementary Supply Channel
           </h2>
-          <p className="mt-4 text-base leading-7 text-slate-600">
+          <p className="mt-4 text-base leading-7 text-graphite-600">
             {readyStockInfo.description}
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -38,7 +38,7 @@ export default function ReadyStockPage() {
               "Fast replenishment discussion",
               "Supplementary to manufacturing, wholesale supply, and OEM/ODM",
             ].map((item) => (
-              <div key={item} className="panel-card p-5 text-sm font-semibold text-navy-900">
+              <div key={item} className="panel-card p-5 text-sm font-semibold text-graphite-900">
                 {item}
               </div>
             ))}

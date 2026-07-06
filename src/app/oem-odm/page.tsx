@@ -38,10 +38,10 @@ export default function OemOdmPage() {
         <div className="container-shell grid gap-12 lg:grid-cols-[0.78fr_1.22fr]">
           <div>
             <p className="editorial-eyebrow">Custom development workflow</p>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
+            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
               A structured path for custom bag projects.
             </h2>
-            <p className="mt-4 text-base leading-7 text-slate-600">
+            <p className="mt-4 text-base leading-7 text-graphite-600">
               Buyers can discuss logo methods, materials, hardware, lining, size, structure, colors, labels, hangtags, packing, carton marks, and market-specific product planning.
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function OemOdmPage() {
                 <span className="text-3xl font-semibold text-clay-600">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="text-base font-semibold leading-7 text-navy-900">{step}</p>
+                <p className="text-base font-semibold leading-7 text-graphite-900">{step}</p>
               </div>
             ))}
           </div>

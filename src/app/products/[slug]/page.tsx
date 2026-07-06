@@ -75,36 +75,36 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           </div>
           <div>
             <p className="editorial-eyebrow">Category capability overview</p>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
+            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
               {category.description}
             </h2>
-            <p className="mt-6 text-base leading-8 text-slate-600">{category.buyerUseCase}</p>
-            <div className="mt-7 border border-stonebrand-200 bg-slate-50 p-5">
-              <p className="text-sm font-semibold text-navy-950">MOQ note</p>
-              <p className="mt-2 text-sm leading-6 text-slate-600">{category.moqNote}</p>
+            <p className="mt-6 text-base leading-8 text-graphite-600">{category.buyerUseCase}</p>
+            <div className="mt-7 border border-stonebrand-200 bg-graphite-50 p-5">
+              <p className="text-sm font-semibold text-graphite-950">MOQ note</p>
+              <p className="mt-2 text-sm leading-6 text-graphite-600">{category.moqNote}</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-y border-y border-stonebrand-200 bg-slate-50">
+      <section className="section-y border-y border-stonebrand-200 bg-graphite-50">
         <div className="container-shell grid gap-8 lg:grid-cols-[0.78fr_1.22fr]">
           <div>
             <p className="editorial-eyebrow">B2B sourcing fit</p>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
+            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
               Built for wholesale buyers, not retail product browsing.
             </h2>
-            <p className="mt-5 text-base leading-7 text-slate-600">
+            <p className="mt-5 text-base leading-7 text-graphite-600">
               This page shows category capability and product direction. It is not a live inventory list, and it keeps the experience focused on catalog requests, product requirements, and B2B sourcing discussion.
             </p>
           </div>
           <div className="grid gap-6">
             <div className="grid gap-5 md:grid-cols-2">
               <div className="border border-stonebrand-200 bg-white p-6">
-                <h3 className="text-lg font-semibold text-navy-950">Suitable Buyers</h3>
+                <h3 className="text-lg font-semibold text-graphite-950">Suitable Buyers</h3>
                 <div className="mt-5 grid gap-3">
                   {category.suitableBuyers.map((buyer) => (
-                    <p key={buyer} className="flex items-center gap-3 text-sm font-semibold text-slate-700">
+                    <p key={buyer} className="flex items-center gap-3 text-sm font-semibold text-graphite-700">
                       <Check className="h-4 w-4 text-clay-600" aria-hidden="true" />
                       {buyer}
                     </p>
@@ -112,10 +112,10 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
                 </div>
               </div>
               <div className="border border-stonebrand-200 bg-white p-6">
-                <h3 className="text-lg font-semibold text-navy-950">Common Use Cases</h3>
+                <h3 className="text-lg font-semibold text-graphite-950">Common Use Cases</h3>
                 <div className="mt-5 grid gap-3">
                   {category.commonUseCases.map((useCase) => (
-                    <p key={useCase} className="flex items-start gap-3 text-sm leading-6 text-slate-700">
+                    <p key={useCase} className="flex items-start gap-3 text-sm leading-6 text-graphite-700">
                       <Check className="mt-1 h-4 w-4 shrink-0 text-clay-600" aria-hidden="true" />
                       {useCase}
                     </p>
@@ -125,10 +125,10 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
             </div>
             <div className="grid gap-5 md:grid-cols-2">
               <div className="border border-stonebrand-200 bg-white p-6">
-                <h3 className="text-lg font-semibold text-navy-950">Product Highlights</h3>
+                <h3 className="text-lg font-semibold text-graphite-950">Product Highlights</h3>
                 <div className="mt-5 grid gap-3">
                   {category.productHighlights.map((highlight) => (
-                    <p key={highlight} className="flex items-start gap-3 text-sm leading-6 text-slate-700">
+                    <p key={highlight} className="flex items-start gap-3 text-sm leading-6 text-graphite-700">
                       <Check className="mt-1 h-4 w-4 shrink-0 text-clay-600" aria-hidden="true" />
                       {highlight}
                     </p>
@@ -136,10 +136,10 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
                 </div>
               </div>
               <div className="border border-stonebrand-200 bg-white p-6">
-                <h3 className="text-lg font-semibold text-navy-950">Production / Sourcing Support</h3>
+                <h3 className="text-lg font-semibold text-graphite-950">Production / Sourcing Support</h3>
                 <div className="mt-5 grid gap-3">
                   {category.sourcingSupport.map((support) => (
-                    <p key={support} className="flex items-start gap-3 text-sm leading-6 text-slate-700">
+                    <p key={support} className="flex items-start gap-3 text-sm leading-6 text-graphite-700">
                       <Check className="mt-1 h-4 w-4 shrink-0 text-clay-600" aria-hidden="true" />
                       {support}
                     </p>
@@ -155,10 +155,10 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
         <div className="container-shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div>
             <p className="editorial-eyebrow">Customization options</p>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
+            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
               Discuss the right materials, structure, logo, and packing before quotation.
             </h2>
-            <p className="mt-5 text-base leading-7 text-slate-600">
+            <p className="mt-5 text-base leading-7 text-graphite-600">
               For custom development, share reference photos, target market, expected quantity, and any logo or packing requirements. {siteConfig.contactPerson} can help clarify the information needed for a practical quotation path.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -175,7 +175,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {category.customizationOptions.map((option) => (
-              <div key={option} className="border border-stonebrand-200 bg-white p-4 text-sm font-semibold text-navy-900 transition hover:border-slate-400">
+              <div key={option} className="border border-stonebrand-200 bg-white p-4 text-sm font-semibold text-graphite-900 transition hover:border-graphite-400">
                 {option}
               </div>
             ))}
@@ -183,14 +183,14 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
         </div>
       </section>
 
-      <section className="section-y border-y border-stonebrand-200 bg-slate-50">
+      <section className="section-y border-y border-stonebrand-200 bg-graphite-50">
         <div className="container-shell">
           <div className="max-w-3xl">
             <p className="editorial-eyebrow">Product direction example</p>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
+            <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
               First-phase product data for future catalog expansion.
             </h2>
-            <p className="mt-4 text-sm leading-6 text-slate-600">
+            <p className="mt-4 text-sm leading-6 text-graphite-600">
               The current page uses local static data to describe category capability. When real product photos and detailed specifications are ready, this section can expand into a paginated catalog or Load More product list.
             </p>
           </div>
@@ -209,24 +209,24 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-navy-950">{product.name}</h3>
-                    <p className="mt-3 text-sm leading-6 text-slate-600">{product.description}</p>
+                    <h3 className="text-xl font-semibold text-graphite-950">{product.name}</h3>
+                    <p className="mt-3 text-sm leading-6 text-graphite-600">{product.description}</p>
                     <dl className="mt-6 grid gap-4 text-sm sm:grid-cols-2">
                       <div>
-                        <dt className="font-semibold text-navy-950">Materials</dt>
-                        <dd className="mt-1 text-slate-600">{product.materials?.join(", ")}</dd>
+                        <dt className="font-semibold text-graphite-950">Materials</dt>
+                        <dd className="mt-1 text-graphite-600">{product.materials?.join(", ")}</dd>
                       </div>
                       <div>
-                        <dt className="font-semibold text-navy-950">Size</dt>
-                        <dd className="mt-1 text-slate-600">{product.size}</dd>
+                        <dt className="font-semibold text-graphite-950">Size</dt>
+                        <dd className="mt-1 text-graphite-600">{product.size}</dd>
                       </div>
                       <div>
-                        <dt className="font-semibold text-navy-950">Target Markets</dt>
-                        <dd className="mt-1 text-slate-600">{product.targetMarkets?.join(", ")}</dd>
+                        <dt className="font-semibold text-graphite-950">Target Markets</dt>
+                        <dd className="mt-1 text-graphite-600">{product.targetMarkets?.join(", ")}</dd>
                       </div>
                       <div>
-                        <dt className="font-semibold text-navy-950">MOQ</dt>
-                        <dd className="mt-1 text-slate-600">{product.moqNote}</dd>
+                        <dt className="font-semibold text-graphite-950">MOQ</dt>
+                        <dd className="mt-1 text-graphite-600">{product.moqNote}</dd>
                       </div>
                     </dl>
                     <WhatsAppCTA
@@ -249,7 +249,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           <div className="container-shell">
             <div className="max-w-3xl">
               <p className="editorial-eyebrow">Related categories</p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-navy-950">
+              <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
                 Build a broader wholesale bag program.
               </h2>
             </div>
@@ -258,11 +258,11 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
                 <Link
                   key={relatedCategory.slug}
                   href={`/products/${relatedCategory.slug}`}
-                  className="focus-ring group border border-stonebrand-200 bg-white p-6 transition hover:border-slate-400 hover:shadow-card"
+                  className="focus-ring group border border-stonebrand-200 bg-white p-6 transition hover:border-graphite-400 hover:shadow-card"
                 >
-                  <h3 className="text-lg font-semibold text-navy-950">{relatedCategory.name}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{relatedCategory.headline}</p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-clay-600 transition group-hover:text-navy-950">
+                  <h3 className="text-lg font-semibold text-graphite-950">{relatedCategory.name}</h3>
+                  <p className="mt-3 text-sm leading-6 text-graphite-600">{relatedCategory.headline}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-clay-600 transition group-hover:text-graphite-950">
                     Explore category
                     <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
                   </span>

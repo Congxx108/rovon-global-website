@@ -39,15 +39,15 @@ export default async function ManufacturingDetailPage({ params }: ManufacturingD
       <PageHero title={page.title} description={page.description} breadcrumbPath={`/manufacturing/${page.slug}`} />
       <section className="section-y">
         <div className="container-shell max-w-4xl">
-          <h2 className="headline-serif text-4xl font-semibold leading-tight text-navy-950">
+          <h2 className="headline-serif text-4xl font-semibold leading-tight text-graphite-950">
             What Buyers Can Discuss With {siteConfig.brandName}
           </h2>
-          <p className="mt-4 text-base leading-7 text-slate-600">
+          <p className="mt-4 text-base leading-7 text-graphite-600">
             This page focuses on professional factory communication for global B2B buyers. It does not use unverified factory scale numbers; the goal is to clarify what can be discussed before catalog, sample, production, or packing decisions.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {page.points.map((point) => (
-              <div key={point} className="panel-card p-5 text-sm font-semibold text-navy-900">
+              <div key={point} className="panel-card p-5 text-sm font-semibold text-graphite-900">
                 {point}
               </div>
             ))}

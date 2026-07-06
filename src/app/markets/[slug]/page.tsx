@@ -42,12 +42,12 @@ export default async function MarketDetailPage({ params }: MarketDetailProps) {
       </PageHero>
       <section className="section-y">
         <div className="container-shell max-w-4xl">
-          <h2 className="headline-serif text-4xl font-semibold leading-tight text-navy-950">
+          <h2 className="headline-serif text-4xl font-semibold leading-tight text-graphite-950">
             Market-Fit Supply Focus
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {market.strengths.map((strength) => (
-              <div key={strength} className="panel-card p-5 text-sm font-semibold text-navy-900">
+              <div key={strength} className="panel-card p-5 text-sm font-semibold text-graphite-900">
                 {strength}
               </div>
             ))}

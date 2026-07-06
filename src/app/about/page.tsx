@@ -39,10 +39,10 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div>
             <p className="editorial-eyebrow">About ROVON Global</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-graphite-950">
               A factory-backed supply partner for professional bag buyers.
             </h2>
-            <p className="mt-5 text-base leading-7 text-slate-600">
+            <p className="mt-5 text-base leading-7 text-graphite-600">
               {siteConfig.brandName} serves importers, distributors, wholesalers, trading companies, and brand buyers who need reliable communication for bag manufacturing, wholesale supply, and OEM/ODM custom projects from China.
             </p>
           </div>
@@ -53,7 +53,7 @@ export default function AboutPage() {
               "OEM/ODM custom bag partner",
               "WhatsApp-first B2B inquiry path",
             ].map((item) => (
-              <div key={item} className="panel-card panel-card-hover p-5 text-sm font-semibold text-navy-900">
+              <div key={item} className="panel-card panel-card-hover p-5 text-sm font-semibold text-graphite-900">
                 {item}
               </div>
             ))}
@@ -65,15 +65,15 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.76fr_1.24fr]">
           <div>
             <p className="editorial-eyebrow">What we focus on</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-graphite-950">
               Core bag categories for global wholesale sourcing.
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {productCategories.map((category) => (
               <div key={category.slug} className="panel-card p-5">
-                <p className="text-sm font-semibold text-navy-950">{category.name}</p>
-                <p className="mt-2 text-xs leading-5 text-slate-600">{category.headline}</p>
+                <p className="text-sm font-semibold text-graphite-950">{category.name}</p>
+                <p className="mt-2 text-xs leading-5 text-graphite-600">{category.headline}</p>
               </div>
             ))}
           </div>
@@ -84,16 +84,16 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
           <div>
             <p className="editorial-eyebrow">How we support buyers</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-graphite-950">
               From product category discussion to packing coordination.
             </h2>
-            <p className="mt-5 text-base leading-7 text-slate-600">
+            <p className="mt-5 text-base leading-7 text-graphite-600">
               The website is structured for B2B sourcing. Buyers can clarify product categories, catalog needs, materials, logos, sample plans, production follow-up, and packing requirements without generic ecommerce steps.
             </p>
           </div>
           <div className="grid gap-4">
             {buyerSupport.map((item) => (
-              <div key={item} className="border-t border-stonebrand-200 pt-4 text-sm font-semibold text-navy-950">
+              <div key={item} className="border-t border-stonebrand-200 pt-4 text-sm font-semibold text-graphite-950">
                 {item}
               </div>
             ))}
@@ -105,10 +105,10 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="editorial-eyebrow">Direct contact</p>
-            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-navy-950">
+            <h2 className="headline-serif mt-4 text-4xl font-semibold leading-tight text-graphite-950">
               Meet {siteConfig.contactPerson}, Your Direct Contact at {siteConfig.brandName}
             </h2>
-            <p className="mt-5 text-base leading-7 text-slate-600">
+            <p className="mt-5 text-base leading-7 text-graphite-600">
               {siteConfig.contactPerson} helps global buyers communicate directly with {siteConfig.brandName} for catalogs, wholesale inquiries, OEM/ODM discussions, and order requirement follow-up. For buyers who prefer fast WhatsApp communication, {siteConfig.contactPerson} provides a clear contact point instead of a generic inquiry form.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -127,8 +127,8 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="panel-card bg-sand-50 p-6">
-            <h3 className="text-lg font-semibold text-navy-950">What to discuss with {siteConfig.contactPerson}</h3>
-            <ul className="mt-5 grid gap-3 text-sm leading-6 text-slate-700">
+            <h3 className="text-lg font-semibold text-graphite-950">What to discuss with {siteConfig.contactPerson}</h3>
+            <ul className="mt-5 grid gap-3 text-sm leading-6 text-graphite-700">
               <li>Target bag category and destination market</li>
               <li>Quantity range and catalog needs</li>
               <li>Material, logo, color, and packing requirements</li>

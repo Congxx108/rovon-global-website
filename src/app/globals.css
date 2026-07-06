@@ -1,16 +1,16 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   color-scheme: light;
   --background: #ffffff;
-  --foreground: #0f172a;
-  --surface: #f8fafc;
-  --surface-strong: #f1f5f9;
-  --border-subtle: #e2e8f0;
-  --accent: #b65f2a;
-  --cta: #b65f2a;
+  --foreground: #171917;
+  --surface: #f7f7f5;
+  --surface-strong: #eeeeeb;
+  --border-subtle: #e3e3df;
+  --accent: #9f5d2f;
+  --cta: #9f5d2f;
   --radius-card: 4px;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 ::selection {
-  background: #b8642f;
+  background: #9f5d2f;
   color: #ffffff;
 }
 
@@ -50,7 +50,7 @@ a {
 }
 
 .section-y {
-  @apply py-20 md:py-28;
+  @apply py-16 md:py-24;
 }
 
 .panel-card {
@@ -58,7 +58,7 @@ a {
 }
 
 .panel-card-hover {
-  @apply hover:-translate-y-0.5 hover:border-slate-400 hover:shadow-card;
+  @apply hover:-translate-y-0.5 hover:border-graphite-400 hover:shadow-card;
 }
 
 .editorial-eyebrow {
@@ -71,22 +71,42 @@ a {
 }
 
 .soft-section {
-  @apply bg-slate-50;
+  @apply bg-graphite-50;
 }
 
 .sand-section {
-  @apply bg-slate-50;
+  @apply bg-sand-50;
 }
 
 .subtle-grid {
-  background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.035), transparent);
+  background-image: linear-gradient(180deg, rgba(23, 25, 23, 0.035), transparent);
 }
 
 .industrial-frame {
-  @apply rounded-sm border border-stonebrand-200 bg-slate-100 shadow-soft;
+  @apply rounded-sm border border-stonebrand-200 bg-graphite-50 shadow-soft;
 }
 
 .spec-line {
   @apply border-t border-stonebrand-200 pt-4;
+}
+
+.premium-hero {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 247, 245, 0.96)),
+    linear-gradient(90deg, rgba(23, 25, 23, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(23, 25, 23, 0.035) 1px, transparent 1px);
+  background-size: auto, 88px 88px, 88px 88px;
+}
+
+.media-frame {
+  @apply overflow-hidden rounded-sm border border-stonebrand-200 bg-graphite-50;
+}
+
+.industrial-card {
+  @apply rounded-sm border border-stonebrand-200 bg-white transition duration-200 ease-out hover:border-graphite-400;
+}
+
+.muted-label {
+  @apply text-[11px] font-bold uppercase tracking-[0.14em] text-graphite-500;
 }
 

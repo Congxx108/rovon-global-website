@@ -583,3 +583,20 @@ Do not invent or imply unverified personal information:
 - Do not describe Cason as founder, CEO, factory owner, or senior executive unless verified information is provided.
 - Do not invent Cason's work history, awards, years of experience, factory ownership, or personal story.
 - Do not turn the website into a personal blog. Cason supports trust and conversion, while ROVON Global remains the core manufacturing and wholesale supply brand.
+
+## Premium B2B Manufacturer Visual System
+
+The current visual direction has been rebuilt toward a cleaner international B2B manufacturer website style. Aluvox is used only as a high-level reference for restraint, whitespace, manufacturing confidence, product-led layout, and inquiry-focused navigation. Do not copy Aluvox content, images, logo, data, product logic, shopping cart behavior, or recognizable page details.
+
+Current design principles:
+
+- Backgrounds use white, off-white, and soft gray instead of heavy warm clay or colorful template sections.
+- Main text uses charcoal / near-black graphite tones.
+- CTA color uses muted burnt orange / clay only for key actions such as Talk to Cason, Get Catalog, and inquiry buttons.
+- Cards use white surfaces, fine gray borders, limited shadow, square or low-radius corners, and generous spacing.
+- Product category cards should feel like a B2B procurement directory, not ecommerce product tiles.
+- Hero and manufacturing sections should prioritize large media containers and supply-chain structure. Current SVGs are placeholders only; replace them with real ROVON product and factory images when available.
+- Motion stays lightweight: CSS hover border changes, subtle image zoom, and small translate effects only.
+- Do not add Framer Motion, GSAP, 3D, video backgrounds, heavy UI frameworks, cart systems, pricing, checkout, or account features.
+
+Future real image replacement should preserve the current ratios and layout. Recommended priorities are homepage hero product/factory image, product category images, manufacturing/material/quality-control/packing images, and verified Cason photo or video screenshots.

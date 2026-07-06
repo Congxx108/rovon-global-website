@@ -50,22 +50,22 @@ export default function CatalogPage() {
       <section className="section-y bg-white">
         <div className="container-shell grid gap-12 lg:grid-cols-[0.74fr_1.26fr] lg:items-start">
           <aside className="sticky top-28 hidden gap-5 lg:grid">
-            <div className="border border-stonebrand-200 bg-slate-50 p-7">
+            <div className="border border-stonebrand-200 bg-graphite-50 p-7">
               <ClipboardList className="h-7 w-7 text-clay-600" aria-hidden="true" />
-              <h2 className="mt-5 text-2xl font-semibold leading-tight tracking-tight text-navy-950">
+              <h2 className="mt-5 text-2xl font-semibold leading-tight tracking-tight text-graphite-950">
                 Prepare a clearer B2B inquiry.
               </h2>
-              <p className="mt-3 text-sm leading-6 text-slate-600">
+              <p className="mt-3 text-sm leading-6 text-graphite-600">
                 This page helps buyers prepare a clearer inquiry before contacting {siteConfig.contactPerson}. It is not a download gate, retail checkout, or price list page.
               </p>
             </div>
 
             <div className="border border-stonebrand-200 bg-white p-7">
               <MessageCircle className="h-7 w-7 text-clay-600" aria-hidden="true" />
-              <h2 className="mt-5 text-2xl font-semibold leading-tight tracking-tight text-navy-950">
+              <h2 className="mt-5 text-2xl font-semibold leading-tight tracking-tight text-graphite-950">
                 What you can request
               </h2>
-              <ul className="mt-5 grid gap-3 text-sm leading-6 text-slate-700">
+              <ul className="mt-5 grid gap-3 text-sm leading-6 text-graphite-700">
                 {requestTypes.map((item) => (
                   <li key={item} className="border-t border-stonebrand-200 pt-3">
                     {item}
@@ -74,15 +74,15 @@ export default function CatalogPage() {
               </ul>
             </div>
 
-            <div className="bg-navy-950 p-7 text-white">
+            <div className="bg-graphite-950 p-7 text-white">
               <ShieldCheck className="h-7 w-7 text-clay-400" aria-hidden="true" />
               <h2 className="mt-5 text-2xl font-semibold leading-tight tracking-tight">
                 Direct contact at {siteConfig.brandName}
               </h2>
-              <p className="mt-3 text-sm leading-6 text-slate-200">
+              <p className="mt-3 text-sm leading-6 text-graphite-200">
                 {siteConfig.contactPerson} is the direct contact at {siteConfig.brandName} for catalog requests, wholesale sourcing, ready stock options, and OEM/ODM communication.
               </p>
-              <ul className="mt-5 grid gap-2 text-sm text-slate-200">
+              <ul className="mt-5 grid gap-2 text-sm text-graphite-200">
                 {inquiryTips.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -93,10 +93,10 @@ export default function CatalogPage() {
           <div>
             <div className="mb-8 border-b border-stonebrand-200 pb-8">
               <p className="editorial-eyebrow">WhatsApp inquiry builder</p>
-              <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.01em] text-navy-950 md:text-5xl">
+              <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950 md:text-5xl">
                 Share the basics, then send them to {siteConfig.contactPerson}.
               </h2>
-              <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
+              <p className="mt-4 max-w-3xl text-base leading-7 text-graphite-600">
                 Fill in what you already know. If some details are not confirmed yet, leave them blank or choose Not sure yet. The form only creates a WhatsApp message and does not store your information.
               </p>
             </div>

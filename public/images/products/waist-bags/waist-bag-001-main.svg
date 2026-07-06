@@ -1,11 +1,11 @@
 <svg width="900" height="675" viewBox="0 0 900 675" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="900" height="675" fill="#f8fafc"/>
-  <rect x="70" y="72" width="760" height="510" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-  <rect x="138" y="154" width="624" height="348" fill="#f1f5f9"/>
+  <rect width="900" height="675" fill="#f4f4f2"/>
+  <rect x="70" y="72" width="760" height="510" fill="#ffffff" stroke="#deded8" stroke-width="2"/>
+  <rect x="138" y="154" width="624" height="348" fill="#eeeeeb"/>
   <ellipse cx="450" cy="516" rx="242" ry="24" fill="#d8dee7"/>
-  <rect x="208" y="322" width="484" height="44" rx="22" fill="#334155"/>
-  <rect x="294" y="268" width="312" height="190" rx="54" fill="#111827"/>
-  <rect x="350" y="318" width="200" height="28" rx="14" fill="#f8fafc"/>
-  <rect x="350" y="382" width="126" height="20" rx="10" fill="#b65f2a"/>
-  <rect x="156" y="540" width="588" height="2" fill="#cbd5e1"/>
+  <rect x="208" y="322" width="484" height="44" rx="22" fill="#42453f"/>
+  <rect x="294" y="268" width="312" height="190" rx="54" fill="#171917"/>
+  <rect x="350" y="318" width="200" height="28" rx="14" fill="#f4f4f2"/>
+  <rect x="350" y="382" width="126" height="20" rx="10" fill="#9f5d2f"/>
+  <rect x="156" y="540" width="588" height="2" fill="#b8b9b2"/>
 </svg>

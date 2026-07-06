@@ -1,9 +1,10 @@
 import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
 import { ProductCard } from "@/components/product-card";
-import { productCategories } from "@/data/products";
+import { productCategories, readyStockInfo } from "@/data/products";
 import { siteConfig } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 
 export const metadata = createPageMetadata({
   title: "Products",
@@ -33,6 +34,23 @@ export default function ProductsPage() {
           {productCategories.map((category) => (
             <ProductCard key={category.slug} category={category} />
           ))}
+          <Link
+            href="/ready-stock"
+            className="focus-ring group flex min-h-[340px] flex-col justify-between rounded-sm border border-dashed border-stonebrand-200 bg-graphite-50 p-7 transition hover:border-graphite-400"
+          >
+            <div>
+              <p className="muted-label">Supplementary channel</p>
+              <h2 className="mt-5 text-2xl font-semibold leading-tight text-graphite-950">
+                {readyStockInfo.name}
+              </h2>
+              <p className="mt-4 text-sm leading-6 text-graphite-600">
+                Ready Stock / Mixed Wholesale is a flexible supplement for selected fast-moving markets, while the main focus remains factory-backed manufacturing, wholesale supply, and OEM/ODM.
+              </p>
+            </div>
+            <span className="mt-8 text-sm font-bold text-clay-600 transition group-hover:text-graphite-950">
+              Ask for available stock list
+            </span>
+          </Link>
         </div>
       </section>
     </>
