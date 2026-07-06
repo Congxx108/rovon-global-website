@@ -80,7 +80,7 @@ export function HomeProcessTabs() {
             key={step.title}
             type="button"
             onClick={() => setActiveIndex(index)}
-            className={`min-h-12 border-b border-[#dedede] px-4 py-3 transition sm:border-b-0 sm:border-r sm:last:border-r-0 ${
+            className={`interactive-button min-h-12 border-b border-[#dedede] px-4 py-3 sm:border-b-0 sm:border-r sm:last:border-r-0 ${
               activeIndex === index
                 ? "bg-white text-graphite-950"
                 : "bg-[#f7f7f7] text-graphite-500 hover:bg-white hover:text-graphite-950"
@@ -90,7 +90,7 @@ export function HomeProcessTabs() {
           </button>
         ))}
       </div>
-      <div className="mx-auto grid max-w-5xl gap-8 rounded-b-md border-x border-b border-[#dedede] bg-white p-6 shadow-[0_22px_60px_rgba(0,0,0,0.09)] md:grid-cols-[0.95fr_1.05fr] md:p-10">
+      <div key={activeStep.title} className="tab-panel-in mx-auto grid max-w-5xl gap-8 rounded-b-md border-x border-b border-[#dedede] bg-white p-6 shadow-[0_22px_60px_rgba(0,0,0,0.09)] md:grid-cols-[0.95fr_1.05fr] md:p-10">
         <div className="self-center">
           <p className="editorial-eyebrow mb-3">{activeStep.eyebrow}</p>
           <h3 className="text-2xl font-black leading-tight text-graphite-950 md:text-3xl">{activeStep.heading}</h3>

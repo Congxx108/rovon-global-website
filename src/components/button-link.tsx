@@ -33,7 +33,7 @@ export function ButtonLink({
   eventName,
   eventParams,
 }: ButtonLinkProps) {
-  const classes = `focus-ring inline-flex min-h-10 items-center justify-center gap-2 rounded border px-6 py-2.5 text-[12px] font-bold tracking-[0.03em] transition duration-200 ease-out active:translate-y-px ${variants[variant]} ${className}`;
+  const classes = `focus-ring interactive-button inline-flex min-h-10 items-center justify-center gap-2 rounded border px-6 py-2.5 text-[12px] font-bold tracking-[0.03em] ${variants[variant]} ${className}`;
   const handleClick = () => {
     if (eventName) {
       trackEvent(eventName, eventParams);

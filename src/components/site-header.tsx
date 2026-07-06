@@ -51,7 +51,8 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={() => trackNavItem(item.href, item.label)}
-                className={`focus-ring rounded py-2 text-[11px] font-bold uppercase tracking-[0.1em] transition duration-200 ${
+                data-active={active}
+                className={`focus-ring nav-link rounded py-2 text-[11px] font-bold uppercase tracking-[0.1em] transition duration-200 ${
                   active ? "text-graphite-950" : "text-graphite-500 hover:text-graphite-950"
                 }`}
               >
@@ -67,14 +68,14 @@ export function SiteHeader() {
           </div>
           <Link
             href="/catalog"
-            className="focus-ring inline-flex min-h-9 items-center justify-center rounded border border-[#d8d8d8] bg-white px-4 text-[11px] font-bold tracking-[0.08em] text-graphite-950 transition hover:border-graphite-950"
+            className="focus-ring interactive-button inline-flex min-h-9 items-center justify-center rounded border border-[#d8d8d8] bg-white px-4 text-[11px] font-bold tracking-[0.08em] text-graphite-950 hover:border-graphite-950"
             onClick={() => trackEvent("click_get_catalog", { cta_label: "Header Get Catalog" })}
           >
             Get Catalog
           </Link>
           <a
             href={whatsappHref}
-            className="focus-ring inline-flex min-h-9 items-center justify-center rounded bg-graphite-950 px-4 text-[11px] font-bold tracking-[0.08em] text-white transition hover:bg-graphite-800"
+            className="focus-ring interactive-button inline-flex min-h-9 items-center justify-center rounded bg-graphite-950 px-4 text-[11px] font-bold tracking-[0.08em] text-white hover:bg-graphite-800"
             target="_blank"
             rel="noreferrer"
             onClick={() => trackEvent("click_contact_cason", { cta_label: `Header Contact ${siteConfig.contactPerson}` })}
@@ -94,8 +95,11 @@ export function SiteHeader() {
         </button>
       </div>
 
-      {isOpen ? (
-        <div className="border-t border-stonebrand-200 bg-white lg:hidden">
+      <div
+        className={`overflow-hidden border-t border-stonebrand-200 bg-white transition-[max-height,opacity,transform] duration-300 ease-out lg:hidden ${
+          isOpen ? "max-h-[560px] translate-y-0 opacity-100" : "max-h-0 -translate-y-1 opacity-0"
+        }`}
+      >
           <nav className="container-shell grid gap-1 py-4" aria-label="Mobile navigation">
             {navItems.map((item) => (
               <Link
@@ -131,8 +135,7 @@ export function SiteHeader() {
             </a>
             <SocialLinks label="Follow ROVON Global" className="mt-4 border-t border-stonebrand-200 pt-4" />
           </nav>
-        </div>
-      ) : null}
+      </div>
     </header>
   );
 }

@@ -1,4 +1,5 @@
 import { ButtonLink } from "@/components/button-link";
+import { Reveal } from "@/components/reveal";
 import { SocialLinks } from "@/components/social-links";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { contactMessage, siteConfig } from "@/data/site";
@@ -15,15 +16,15 @@ export function CtaBand({
   message = contactMessage(`I want to discuss bag sourcing with ${siteConfig.brandName}. Please send catalog and quotation details.`),
 }: CtaBandProps) {
   return (
-    <section className="border-y border-stonebrand-200 bg-graphite-950 py-16 text-white md:py-20">
+    <Reveal as="section" className="border-y border-stonebrand-200 bg-graphite-950 py-16 text-white md:py-20">
       <div className="container-shell">
         <div className="grid gap-10 md:grid-cols-[1.15fr_0.85fr] md:items-center">
-          <div className="max-w-2xl">
+          <Reveal className="max-w-2xl" delay={80}>
             <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.16em] text-graphite-300">Wholesale inquiry</p>
             <h2 className="text-4xl font-black leading-[1.02] md:text-5xl">{title}</h2>
             <p className="mt-5 text-sm leading-7 text-graphite-300 md:text-base">{description}</p>
-          </div>
-          <div className="flex flex-col gap-3 justify-self-start md:justify-self-end">
+          </Reveal>
+          <Reveal className="flex flex-col gap-3 justify-self-start md:justify-self-end" delay={180}>
             <WhatsAppCTA
               message={message}
               label={`Contact ${siteConfig.contactPerson} on WhatsApp`}
@@ -45,9 +46,9 @@ export function CtaBand({
               </p>
               <SocialLinks tone="light" className="mt-3" />
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }

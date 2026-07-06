@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Reveal } from "@/components/reveal";
 import { SocialLinks } from "@/components/social-links";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { productCategories, readyStockInfo } from "@/data/products";
@@ -8,7 +9,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-stonebrand-200 bg-graphite-950 text-white">
       <div className="container-shell grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.8fr_1fr]">
-        <div className="lg:pr-8">
+        <Reveal className="lg:pr-8">
           <div className="flex items-center gap-3">
             <span className="flex h-9 w-9 items-center justify-center border border-white text-xs font-black text-white">
               R
@@ -22,9 +23,9 @@ export function SiteFooter() {
             Factory-backed bag production, wholesale supply, and OEM/ODM custom support for global B2B buyers.
           </p>
           <SocialLinks label="Follow ROVON Global" tone="light" className="mt-7" />
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal delay={80}>
           <p className="muted-label text-graphite-400">Categories</p>
           <ul className="mt-5 space-y-3 text-sm text-graphite-300">
             {productCategories.slice(0, 7).map((category) => (
@@ -40,9 +41,9 @@ export function SiteFooter() {
               </Link>
             </li>
           </ul>
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal delay={160}>
           <p className="muted-label text-graphite-400">Factory</p>
           <ul className="mt-5 space-y-3 text-sm text-graphite-300">
             <li><Link className="transition hover:text-white" href="/manufacturing">Manufacturing</Link></li>
@@ -51,9 +52,9 @@ export function SiteFooter() {
             <li><Link className="transition hover:text-white" href="/manufacturing/packing-shipping">Packing & Shipping</Link></li>
             <li><Link className="transition hover:text-white" href="/oem-odm">OEM/ODM Process</Link></li>
           </ul>
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal delay={240}>
           <p className="muted-label text-graphite-400">Company</p>
           <ul className="mt-5 space-y-3 text-sm text-graphite-300">
             <li><Link className="transition hover:text-white" href="/wholesale-solutions">Wholesale Solutions</Link></li>
@@ -62,9 +63,9 @@ export function SiteFooter() {
             <li><Link className="transition hover:text-white" href="/faq">FAQ</Link></li>
             <li><Link className="transition hover:text-white" href="/contact">Contact Cason</Link></li>
           </ul>
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal delay={320}>
           <p className="muted-label text-graphite-400">Contact Cason</p>
           <ul className="mt-5 space-y-3 text-sm leading-6 text-graphite-300">
             <li>{siteConfig.contactPerson}</li>
@@ -79,7 +80,7 @@ export function SiteFooter() {
             eventName="click_contact_cason"
             eventParams={{ page_path: "footer" }}
           />
-        </div>
+        </Reveal>
       </div>
       <div className="border-t border-white/10 py-5">
         <div className="container-shell flex flex-col gap-2 text-xs text-graphite-400 sm:flex-row sm:items-center sm:justify-between">
