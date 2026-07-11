@@ -92,10 +92,10 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           <div>
             <p className="editorial-eyebrow">B2B sourcing fit</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
-              Built for B2B sourcing, not retail product browsing.
+              Built for category planning and B2B sourcing.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              This page shows category capability and supply direction. It is not a live retail inventory list. Share your quantity range and market so the team can recommend suitable products and MOQ options.
+              This page shows category capability and supply direction. Share your quantity range and market so the team can recommend suitable products and MOQ options.
             </p>
           </div>
           <div className="grid gap-6">

@@ -6,9 +6,9 @@ import { siteConfig } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Flexible Supply / Ready Stock",
+  title: "Flexible Supply for Market Testing and Faster Replenishment",
   description:
-    `Flexible Supply from ${siteConfig.brandName} covers ready stock, factory overstock, mixed wholesale, low MOQ, market testing, and faster delivery as a supplement to Factory Manufacturing and OEM/ODM custom bag production.`,
+    `Explore ready stock, factory overstock, and mixed wholesale options from ${siteConfig.brandName} for lower inventory exposure, faster delivery, and market testing.`,
   path: "/ready-stock",
 });
 
@@ -36,7 +36,7 @@ export default function ReadyStockPage() {
               "Ready stock and factory overstock availability check",
               "Mixed wholesale for selected market needs",
               "Low MOQ and faster delivery discussion when available",
-              "Supplementary to Factory Manufacturing and OEM/ODM",
+              "Factory Manufacturing and OEM/ODM support when custom production is needed",
             ].map((item) => (
               <div key={item} className="panel-card p-5 text-sm font-semibold text-graphite-900">
                 {item}
@@ -46,8 +46,8 @@ export default function ReadyStockPage() {
         </div>
       </section>
       <CtaBand
-        title="Ask Cason for Flexible Supply Options"
-        description={`Ready stock, factory overstock, and mixed wholesale details change quickly and remain supplementary to Factory Manufacturing. Contact ${siteConfig.contactPerson} on WhatsApp to request current options and market-fit recommendations.`}
+        title="Check Current Stock Options"
+        description={`Ready stock, factory overstock, and mixed wholesale details change quickly. Contact ${siteConfig.contactPerson} on WhatsApp to request current options and market-fit recommendations.`}
         message={readyStockInfo.whatsappMessage}
       />
     </>

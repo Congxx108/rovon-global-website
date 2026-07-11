@@ -32,8 +32,8 @@ export default function CatalogPage() {
   return (
     <>
       <PageHero
-        title={`Tell ${siteConfig.contactPerson} What You Need`}
-        description={`Use this page to prepare a B2B inquiry for catalog, OEM/ODM custom bags, ready stock, factory overstock, mixed wholesale, MOQ options, and pricing details.`}
+        title="Prepare Your Bag Sourcing Inquiry"
+        description={`Share a few details so ${siteConfig.contactPerson} can recommend the right catalog, product options, and next steps for your business.`}
         breadcrumbPath="/catalog"
       >
         <ButtonLink href="/products" variant="outline">
@@ -54,10 +54,10 @@ export default function CatalogPage() {
             <div className="border border-stonebrand-200 bg-graphite-50 p-7">
               <ClipboardList className="h-7 w-7 text-clay-600" aria-hidden="true" />
               <h2 className="mt-5 text-2xl font-semibold leading-tight tracking-tight text-graphite-950">
-                Prepare a clearer B2B sourcing inquiry.
+                Prepare a professional B2B sourcing inquiry.
               </h2>
               <p className="mt-3 text-sm leading-6 text-graphite-600">
-                This page helps buyers prepare a clearer inquiry before contacting {siteConfig.contactPerson}. It is not a download gate, retail checkout, or public price list.
+                Share the category, quantity range, destination market, business type, and customization needs that help {siteConfig.contactPerson} recommend practical next steps.
               </p>
             </div>
 

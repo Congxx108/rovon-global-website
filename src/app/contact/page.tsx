@@ -61,7 +61,7 @@ export default function ContactPage() {
           <div className="rounded-md border border-[#dddddd] bg-[#f7f7f7] p-6">
             <Mail className="h-8 w-8 text-graphite-950" aria-hidden="true" />
             <h2 className="headline-serif mt-5 text-3xl font-black leading-tight text-graphite-950">
-              Before contacting, prepare:
+              Helpful details to include:
             </h2>
             <ul className="mt-5 grid gap-3 text-sm leading-6 text-graphite-700 sm:grid-cols-2">
               <li>Target bag category</li>
@@ -76,6 +76,12 @@ export default function ContactPage() {
               Email {siteConfig.contactPerson}
             </ButtonLink>
             <div className="mt-6 grid gap-2 text-sm leading-6 text-graphite-600">
+              <p>
+                <span className="font-semibold text-graphite-950">Email:</span>{" "}
+                <a className="underline underline-offset-4 transition hover:text-graphite-950" href={`mailto:${siteConfig.email}`}>
+                  {siteConfig.email}
+                </a>
+              </p>
               <p><span className="font-semibold text-graphite-950">WhatsApp:</span> {siteConfig.whatsappDisplay}</p>
               <p><span className="font-semibold text-graphite-950">Address:</span> {siteConfig.address}</p>
             </div>

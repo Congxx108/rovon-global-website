@@ -51,7 +51,7 @@ export default function AboutPage() {
               "OEM/ODM and private label development",
               "Ready stock, overstock, and mixed wholesale support",
               "Direct WhatsApp communication with Cason",
-              "Selected VANTO KARO product-brand elements",
+              "Production, packing, and export coordination",
             ].map((item) => (
               <div key={item} className="rounded-md border border-[#dddddd] bg-white p-5 text-sm font-bold text-graphite-900 shadow-[0_6px_18px_rgba(0,0,0,0.04)]">
                 {item}

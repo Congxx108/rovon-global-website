@@ -39,7 +39,7 @@ export default function ProductsPage() {
             className="focus-ring group flex min-h-[340px] flex-col justify-between rounded-md border border-dashed border-[#dddddd] bg-[#f7f7f7] p-7 transition hover:border-graphite-300"
           >
             <div>
-              <p className="muted-label">Supplementary channel</p>
+              <p className="muted-label">Flexible Supply</p>
               <h2 className="mt-5 text-2xl font-black leading-tight text-graphite-950">
                 {readyStockInfo.name}
               </h2>

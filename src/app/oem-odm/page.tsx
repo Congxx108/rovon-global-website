@@ -15,7 +15,7 @@ const steps = [
 export const metadata = createPageMetadata({
   title: "OEM/ODM Custom Bags",
   description:
-    `Start Factory Manufacturing and OEM/ODM custom bag projects with ${siteConfig.brandName}, including logo, material, size, structure, sample development, bulk production, QC, VANTO KARO brand elements, and packing.`,
+    `Start Factory Manufacturing and OEM/ODM custom bag projects with ${siteConfig.brandName}, including logo, material, size, structure, sample development, bulk production, quality control, and packing.`,
   path: "/oem-odm",
 });
 
@@ -57,9 +57,25 @@ export default function OemOdmPage() {
           </div>
         </div>
       </section>
+      <section className="section-y soft-section">
+        <div className="container-shell grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
+          <div>
+            <p className="editorial-eyebrow">Product brand note</p>
+            <h2 className="headline-serif mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
+              ROVON Global Product Brand
+            </h2>
+          </div>
+          <div className="rounded-md border border-[#dddddd] bg-white p-6 shadow-[0_6px_18px_rgba(0,0,0,0.04)]">
+            <h3 className="text-xl font-black text-graphite-950">{vantoKaro.name}</h3>
+            <p className="mt-3 text-base leading-7 text-graphite-600">
+              {vantoKaro.name} is used for selected ROVON Global product lines. OEM/ODM buyers can develop products under their own brands.
+            </p>
+          </div>
+        </div>
+      </section>
       <CtaBand
         title={`Prepare Your Custom Bag Brief With ${siteConfig.contactPerson}`}
-        description={`Send your reference images, category, material ideas, target market, logo needs, estimated quantity, and packing plan to start a practical OEM/ODM discussion. ${vantoKaro.name} can also be discussed for selected labels, trims, hardware, and packaging.`}
+        description="Send your reference images, category, material ideas, target market, logo needs, estimated quantity, and packing plan to start a practical OEM/ODM discussion."
         message={contactMessage("I want to prepare a custom bag brief for Factory Manufacturing and OEM/ODM production. Please help me clarify materials, logo, sample, quantity, and packing requirements.")}
       />
     </>

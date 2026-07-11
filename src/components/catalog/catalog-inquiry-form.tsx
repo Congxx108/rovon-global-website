@@ -13,8 +13,7 @@ const businessTypeOptions = [
   "Trading Company",
   "Brand Buyer",
   "Boutique / Retail Chain",
-  "Online Seller",
-  "Independent Website Seller",
+  "E-commerce Seller",
   "Other",
 ];
 

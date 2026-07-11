@@ -11,11 +11,11 @@ const processSteps = [
     eyebrow: "Factory Manufacturing brief",
     heading: "Confirm the brief before sampling.",
     description:
-      "Cason helps buyers organize product direction, material expectations, logo needs, quantity range, packing details, and sample questions.",
+      "Share your target category, reference style, quantity range, material level, logo needs, and destination market. Cason will help organize the next sampling or sourcing step.",
     points: [
-      "Share your target market, product category, quantity range, reference style, and expected quality level.",
-      "Clarify whether the project is private label, full OEM/ODM development, ready stock, factory overstock, or mixed wholesale.",
-      "Prepare clear requirements so the team can recommend suitable products and next steps.",
+      "Share reference images, size, material level, and target market.",
+      "Confirm logo method, packing needs, and expected quantity.",
+      "Move into sample or catalog follow-up with clearer requirements.",
     ],
   },
   {
@@ -47,7 +47,7 @@ const processSteps = [
     eyebrow: "Production coordination",
     heading: "Move into controlled bulk production.",
     description:
-      "After confirmation, ROVON coordinates production communication around material, logo, color, packing, and delivery requirements.",
+      "After confirmation, ROVON aligns material, logo, color, packing, and delivery requirements for production.",
     points: [
       "Confirm final product specification and packing details.",
       "Coordinate category, quantity, color, and logo requirements for production.",

@@ -178,7 +178,7 @@ export default function HomePage() {
                       </div>
                       <div className="flex flex-1 flex-col items-center pt-5">
                         <h3 className="text-base font-black text-graphite-950">{category.name}</h3>
-                        <p className="mt-3 line-clamp-2 text-xs leading-5 text-graphite-600">{category.buyerUseCase}</p>
+                        <p className="mt-3 text-xs leading-5 text-graphite-600">{category.buyerUseCase}</p>
                         <span className="interactive-button mt-auto inline-flex rounded bg-graphite-950 px-5 py-2 text-[11px] font-bold text-white">
                           View more
                         </span>

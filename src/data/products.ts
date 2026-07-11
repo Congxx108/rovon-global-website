@@ -59,7 +59,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "Duffel bags, travel organizers, multi-function travel bags, and export-ready travel products for importers, distributors, and private label buyers.",
     buyerUseCase:
-      "Suitable for buyers building travel goods programs, seasonal wholesale lines, promotional travel collections, or market-testing orders.",
+      "Wholesale, private label, and flexible supply options for travel goods importers, distributors, and seasonal bag programs.",
     suitableBuyers: ["Importers", "Travel goods wholesalers", "Regional distributors", "Promotional buyers"],
     commonUseCases: ["Regional travel goods programs", "Promotional travel bag projects", "Wholesale duffel bag sourcing", "Private label travel accessories"],
     productHighlights: [
@@ -88,7 +88,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "Business, casual, crossbody, shoulder, and daily men's bag solutions with material, logo, structure, and packing support.",
     buyerUseCase:
-      "Built for men's accessory distributors, trading companies, importers, and private label buyers who need practical styles, stable quality, and clear supply choices.",
+      "Practical men's bag programs for importers, accessory distributors, trading companies, and private label buyers.",
     suitableBuyers: ["Men's bag importers", "Accessory distributors", "Trading companies", "Private label buyers"],
     commonUseCases: ["Men's daily bag programs", "Business and casual bag sourcing", "Private label accessory projects", "Regional wholesale distribution"],
     productHighlights: [
@@ -117,7 +117,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "Women's backpacks in practical daily styles with flexible material, color, logo, and packing options for wholesale buyers.",
     buyerUseCase:
-      "Designed for buyers sourcing daily backpacks, fashion backpack lines, regional retail supply, private label programs, or flexible replenishment.",
+      "Daily and fashion backpack supply for wholesalers, online retailers, distributors, and brand buyers.",
     suitableBuyers: ["Backpack importers", "Fashion accessory wholesalers", "Regional distributors", "Brand buyers"],
     commonUseCases: ["Women's daily backpack sourcing", "Fashion backpack programs", "Private label backpack development", "Regional wholesale replenishment"],
     productHighlights: [
@@ -146,7 +146,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "Compact chest bags and sling styles for urban, sports, outdoor, and regional wholesale markets.",
     buyerUseCase:
-      "A practical category for buyers sourcing compact daily bags, lifestyle sling products, sports-inspired accessories, or fast-moving wholesale lines with lower inventory risk.",
+      "Compact sling and chest bag options for lifestyle, sports, outdoor, and fast-moving wholesale markets.",
     suitableBuyers: ["Importers", "Lifestyle bag wholesalers", "Market distributors", "Trading companies"],
     commonUseCases: ["Urban sling bag sourcing", "Sports-inspired accessory programs", "Compact daily bag wholesale", "Market-ready product matching"],
     productHighlights: [
@@ -175,7 +175,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "Lightweight waist bags with custom materials, strap structures, logo methods, and market-ready packing options.",
     buyerUseCase:
-      "Suitable for buyers planning travel accessories, outdoor-inspired products, daily waist bag ranges, market testing, or replenishment programs for regional markets.",
+      "Travel, outdoor, and daily waist bag options for regional wholesalers, promotional buyers, and market-testing orders.",
     suitableBuyers: ["Travel accessory importers", "Sports bag distributors", "Wholesale market buyers", "Promotional buyers"],
     commonUseCases: ["Travel accessory programs", "Outdoor-inspired waist bag sourcing", "Daily-use wholesale lines", "Promotional bag projects"],
     productHighlights: [
@@ -204,7 +204,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "Crossbody bags across men's, casual, travel, and daily-use segments with factory support for bulk orders.",
     buyerUseCase:
-      "A versatile product direction for buyers who need daily-use bag ranges, men's accessory programs, travel-related small bags, flexible replenishment, or private label development.",
+      "Crossbody bag options for daily-use ranges, men's accessories, travel small bags, and private label projects.",
     suitableBuyers: ["Bag importers", "Accessory wholesalers", "Regional distributors", "Brand buyers"],
     commonUseCases: ["Daily crossbody bag programs", "Men's accessory sourcing", "Travel small-bag projects", "Private label crossbody development"],
     productHighlights: [
@@ -233,7 +233,7 @@ export const productCategories: ProductCategory[] = [
     description:
       "OEM/ODM support for material selection, logo application, structure adjustment, sample development, production, QC, and export packing.",
     buyerUseCase:
-      "For brand owners, importers, and trading companies that need a customized bag project based on a target market, reference sample, design brief, or private label plan.",
+      "Custom bag development for brand owners, importers, and trading companies with reference samples or design briefs.",
     suitableBuyers: ["Brand buyers", "Private label importers", "Trading companies", "Custom project buyers"],
     commonUseCases: ["Private label bag development", "Custom logo bag programs", "Material and structure customization", "Sample-to-production project follow-up"],
     productHighlights: [
@@ -282,11 +282,11 @@ export const products: Product[] = productCategories.map((category, index) => ({
 
 export const readyStockInfo = {
   slug: "ready-stock",
-  name: "Flexible Supply / Ready Stock",
-  headline: "Ready stock, factory overstock, mixed wholesale, low MOQ, and faster delivery as a flexible supply option",
+  name: "Flexible Supply for Market Testing and Faster Replenishment",
+  headline: "Explore ready stock, factory overstock, and mixed wholesale options for lower inventory exposure, faster delivery, and market testing.",
   description:
-    `Flexible Supply is the supplementary path for ready stock, factory overstock, mixed wholesale, low MOQ, fast delivery, and market testing. It supports buyers who need lower inventory risk, while ${siteConfig.brandName}'s core positioning remains factory-backed bag manufacturing and OEM/ODM custom bag supply.`,
-  ctaLabel: "Discuss Your Requirements",
+    `Flexible Supply complements ${siteConfig.brandName}'s Factory Manufacturing and OEM/ODM services. It helps buyers check ready stock, factory overstock, mixed wholesale, low MOQ, faster delivery, and market-testing options when available.`,
+  ctaLabel: "Check Current Stock Options",
   whatsappMessage:
     contactMessage("I am interested in Flexible Supply. Please send available ready stock, factory overstock, or mixed wholesale options and help me check what fits my market and quantity range."),
 };

@@ -62,7 +62,7 @@ export const supplySolutions = [
 export const vantoKaro = {
   name: "VANTO KARO",
   description:
-    "VANTO KARO is an independent bag product brand developed by Cason for selected bag lines, labels, trims, hardware, and packaging. It is manufactured and supplied by ROVON Global, and it does not replace ROVON Global's role as the manufacturing and supply chain partner.",
+    "VANTO KARO is ROVON Global's independent product brand for selected bag collections. OEM/ODM buyers can also develop products under their own brands.",
 };
 
 export function whatsappLink(message: string) {

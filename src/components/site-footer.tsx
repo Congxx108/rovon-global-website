@@ -16,11 +16,10 @@ export function SiteFooter() {
             </span>
             <div>
               <p className="text-sm font-black uppercase tracking-[0.12em]">{siteConfig.brandName}</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-graphite-400">Bag manufacturing partner</p>
             </div>
           </div>
           <p className="mt-6 max-w-sm text-sm leading-7 text-graphite-300">
-            Bag manufacturing, wholesale supply, and OEM/ODM support from China for global B2B buyers.
+            Factory-Backed Bag Manufacturer & Flexible Supply Partner from China.
           </p>
           <SocialLinks label="Follow ROVON Global" tone="light" className="mt-7" />
         </Reveal>
@@ -95,7 +94,6 @@ export function SiteFooter() {
       <div className="border-t border-white/10 py-5">
         <div className="container-shell flex flex-col gap-2 text-xs text-graphite-400 sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright {new Date().getFullYear()} {siteConfig.brandName}. All rights reserved.</p>
-          <p>B2B inquiry website for catalog requests, sourcing discussion, and OEM/ODM communication.</p>
         </div>
       </div>
     </footer>

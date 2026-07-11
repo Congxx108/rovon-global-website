@@ -11,7 +11,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Manufacturing",
   description:
-    `${siteConfig.brandName} provides bag production support from China for OEM/ODM bags, private label projects, bulk production, quality control, packing, and export communication.`,
+    `${siteConfig.brandName} supports cutting, stitching, reinforcement, assembly, sampling, inspection, packing, and OEM/ODM production across multiple bag categories.`,
   path: "/manufacturing",
 });
 
@@ -19,8 +19,8 @@ export default function ManufacturingPage() {
   return (
     <>
       <PageHero
-        title="Bag Production, Inspection and Packing Support"
-        description={`${siteConfig.brandName} supports global buyers with production communication across product categories, material selection, accessory matching, sample discussion, cutting, stitching, assembly, quality inspection, packing, and OEM/ODM workflows.`}
+        title="Built Around Practical Bag Production"
+        description={`${siteConfig.brandName} supports cutting, stitching, reinforcement, assembly, sampling, inspection, packing, and OEM/ODM production across multiple bag categories.`}
         breadcrumbPath="/manufacturing"
       />
       <section className="section-y">
@@ -39,19 +39,20 @@ export default function ManufacturingPage() {
           <div>
             <p className="editorial-eyebrow">Manufacturing capability</p>
             <h2 className="mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
-              Built around practical bag production communication.
+              Practical capability for wholesale and OEM/ODM orders.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
               Backed by around 5,000 sqm of warehouse and operating space, 150+ skilled workers, and 10 production lines, ROVON Global supports both flexible wholesale orders and large-scale OEM/ODM production, with around 2,000 bags shipped per day.
             </p>
             <div className="mt-8 grid gap-0 border-y border-stonebrand-200">
               {[...factoryStats,
-                "Category-based bag manufacturing support",
-                "Material selection and accessory matching",
-                "Pattern, structure, and sample communication",
-                "Sewing and production coordination",
-                "Quality inspection before packing",
-                "OEM/ODM and private label workflow",
+                "Material and component selection",
+                "Pattern and structure development",
+                "Cutting and stitching",
+                "Reinforcement and assembly",
+                "Sample review",
+                "In-line and final inspection",
+                "Packing and export preparation",
               ].map((item) => (
                 <div key={item} className="border-b border-stonebrand-200 py-4 last:border-b-0">
                   <p className="text-sm font-semibold text-graphite-900">{item}</p>
@@ -92,7 +93,7 @@ export default function ManufacturingPage() {
         </div>
       </section>
       <CtaBand
-        title="Discuss Production Capability"
+        title="Discuss Your Production Requirements"
         description={`Share your product category, material direction, quantity range, business type, and custom requirements. ${siteConfig.contactPerson} can help clarify production, inspection, and packing details.`}
         message={contactMessage(`I want to discuss ${siteConfig.brandName} manufacturing capability for my bag sourcing project. Please help me clarify materials, samples, production support, and packing requirements.`)}
       />

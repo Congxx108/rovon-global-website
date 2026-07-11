@@ -35,10 +35,9 @@ export function ProductCard({ category, featured = false }: ProductCardProps) {
           </h3>
           <ArrowRight className="mt-1 h-5 w-5 shrink-0 text-graphite-400 transition group-hover:translate-x-1 group-hover:text-graphite-950" aria-hidden="true" />
         </div>
-        <p className="mt-3 line-clamp-3 text-sm leading-6 text-graphite-600">{category.buyerUseCase}</p>
-        <div className="mt-6 grid gap-3 border-y border-stonebrand-200 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-graphite-500">
-          <p>{category.suitableBuyers.slice(0, 2).join(" / ")}</p>
-          <p>Material / logo / packing support</p>
+        <p className="mt-3 text-sm leading-6 text-graphite-600">{category.buyerUseCase}</p>
+        <div className="mt-6 border-y border-stonebrand-200 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-graphite-500">
+          <p>{category.suitableBuyers[0]}</p>
         </div>
         <span className="interactive-button mt-6 inline-flex w-fit items-center gap-2 text-sm font-bold text-graphite-950 transition group-hover:text-graphite-700">
           Explore {category.name}

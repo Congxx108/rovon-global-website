@@ -20,7 +20,7 @@ export default function FaqPage() {
       <JsonLd data={faqPageJsonLd(faqItems)} />
       <PageHero
         title="B2B Bag Sourcing FAQ"
-        description={`Answers for importers, distributors, trading companies, online sellers, brand owners, and OEM/ODM buyers sourcing bags from ${siteConfig.brandName}.`}
+        description={`Answers for importers, distributors, trading companies, e-commerce sellers, brand owners, and OEM/ODM buyers sourcing bags from ${siteConfig.brandName}.`}
         breadcrumbPath="/faq"
       >
         <ButtonLink
