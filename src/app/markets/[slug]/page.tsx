@@ -45,6 +45,9 @@ export default async function MarketDetailPage({ params }: MarketDetailProps) {
           <h2 className="headline-serif text-4xl font-semibold leading-tight text-graphite-950">
             Market-Fit Supply Focus
           </h2>
+          <p className="mt-4 text-base leading-7 text-graphite-600">
+            Cason can help compare Factory Manufacturing, Flexible Supply, ready stock, factory overstock, mixed wholesale, and OEM/ODM paths based on your region, buyer type, and inventory risk.
+          </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {market.strengths.map((strength) => (
               <div key={strength} className="panel-card p-5 text-sm font-semibold text-graphite-900">
@@ -56,7 +59,7 @@ export default async function MarketDetailPage({ params }: MarketDetailProps) {
       </section>
       <CtaBand
         title={`Discuss ${market.name} Supply`}
-        description={`Share your target market, preferred bag categories, order plan, and packing needs. ${siteConfig.brandName} can recommend suitable product and supply options.`}
+        description={`Share your target market, buyer type, preferred bag categories, order plan, inventory risk, and packing needs. ${siteConfig.brandName} can recommend suitable product and supply options.`}
         message={market.whatsappMessage}
       />
     </>

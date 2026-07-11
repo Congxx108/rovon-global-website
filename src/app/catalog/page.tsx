@@ -9,30 +9,31 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Bag Catalog Request | ROVON Global",
   description:
-    `Request the latest ${siteConfig.brandName} bag catalog and send your wholesale, sourcing, or OEM/ODM inquiry directly to ${siteConfig.contactPerson} on WhatsApp.`,
+    `Tell ${siteConfig.contactPerson} what you need before asking for a quote. Request the latest ${siteConfig.brandName} catalog and choose between Factory Manufacturing and Flexible Supply on WhatsApp.`,
   path: "/catalog",
 });
 
 const requestTypes = [
   "Latest category catalog",
-  "Wholesale quotation direction",
-  "Ready stock options",
-  "OEM/ODM project discussion",
+  "Factory Manufacturing discussion",
+  "Flexible Supply options",
+  "OEM/ODM and private label brief",
 ];
 
 const inquiryTips = [
   "Target bag category and market",
   "Estimated quantity range",
+  "Destination market and business type",
   "Logo, material, color, or packing needs",
-  "Sample, order, or timeline questions",
+  "Preferred supply path, sample, or timeline questions",
 ];
 
 export default function CatalogPage() {
   return (
     <>
       <PageHero
-        title="Get Latest Bag Catalog"
-        description={`Tell ${siteConfig.contactPerson} what kind of bags you are looking for. We will help you understand suitable categories, wholesale options, and OEM/ODM possibilities before the WhatsApp discussion starts.`}
+        title={`Tell ${siteConfig.contactPerson} What You Need Before Asking for a Quote`}
+        description={`Use this page to prepare a B2B inquiry for catalog, Factory Manufacturing, Flexible Supply, ready stock, factory overstock, mixed wholesale, or OEM/ODM custom bag discussion.`}
         breadcrumbPath="/catalog"
       >
         <ButtonLink href="/products" variant="outline">
@@ -40,7 +41,7 @@ export default function CatalogPage() {
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </ButtonLink>
         <WhatsAppCTA
-          message={contactMessage("I want to contact you directly about bag catalog, wholesale sourcing, and OEM/ODM support.")}
+          message={contactMessage("I visited ROVON Global website. I am interested in your bag supply solutions. Please send me the latest catalog and help me choose between Factory Manufacturing and Flexible Supply options.")}
           label={`Contact ${siteConfig.contactPerson} Directly`}
           eventName="click_contact_cason"
           eventParams={{ cta_label: `Contact ${siteConfig.contactPerson} Directly`, page_path: "/catalog" }}
@@ -53,10 +54,10 @@ export default function CatalogPage() {
             <div className="border border-stonebrand-200 bg-graphite-50 p-7">
               <ClipboardList className="h-7 w-7 text-clay-600" aria-hidden="true" />
               <h2 className="mt-5 text-2xl font-semibold leading-tight tracking-tight text-graphite-950">
-                Prepare a clearer B2B inquiry.
+                Prepare a clearer B2B sourcing inquiry.
               </h2>
               <p className="mt-3 text-sm leading-6 text-graphite-600">
-                This page helps buyers prepare a clearer inquiry before contacting {siteConfig.contactPerson}. It is not a download gate, retail checkout, or price list page.
+                This page helps buyers prepare a clearer inquiry before contacting {siteConfig.contactPerson}. It is not a download gate, retail checkout, or public price list.
               </p>
             </div>
 
@@ -80,7 +81,7 @@ export default function CatalogPage() {
                 Direct contact at {siteConfig.brandName}
               </h2>
               <p className="mt-3 text-sm leading-6 text-graphite-200">
-                {siteConfig.contactPerson} is the direct contact at {siteConfig.brandName} for catalog requests, wholesale sourcing, ready stock options, and OEM/ODM communication.
+                {siteConfig.contactPerson} is the direct contact at {siteConfig.brandName} for catalog requests, Factory Manufacturing, Flexible Supply, ready stock, factory overstock, mixed wholesale, and OEM/ODM communication.
               </p>
               <ul className="mt-5 grid gap-2 text-sm text-graphite-200">
                 {inquiryTips.map((item) => (
@@ -94,10 +95,10 @@ export default function CatalogPage() {
             <div className="mb-8 border-b border-stonebrand-200 pb-8">
               <p className="editorial-eyebrow">WhatsApp inquiry builder</p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950 md:text-5xl">
-                Share the basics, then send them to {siteConfig.contactPerson}.
+                Share the basics, then send them to {siteConfig.contactPerson} on WhatsApp.
               </h2>
               <p className="mt-4 max-w-3xl text-base leading-7 text-graphite-600">
-                Fill in what you already know. If some details are not confirmed yet, leave them blank or choose Not sure yet. The form only creates a WhatsApp message and does not store your information.
+                Fill in what you already know: product category, quantity range, destination market, business type, logo needs, and preferred supply path. If some details are not confirmed yet, leave them blank or choose Not sure yet. The form only creates a WhatsApp message and does not store your information.
               </p>
             </div>
             <CatalogInquiryForm />

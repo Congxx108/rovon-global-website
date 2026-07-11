@@ -651,3 +651,29 @@ Current design principles:
 - Do not add Framer Motion, GSAP, 3D, video backgrounds, heavy UI frameworks, cart systems, pricing, checkout, or account features.
 
 Future real image replacement should preserve the current ratios and layout. Recommended priorities are homepage hero product/factory image, product category images, manufacturing/material/quality-control/packing images, and verified Cason photo or video screenshots.
+## Current Positioning - Cason / Two Supply Solutions / VANTO KARO
+
+ROVON Global is now positioned as:
+
+```text
+Factory-backed Bag Manufacturer & Flexible Supply Partner from China.
+```
+
+The site copy should follow:
+
+```text
+One Supplier. Two Supply Solutions.
+```
+
+- Factory Manufacturing: OEM/ODM, private label, custom bags, long-term cooperation, and bulk production.
+- Flexible Supply: ready stock, factory overstock, mixed wholesale, low MOQ, market testing, faster delivery, and lower inventory risk.
+
+Brand roles:
+
+- Cason is the real buyer trust entrance and direct WhatsApp contact.
+- ROVON Global is the manufacturing and supply chain partner.
+- VANTO KARO is an independent bag product brand for selected bag lines, labels, trims, hardware, and packaging. It is not the company name.
+
+Verified factory data may be used conservatively: around 5,000 sqm warehouse and operating space, 150+ skilled workers, 10 production lines, and around 2,000 bags shipped per day.
+
+Core categories remain Travel Bags, Men's Bags, Women's Backpacks, Chest Bags, Waist Bags, Crossbody Bags, and OEM/ODM Custom Bags. Hand Bags and School Bags should only appear as Flexible Supply / ready stock opportunities.

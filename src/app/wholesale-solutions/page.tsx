@@ -4,14 +4,14 @@ import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { factoryStrengths } from "@/data/factory";
-import { contactMessage, siteConfig } from "@/data/site";
+import { contactMessage, siteConfig, supplySolutions } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
 import { inquiryProcess, wholesaleSegments } from "@/data/wholesale";
 
 export const metadata = createPageMetadata({
   title: "Wholesale Solutions",
   description:
-    `Wholesale bag supply solutions from ${siteConfig.brandName} for importers, distributors, trading companies, and brand buyers sourcing factory-backed bags from China.`,
+    `Wholesale bag supply solutions from ${siteConfig.brandName} for importers, distributors, trading companies, brand buyers, and sellers choosing between Factory Manufacturing and Flexible Supply from China.`,
   path: "/wholesale-solutions",
 });
 
@@ -19,12 +19,12 @@ export default function WholesaleSolutionsPage() {
   return (
     <>
       <PageHero
-        title="Wholesale Bag Supply Solutions for Global Buyers"
-        description={`${siteConfig.brandName} is not a retail shop. We support global wholesale buyers with factory-backed multi-category bag supply, OEM/ODM customization, catalog support, and flexible cooperation for different markets. Talk to ${siteConfig.contactPerson} to discuss your buyer type and sourcing plan.`}
+        title="One Supplier. Two Supply Solutions for Global Buyers"
+        description={`${siteConfig.brandName} is not a retail shop or a low-price listing site. We support B2B buyers with Factory Manufacturing for OEM/ODM and long-term production, plus Flexible Supply for ready stock, factory overstock, mixed wholesale, low MOQ, market testing, and faster delivery.`}
         breadcrumbPath="/wholesale-solutions"
       >
         <WhatsAppCTA
-          message={contactMessage("I want to discuss wholesale bag supply solutions for my market. Please help me clarify catalog options, product categories, and quotation requirements.")}
+          message={contactMessage("I want to discuss wholesale bag supply solutions for my market. Please help me choose between Factory Manufacturing and Flexible Supply before quotation.")}
           label={`Talk to ${siteConfig.contactPerson}`}
           eventName="click_contact_cason"
           eventParams={{ cta_label: `Talk to ${siteConfig.contactPerson}`, inquiry_type: "Wholesale Solutions" }}
@@ -35,6 +35,16 @@ export default function WholesaleSolutionsPage() {
       </PageHero>
 
       <section className="section-y bg-white">
+        <div className="container-shell mb-10 grid gap-6 md:grid-cols-2">
+          {supplySolutions.map((solution) => (
+            <article key={solution.title} className="interactive-card rounded-md border border-[#dddddd] bg-white p-7 shadow-[0_8px_22px_rgba(0,0,0,0.05)]">
+              <p className="editorial-eyebrow">Supply solution</p>
+              <h2 className="mt-4 text-3xl font-black leading-tight text-graphite-950">{solution.title}</h2>
+              <p className="mt-3 text-sm font-semibold leading-6 text-graphite-800">{solution.subtitle}</p>
+              <p className="mt-4 text-sm leading-6 text-graphite-600">{solution.description}</p>
+            </article>
+          ))}
+        </div>
         <div className="container-shell">
           <div className="grid gap-0 overflow-hidden rounded-md border border-[#dddddd] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.04)] md:grid-cols-2">
             {wholesaleSegments.map((segment, index) => (
@@ -58,10 +68,10 @@ export default function WholesaleSolutionsPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
             <h2 className="text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
-              Factory-Backed Supply Advantages
+              Factory-backed supply advantages without cheap sourcing noise.
             </h2>
             <p className="mt-4 text-base leading-7 text-graphite-600">
-              The cooperation model is built for B2B sourcing, not retail transaction. Buyers can discuss product category planning, OEM/ODM requirements, catalog support, packing, and market-fit supply directly with {siteConfig.contactPerson}.
+              The cooperation model is built for B2B sourcing, not retail transactions. Buyers can discuss product category planning, OEM/ODM requirements, catalog support, packing, market-fit Flexible Supply, and long-term production directly with {siteConfig.contactPerson}.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -83,7 +93,7 @@ export default function WholesaleSolutionsPage() {
               Inquiry Process
             </h2>
             <p className="mt-4 text-base leading-7 text-graphite-600">
-              A clear inquiry helps the team recommend suitable categories, catalog direction, quotation logic, and customization options.
+              A clear inquiry helps the team recommend the right supply path, suitable categories, catalog direction, quotation logic, and customization options.
             </p>
             <ButtonLink href="/contact" variant="secondary" className="mt-8">
               Contact {siteConfig.contactPerson}
@@ -105,8 +115,8 @@ export default function WholesaleSolutionsPage() {
 
       <CtaBand
         title="Explore Wholesale Cooperation"
-        description={`Send your buyer type, target category, market, quantity, and customization needs. ${siteConfig.contactPerson} can help you choose the right sourcing direction.`}
-        message={contactMessage("I want to explore wholesale cooperation for bag supply. Please help me clarify my buyer type, category needs, and quotation path.")}
+        description={`Send your buyer type, target category, market, quantity range, and customization needs. ${siteConfig.contactPerson} can help you choose the right supply path.`}
+        message={contactMessage("I want to explore wholesale cooperation for bag supply. Please help me clarify my buyer type, category needs, and whether Factory Manufacturing or Flexible Supply is right.")}
       />
     </>
   );

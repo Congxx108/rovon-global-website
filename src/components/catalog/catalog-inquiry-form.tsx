@@ -14,6 +14,7 @@ const businessTypeOptions = [
   "Brand Buyer",
   "Boutique / Retail Chain",
   "Online Seller",
+  "Independent Website Seller",
   "Other",
 ];
 
@@ -25,7 +26,9 @@ const categoryOptions = [
   "Waist Bags",
   "Crossbody Bags",
   "OEM/ODM Custom Bags",
-  "Ready Stock / Mixed Wholesale",
+  "Flexible Supply / Ready Stock",
+  "Factory Overstock",
+  "Mixed Wholesale",
   "Not sure yet",
 ];
 
@@ -40,9 +43,11 @@ const quantityOptions = [
 
 const inquiryPurposeOptions = [
   "Latest Catalog",
-  "Wholesale Price",
+  "Factory Manufacturing",
+  "Flexible Supply",
   "OEM/ODM Custom Project",
-  "Ready Stock List",
+  "Ready Stock / Factory Overstock List",
+  "Mixed Wholesale",
   "Product Recommendation",
   "Other",
 ];
@@ -53,6 +58,7 @@ const customizationOptions = [
   "Color",
   "Size / Structure",
   "Packing",
+  "VANTO KARO label / trim / hardware direction",
   "No customization yet",
   "Not sure yet",
 ];
@@ -147,7 +153,7 @@ export function CatalogInquiryForm() {
 
   function buildMessage() {
     return [
-      `Hello ${siteConfig.contactPerson}, I visited ${siteConfig.brandName} website and would like to request the latest bag catalog.`,
+      `Hello ${siteConfig.contactPerson}, I visited ${siteConfig.brandName} website. I am interested in your bag supply solutions. Please send me the latest catalog and help me choose between Factory Manufacturing and Flexible Supply options.`,
       "",
       `Buyer name: ${valueOrFallback(formState.buyerName)}`,
       `Company / business type: ${valueOrFallback(formState.businessType)}`,
@@ -158,7 +164,7 @@ export function CatalogInquiryForm() {
       `Customization needs: ${customizationSummary}`,
       `Message: ${valueOrFallback(formState.extraMessage)}`,
       "",
-      "Please help me check suitable bag options and wholesale quotation.",
+      "Please help me check suitable bag options, supply path, and quotation direction before I confirm the next step.",
     ].join("\n");
   }
 
@@ -260,7 +266,7 @@ export function CatalogInquiryForm() {
           id="extra-message"
           value={formState.extraMessage}
           onChange={(event) => updateField("extraMessage", event.target.value)}
-          placeholder="Tell Cason about target styles, materials, logo needs, packing, sample questions, or timeline."
+          placeholder="Tell Cason about target styles, materials, logo needs, VANTO KARO elements, packing, sample questions, flexible supply needs, or timeline."
           rows={5}
           className="focus-ring rounded-sm border border-stonebrand-200 bg-white px-4 py-3 text-sm font-medium leading-6 text-graphite-700 outline-none transition placeholder:text-graphite-400 hover:border-graphite-400"
         />

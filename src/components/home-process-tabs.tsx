@@ -8,13 +8,13 @@ import { ButtonLink } from "@/components/button-link";
 const processSteps = [
   {
     title: "Start with your idea",
-    eyebrow: "OEM/ODM communication",
-    heading: "Confirm the brief before quotation.",
+    eyebrow: "Factory Manufacturing brief",
+    heading: "Confirm the supply path before quotation.",
     description:
-      "Cason helps buyers organize product direction, material expectations, logo needs, quantity range, packing details, and sample questions before moving into production discussion.",
+      "Cason helps buyers organize product direction, material expectations, logo needs, quantity range, packing details, sample questions, and whether the project belongs to Factory Manufacturing or Flexible Supply.",
     points: [
       "Share your target market, product category, quantity range, reference style, and expected quality level.",
-      "Clarify whether the project is catalog selection, private label, or full OEM/ODM development.",
+      "Clarify whether the project is private label, full OEM/ODM development, ready stock, factory overstock, or mixed wholesale.",
       "Prepare a practical inquiry path before quotation starts.",
     ],
   },
@@ -23,7 +23,7 @@ const processSteps = [
     eyebrow: "Material planning",
     heading: "Align the build before sampling.",
     description:
-      "ROVON reviews material direction, hardware, lining, capacity, pocket structure, logo method, and export packing expectations before sample details are confirmed.",
+      "ROVON Global reviews material direction, hardware, lining, capacity, pocket structure, logo method, VANTO KARO elements where suitable, and export packing expectations before sample details are confirmed.",
     points: [
       "Confirm fabric, lining, zipper, buckle, handle, strap, and hardware direction.",
       "Review logo method, color direction, size, and compartment structure.",

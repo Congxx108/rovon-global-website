@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
+import { factoryStats } from "@/data/factory";
 import { manufacturingPages } from "@/data/manufacturing";
 import { contactMessage, siteConfig } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
@@ -10,7 +11,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Manufacturing",
   description:
-    `${siteConfig.brandName} provides factory-backed bag manufacturing support for global B2B buyers, including category-based production communication, sampling, quality control, packing, export support, and OEM/ODM custom bags.`,
+    `${siteConfig.brandName} provides Factory Manufacturing support from China for OEM/ODM bags, private label projects, bulk production, quality control, packing, and export communication.`,
   path: "/manufacturing",
 });
 
@@ -18,7 +19,7 @@ export default function ManufacturingPage() {
   return (
     <>
       <PageHero
-        title="Factory-Backed Bag Manufacturing"
+        title="Factory Manufacturing for Custom Bags and Long-term Supply"
         description={`${siteConfig.brandName} supports global buyers with structured manufacturing communication across product categories, material selection, accessory matching, sample discussion, production coordination, quality inspection, packing, and OEM/ODM custom bag workflows.`}
         breadcrumbPath="/manufacturing"
       />
@@ -36,21 +37,21 @@ export default function ManufacturingPage() {
             </div>
           </div>
           <div>
-            <p className="editorial-eyebrow">Professional factory support</p>
+            <p className="editorial-eyebrow">Factory-backed supply capability</p>
             <h2 className="mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
-              Built around practical bag production communication.
+              Built around practical bag production and sourcing communication.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              Instead of presenting unverified production numbers, this manufacturing section focuses on the real working areas global buyers need to discuss: category direction, materials, sample details, sewing process, inspection, packing, and export coordination.
+              Backed by around 5,000 sqm of warehouse and operating space, 150+ skilled workers, and 10 production lines, ROVON Global supports both flexible wholesale orders and large-scale OEM/ODM production, with around 2,000 bags shipped per day.
             </p>
             <div className="mt-8 grid gap-0 border-y border-stonebrand-200">
-              {[
+              {[...factoryStats,
                 "Category-based bag manufacturing support",
                 "Material selection and accessory matching",
                 "Pattern, structure, and sample communication",
                 "Sewing and production coordination",
                 "Quality inspection before packing",
-                "OEM/ODM customization workflow",
+                "OEM/ODM and private label workflow",
               ].map((item) => (
                 <div key={item} className="border-b border-stonebrand-200 py-4 last:border-b-0">
                   <p className="text-sm font-semibold text-graphite-900">{item}</p>
@@ -92,8 +93,8 @@ export default function ManufacturingPage() {
       </section>
       <CtaBand
         title="Discuss Production Capability"
-        description={`Share your product category, material direction, quantity range, and custom requirements. ${siteConfig.contactPerson} can help clarify the manufacturing discussion path.`}
-        message={contactMessage(`I want to discuss ${siteConfig.brandName} manufacturing capability for my bag sourcing project. Please help me clarify materials, samples, production support, and packing requirements.`)}
+        description={`Share your product category, material direction, quantity range, business type, and custom requirements. ${siteConfig.contactPerson} can help clarify whether Factory Manufacturing or Flexible Supply fits the project.`}
+        message={contactMessage(`I want to discuss ${siteConfig.brandName} Factory Manufacturing capability for my bag sourcing project. Please help me clarify materials, samples, production support, packing requirements, and whether flexible supply is also suitable.`)}
       />
     </>
   );

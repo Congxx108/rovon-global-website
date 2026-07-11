@@ -3,7 +3,7 @@ import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { productCategories } from "@/data/products";
-import { contactMessage, siteConfig } from "@/data/site";
+import { contactMessage, siteConfig, supplySolutions, vantoKaro } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 const buyerSupport = [
@@ -17,7 +17,7 @@ const buyerSupport = [
 export const metadata = createPageMetadata({
   title: "About ROVON Global and Cason",
   description:
-    `Learn about ${siteConfig.brandName}, a China-based bag manufacturer and wholesale supplier, and ${siteConfig.contactPerson}, the direct contact for global B2B bag sourcing inquiries.`,
+    `Learn about ${siteConfig.brandName}, a factory-backed bag manufacturer and flexible supply partner from China, ${siteConfig.contactPerson} as the direct B2B contact, and VANTO KARO as an independent bag product brand.`,
   path: "/about",
 });
 
@@ -26,7 +26,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title={`About ${siteConfig.brandName}`}
-        description={`${siteConfig.brandName} is a China-based bag manufacturer and wholesale supplier supporting global B2B buyers with factory-backed production, wholesale supply, and OEM/ODM custom bag solutions.`}
+        description={`${siteConfig.brandName} is a factory-backed bag manufacturer and flexible supply partner from China, supporting global B2B buyers through Factory Manufacturing and Flexible Supply.`}
         breadcrumbPath="/about"
       >
         <WhatsAppCTA
@@ -40,18 +40,18 @@ export default function AboutPage() {
           <div>
             <p className="editorial-eyebrow">About ROVON Global</p>
             <h2 className="headline-serif mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
-              A factory-backed supply partner for professional bag buyers.
+              Factory-backed Bag Manufacturer & Flexible Supply Partner from China.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              {siteConfig.brandName} serves importers, distributors, wholesalers, trading companies, and brand buyers who need reliable communication for bag manufacturing, wholesale supply, and OEM/ODM custom projects from China.
+              {siteConfig.brandName} serves importers, distributors, wholesalers, trading companies, boutique owners, online store sellers, independent website sellers, and brand buyers who need reliable China bag sourcing support.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              "China-based professional bag manufacturer",
-              "Factory-backed wholesale supplier",
-              "OEM/ODM custom bag partner",
-              "WhatsApp-first B2B inquiry path",
+              "Factory Manufacturing for OEM/ODM and private label",
+              "Flexible Supply for ready stock, overstock, and mixed wholesale",
+              "Direct WhatsApp communication with Cason",
+              "VANTO KARO support for selected brand elements",
             ].map((item) => (
               <div key={item} className="rounded-md border border-[#dddddd] bg-white p-5 text-sm font-bold text-graphite-900 shadow-[0_6px_18px_rgba(0,0,0,0.04)]">
                 {item}
@@ -74,6 +74,15 @@ export default function AboutPage() {
       </section>
 
       <section className="section-y soft-section">
+        <div className="container-shell mb-12 grid gap-6 md:grid-cols-2">
+          {supplySolutions.map((solution) => (
+            <div key={solution.title} className="interactive-card rounded-md border border-[#dddddd] bg-white p-6 shadow-[0_6px_18px_rgba(0,0,0,0.04)]">
+              <p className="editorial-eyebrow">Supply solution</p>
+              <h2 className="mt-3 text-2xl font-black text-graphite-950">{solution.title}</h2>
+              <p className="mt-3 text-sm leading-6 text-graphite-600">{solution.subtitle}</p>
+            </div>
+          ))}
+        </div>
         <div className="container-shell grid gap-10 lg:grid-cols-[0.76fr_1.24fr]">
           <div>
             <p className="editorial-eyebrow">What we focus on</p>
@@ -121,7 +130,7 @@ export default function AboutPage() {
               Meet {siteConfig.contactPerson}, Your Direct Contact at {siteConfig.brandName}
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              {siteConfig.contactPerson} helps global buyers communicate directly with {siteConfig.brandName} for catalogs, wholesale inquiries, OEM/ODM discussions, and order requirement follow-up. For buyers who prefer fast WhatsApp communication, {siteConfig.contactPerson} provides a clear contact point instead of a generic inquiry form.
+              {siteConfig.contactPerson} is the real contact behind {siteConfig.brandName}. He helps global buyers communicate directly about catalogs, Factory Manufacturing, Flexible Supply, OEM/ODM discussions, quantity range, market fit, and order requirement follow-up. The website keeps {siteConfig.brandName} as the supply partner while making Cason the practical trust entrance for WhatsApp communication.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <WhatsAppCTA
@@ -150,10 +159,24 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="section-y bg-white">
+        <div className="container-shell grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+          <div>
+            <p className="editorial-eyebrow">Independent product brand</p>
+            <h2 className="headline-serif mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
+              {vantoKaro.name}
+            </h2>
+          </div>
+          <div className="rounded-md border border-[#dddddd] bg-white p-6 shadow-[0_6px_18px_rgba(0,0,0,0.04)]">
+            <p className="text-base leading-7 text-graphite-600">{vantoKaro.description}</p>
+          </div>
+        </div>
+      </section>
+
       <CtaBand
         title={`Talk to ${siteConfig.contactPerson} About Your Bag Sourcing Plan`}
-        description={`Send your target category, market, quantity range, and customization needs. ${siteConfig.contactPerson} can help you get the right catalog and move the inquiry forward.`}
-        message={contactMessage("I want to talk about my bag sourcing plan and request the latest catalog.")}
+        description={`Send your target category, market, quantity range, business type, and customization needs. ${siteConfig.contactPerson} can help you choose between Factory Manufacturing and Flexible Supply.`}
+        message={contactMessage("I want to talk about my bag sourcing plan, request the latest catalog, and choose between Factory Manufacturing and Flexible Supply.")}
       />
     </>
   );

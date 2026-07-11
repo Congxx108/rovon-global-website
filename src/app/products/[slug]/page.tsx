@@ -74,7 +74,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
             />
           </div>
           <div>
-            <p className="editorial-eyebrow">Category capability overview</p>
+            <p className="editorial-eyebrow">Category supply overview</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
               {category.description}
             </h2>
@@ -92,10 +92,10 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           <div>
             <p className="editorial-eyebrow">B2B sourcing fit</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
-              Built for wholesale buyers, not retail product browsing.
+              Built for B2B sourcing, not retail product browsing.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              This page shows category capability and product direction. It is not a live inventory list, and it keeps the experience focused on catalog requests, product requirements, and B2B sourcing discussion.
+              This page shows category capability and supply direction. It is not a live retail inventory list. Cason can help you clarify whether Factory Manufacturing, Flexible Supply, or OEM/ODM customization is the right path.
             </p>
           </div>
           <div className="grid gap-6">
@@ -156,10 +156,10 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           <div>
             <p className="editorial-eyebrow">Customization options</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
-              Discuss the right materials, structure, logo, and packing before quotation.
+              Discuss materials, structure, logo, supply path, and packing before quotation.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              For custom development, share reference photos, target market, expected quantity, and any logo or packing requirements. {siteConfig.contactPerson} can help clarify the information needed for a practical quotation path.
+              For Factory Manufacturing, share reference photos, target market, expected quantity, material direction, logo needs, and packing requirements. For Flexible Supply, share your target market, category mix, quantity range, and delivery expectation.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <WhatsAppCTA
@@ -188,10 +188,10 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           <div className="max-w-3xl">
             <p className="editorial-eyebrow">Product direction example</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
-              First-phase product data for future catalog expansion.
+              Capability examples for catalog and sourcing discussion.
             </h2>
             <p className="mt-4 text-sm leading-6 text-graphite-600">
-              The current page uses local static data to describe category capability. When real product photos and detailed specifications are ready, this section can expand into a paginated catalog or Load More product list.
+              The current page uses representative static data to describe category capability. Real photos, specifications, stock lists, and OEM/ODM details should be confirmed with {siteConfig.contactPerson} before quotation.
             </p>
           </div>
           <div className="mt-8 grid gap-6">
@@ -252,6 +252,9 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
               <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
                 Build a broader wholesale bag program.
               </h2>
+              <p className="mt-4 text-sm leading-6 text-graphite-600">
+                Related categories can support a stronger Factory Manufacturing plan or a more flexible wholesale combination for market testing.
+              </p>
             </div>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {relatedCategories.map((relatedCategory) => (
@@ -275,7 +278,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
 
       <CtaBand
         title={`Discuss ${category.name} Supply`}
-        description={`Share your market, target quantity, material preferences, and packing needs. ${siteConfig.contactPerson} can help clarify catalog options, customization requirements, and a practical sourcing path.`}
+        description={`Share your market, target quantity, material preferences, business type, and packing needs. ${siteConfig.contactPerson} can help choose between Factory Manufacturing, Flexible Supply, and OEM/ODM customization.`}
         message={category.whatsappMessage}
       />
     </>

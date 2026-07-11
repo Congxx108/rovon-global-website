@@ -21,19 +21,21 @@ import { HomeProcessTabs } from "@/components/home-process-tabs";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
+import { factoryStats } from "@/data/factory";
+import { faqItems } from "@/data/faq";
 import { productCategories } from "@/data/products";
-import { contactMessage, siteConfig } from "@/data/site";
+import { contactMessage, siteConfig, supplySolutions, vantoKaro } from "@/data/site";
 import { wholesaleSegments } from "@/data/wholesale";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "ROVON Global | China Bag Manufacturer & Wholesale Supplier",
+  title: "ROVON Global | Factory-backed Bag Manufacturer & Flexible Supply Partner",
   description:
-    `${siteConfig.brandName} is a China-based professional bag manufacturer, factory-backed wholesale supplier, and OEM/ODM partner for global B2B buyers.`,
+    `${siteConfig.brandName} is a factory-backed bag manufacturer and flexible supply partner from China, supporting OEM/ODM production, private label, ready stock, factory overstock, and mixed wholesale.`,
   path: "/",
 });
 
-const buyerMarks = ["IMPORTERS", "DISTRIBUTORS", "TRADING COMPANIES", "PRIVATE LABEL", "OEM BUYERS", "WHOLESALE"];
+const buyerMarks = ["FACTORY-BACKED SUPPLY", "TWO SUPPLY SOLUTIONS", "OEM/ODM PRODUCTION", "FLEXIBLE WHOLESALE", "DIRECT WHATSAPP CONTACT WITH CASON"];
 
 const productIcons = [BriefcaseBusiness, Store, Layers3, PackageCheck, Ruler, Scissors, Factory];
 
@@ -44,33 +46,6 @@ const materialItems = [
   { title: "Stitching", text: "Reinforcement, sewing details, handle joints, and wholesale-ready finishing.", icon: Scissors },
   { title: "Logo Options", text: "Woven label, rubber patch, metal logo, printing, and custom hangtag support.", icon: Stamp },
   { title: "Packing", text: "Polybag, carton, label, mixed carton, and export packing coordination.", icon: PackageCheck },
-];
-
-const faqItems = [
-  {
-    question: "How does ROVON reduce sourcing risk?",
-    answer: "ROVON helps buyers clarify category, material, logo, quantity, packing, and inspection details before quotation or production decisions.",
-  },
-  {
-    question: "What should I prepare before inquiry?",
-    answer: "Prepare your target category, destination market, quantity range, reference style, logo needs, and any preferred material or packing details.",
-  },
-  {
-    question: "Can I contact Cason directly on WhatsApp?",
-    answer: "Yes. Cason is the direct communication entry for catalog requests, wholesale discussion, OEM/ODM requirements, and follow-up questions.",
-  },
-  {
-    question: "Do you support OEM/ODM custom bags?",
-    answer: "Yes. ROVON supports custom material, structure, size, logo, packing, samples, bulk production, and quality inspection communication.",
-  },
-  {
-    question: "Can I request a catalog before ordering?",
-    answer: "Yes. You can request the latest catalog first, then discuss suitable categories and quotation direction based on your market.",
-  },
-  {
-    question: "Do you supply ready stock or mixed wholesale?",
-    answer: "Ready Stock and Mixed Wholesale can be discussed as supplementary options, while ROVON's main positioning remains factory-backed bag supply.",
-  },
 ];
 
 const wholesaleIcons = [Store, Handshake, BriefcaseBusiness, Factory];
@@ -92,14 +67,14 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/48 to-black/55" />
         <div className="container-shell relative flex min-h-[680px] flex-col items-center justify-center py-24 text-center md:min-h-[760px] xl:min-h-[820px]">
           <p className="hero-kicker text-[11px] font-bold uppercase tracking-[0.28em] text-white/75">
-            Factory-backed bag supplier from China
+            Factory-backed bag manufacturer from China
           </p>
           <h1 className="hero-title mt-5 max-w-4xl text-5xl font-black leading-[0.98] text-white md:text-7xl">
-            Global Bag Manufacturer
-            <span className="block">& Wholesale Supplier</span>
+            Factory-backed Bag Manufacturer
+            <span className="block">& Flexible Supply Partner</span>
           </h1>
           <p className="hero-subtext mt-6 max-w-3xl text-base leading-8 text-white/82 md:text-lg">
-            Travel bags, men&apos;s bags, women&apos;s backpacks, chest bags, waist bags, crossbody bags and OEM/ODM custom bag solutions for global buyers.
+            ROVON Global helps global B2B buyers source bags from China through two supply solutions: Factory Manufacturing for OEM/ODM and long-term production, and Flexible Supply for ready stock, factory overstock, mixed wholesale, low MOQ, and fast delivery.
           </p>
           <div className="hero-actions mt-8 flex flex-wrap justify-center gap-3">
             <ButtonLink
@@ -111,7 +86,7 @@ export default function HomePage() {
               Get Latest Catalog
             </ButtonLink>
             <WhatsAppCTA
-              message={contactMessage("I want to discuss bag sourcing with ROVON Global. Please send catalog options and help me confirm suitable product categories.")}
+              message={contactMessage("I visited ROVON Global and want to discuss bag sourcing. Please send catalog options and help me choose between Factory Manufacturing and Flexible Supply.")}
               label="Contact Cason"
               eventName="click_contact_cason"
               className="border-white/50 bg-white/10 text-white hover:border-white hover:bg-white hover:!text-graphite-950"
@@ -124,7 +99,7 @@ export default function HomePage() {
       <Reveal as="section" className="border-b border-[#dedede] bg-white">
         <div className="container-shell py-8 text-center">
           <p className="text-lg font-black text-graphite-950 md:text-xl">
-            Trusted by global importers, distributors, wholesalers and OEM/ODM buyers.
+            Factory-backed supply for global importers, distributors, wholesalers, brand buyers and OEM/ODM buyers.
           </p>
         </div>
         <div className="overflow-hidden border-t border-[#eeeeee] py-6">
@@ -143,8 +118,37 @@ export default function HomePage() {
       <Reveal as="section" className="section-y bg-white">
         <div className="container-shell">
           <SectionHeading
+            title="One Supplier. Two Supply Solutions."
+            description="Choose the sourcing path that fits your business stage, order plan, inventory risk, and customization needs."
+            align="center"
+          />
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {supplySolutions.map((solution, index) => (
+              <Reveal key={solution.title} delay={index * 120}>
+                <div className="interactive-card h-full rounded-md border border-[#dedede] bg-white p-7 shadow-[0_14px_38px_rgba(0,0,0,0.055)] md:p-9">
+                  <p className="muted-label">{String(index + 1).padStart(2, "0")} / Supply solution</p>
+                  <h2 className="mt-6 text-3xl font-black leading-tight text-graphite-950">{solution.title}</h2>
+                  <p className="mt-3 text-base font-semibold leading-7 text-graphite-800">{solution.subtitle}</p>
+                  <p className="mt-4 text-sm leading-7 text-graphite-600">{solution.description}</p>
+                  <div className="mt-7 flex flex-wrap gap-2">
+                    {solution.fit.map((item) => (
+                      <span key={item} className="rounded border border-stonebrand-200 px-3 py-2 text-xs font-bold text-graphite-700">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal as="section" className="section-y bg-white">
+        <div className="container-shell">
+          <SectionHeading
             title="Product Categories We Manufacture"
-            description="Core bag categories for importers, distributors, wholesale buyers, brand projects, and OEM/ODM custom sourcing."
+            description="Core bag categories for Factory Manufacturing, wholesale programs, private label projects, and Flexible Supply discussions."
             align="center"
           />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -191,7 +195,7 @@ export default function HomePage() {
         <div className="container-shell">
           <SectionHeading
             title="A Clear OEM/ODM Process From Idea To Production"
-            description="A stable workflow for custom bags, wholesale programs, catalog selection, sample confirmation, production, inspection, and packing."
+            description="A stable Factory Manufacturing workflow for custom bags, private label projects, catalog selection, sample confirmation, production, inspection, and packing."
             align="center"
           />
           <HomeProcessTabs />
@@ -202,7 +206,7 @@ export default function HomePage() {
         <div className="container-shell">
           <SectionHeading
             title="Materials, Components And Packing Support"
-            description="A cleaner capability view for material selection, structure planning, hardware, stitching, logo application, and export packing."
+            description="A practical capability view for material selection, structure planning, hardware, stitching, logo application, export packing, and selected VANTO KARO brand elements."
             align="center"
           />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -243,10 +247,10 @@ export default function HomePage() {
               Factory-backed Supply Capability
             </h2>
             <p className="mt-5 text-sm leading-7 text-graphite-600 md:text-base">
-              ROVON Global supports global buyers with factory-backed production, multi-category sourcing, quality inspection, packing coordination and export communication.
+              Backed by around 5,000 sqm of warehouse and operating space, 150+ skilled workers, and 10 production lines, ROVON Global supports both Flexible Supply orders and large-scale OEM/ODM production, with around 2,000 bags shipped per day.
             </p>
             <div className="mt-6 grid gap-4 border-y border-[#dedede] py-6">
-              {["Multi-category bag production", "Material, sample and logo coordination", "Quality inspection before packing", "Export communication with Cason"].map((item) => (
+              {[...factoryStats, "Direct production and sourcing communication with Cason"].map((item) => (
                 <div key={item} className="flex items-center gap-3 text-sm font-semibold text-graphite-800">
                   <BadgeCheck className="h-4 w-4" aria-hidden="true" />
                   {item}
@@ -259,7 +263,7 @@ export default function HomePage() {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </ButtonLink>
               <WhatsAppCTA
-                message={contactMessage("I want to talk about production capability, product categories, quality inspection, and packing support.")}
+                message={contactMessage("I want to talk about production capability, Factory Manufacturing, Flexible Supply, quality inspection, and packing support.")}
                 label="Talk to Cason About Production"
                 className="bg-white !text-graphite-950 hover:bg-graphite-950 hover:!text-white"
                 eventName="click_contact_cason"
@@ -269,11 +273,43 @@ export default function HomePage() {
         </div>
       </Reveal>
 
+      <Reveal as="section" className="section-y border-y border-stonebrand-200 bg-[#f6f6f6]">
+        <div className="container-shell grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+          <div>
+            <p className="editorial-eyebrow">Cason / ROVON Global / VANTO KARO</p>
+            <h2 className="text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
+              A clear brand structure for buyer trust.
+            </h2>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              {
+                title: "Cason",
+                text: "The real contact behind ROVON Global and your direct WhatsApp sourcing partner.",
+              },
+              {
+                title: "ROVON Global",
+                text: "The manufacturing and supply chain partner for Factory Manufacturing and Flexible Supply.",
+              },
+              {
+                title: vantoKaro.name,
+                text: "An independent bag product brand for selected lines, labels, trims, hardware, and packaging.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="interactive-card rounded-md border border-[#dedede] bg-white p-6 shadow-[0_12px_34px_rgba(0,0,0,0.04)]">
+                <h3 className="text-lg font-black text-graphite-950">{item.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-graphite-600">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+
       <Reveal as="section" className="section-y bg-white pt-0">
         <div className="container-shell">
           <SectionHeading
             title="What Set Us Apart?"
-            description="Different buyer types need different sourcing support. ROVON keeps the path practical for catalog selection, customization, production, and follow-up."
+            description="Different buyer types need different sourcing support. ROVON keeps the path practical for supply-path selection, catalog direction, customization, production, and follow-up."
             align="center"
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -328,8 +364,8 @@ export default function HomePage() {
 
       <CtaBand
         title="Send your bag sourcing requirements to Cason."
-        description="Share your target market, product category, quantity range and OEM/ODM needs. ROVON Global will help you choose a safer sourcing plan before quotation."
-        message={contactMessage("I want to send my bag sourcing requirements. Please help me review product category, quantity range, and OEM/ODM options before quotation.")}
+        description="Share your target market, product category, quantity range, business type and customization needs. ROVON Global will help you choose between Factory Manufacturing and Flexible Supply before quotation."
+        message={contactMessage("I want to send my bag sourcing requirements. Please help me review product category, quantity range, and whether Factory Manufacturing or Flexible Supply fits before quotation.")}
       />
     </>
   );

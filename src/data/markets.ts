@@ -15,40 +15,40 @@ export const markets: Market[] = [
     name: "Africa",
     headline: "Wholesale bag supply for fast-moving African markets",
     description:
-      `${siteConfig.brandName} supports importers, distributors, and market sellers with practical bag categories, flexible communication, and supply options for replenishment and wholesale programs.`,
-    strengths: ["Wholesale supply", "Ready stock support", "Competitive product range", "Fast WhatsApp communication"],
+      `${siteConfig.brandName} supports African importers, distributors, wholesalers, and market sellers with Flexible Supply for ready stock, mixed wholesale, market testing, lower inventory risk, and replenishment programs.`,
+    strengths: ["Flexible supply and mixed wholesale", "Market testing with lower inventory risk", "Ready stock and factory overstock discussion", "Direct WhatsApp communication with Cason"],
     whatsappMessage:
-      contactMessage("I am sourcing bags for the African market. Please send catalog and wholesale supply options."),
+      contactMessage("I am sourcing bags for the African market. Please send flexible supply, ready stock, mixed wholesale, and suitable catalog options."),
   },
   {
     slug: "middle-east",
     name: "Middle East",
     headline: "Bag manufacturing and OEM/ODM support for Middle East buyers",
     description:
-      `For Middle East buyers, ${siteConfig.brandName} can support men's bags, travel bags, chest bags, waist bags, private label projects, materials, hardware, and packing requirements.`,
-    strengths: ["Men's and travel bags", "Private label support", "Material and hardware options", "OEM/ODM projects"],
+      `For Middle East buyers, ${siteConfig.brandName} supports texture, capacity, appearance, travel bags, men's bags, chest bags, crossbody bags, OEM/ODM production, private label projects, materials, hardware, and packing requirements.`,
+    strengths: ["Travel bags and men's bags", "Chest bags and crossbody bags", "Texture, capacity, and appearance discussion", "OEM/ODM and private label support"],
     whatsappMessage:
-      contactMessage("I am sourcing bags for the Middle East market. Please share product and OEM/ODM options."),
+      contactMessage("I am sourcing bags for the Middle East market. Please share travel bag, men's bag, chest bag, crossbody bag, OEM/ODM, and private label options."),
   },
   {
     slug: "southeast-asia",
     name: "Southeast Asia",
     headline: "Flexible bag supply for trend-driven Southeast Asian markets",
     description:
-      `${siteConfig.brandName} helps regional buyers source women's backpacks, daily bags, crossbody bags, and flexible wholesale product combinations.`,
-    strengths: ["Trend-responsive styles", "Women's backpacks", "Daily bag categories", "Flexible wholesale planning"],
+      `${siteConfig.brandName} helps Southeast Asian buyers source fast-moving styles, practical daily bags, women's backpacks, crossbody bags, and flexible category combinations for online and wholesale channels.`,
+    strengths: ["Fast-moving daily bag styles", "Women's backpacks and crossbody bags", "Flexible sourcing and category combinations", "Market-fit catalog recommendations"],
     whatsappMessage:
-      contactMessage("I need bag supply options for Southeast Asia. Please send catalog and recommended categories."),
+      contactMessage("I need bag supply options for Southeast Asia. Please send fast-moving styles, women's backpacks, crossbody bags, and flexible sourcing recommendations."),
   },
   {
     slug: "latin-america",
     name: "Latin America",
     headline: "China bag supply chain support for Latin American importers",
     description:
-      `${siteConfig.brandName} supports importers and regional distributors with travel bags, men's bags, backpacks, multi-category wholesale supply, and custom projects.`,
-    strengths: ["Importer support", "Regional distribution", "Multi-category wholesale", "OEM/ODM customization"],
+      `${siteConfig.brandName} supports Latin American importers and distributors with stable bag categories, OEM/ODM projects, travel bags, men's bags, regional wholesale supply, and practical catalog communication.`,
+    strengths: ["Importer and distributor support", "Travel bags and men's bags", "Stable category planning", "OEM/ODM and wholesale supply"],
     whatsappMessage:
-      contactMessage("I am sourcing bags for Latin America. Please send wholesale and OEM/ODM information."),
+      contactMessage("I am sourcing bags for Latin America. Please send wholesale, OEM/ODM, travel bag, men's bag, and stable category supply information."),
   },
 ];
 

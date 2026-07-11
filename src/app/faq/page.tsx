@@ -10,7 +10,7 @@ import { faqPageJsonLd } from "@/lib/seo";
 export const metadata = createPageMetadata({
   title: "FAQ",
   description:
-    `B2B bag sourcing FAQ for global buyers covering ${siteConfig.brandName} product categories, OEM/ODM, samples, MOQ, ready stock, catalogs, quality control, packing, shipping, and how to contact ${siteConfig.contactPerson}.`,
+    `B2B bag sourcing FAQ for global buyers covering ${siteConfig.brandName}'s two supply solutions, Factory Manufacturing, Flexible Supply, OEM/ODM, VANTO KARO, ready stock, catalogs, MOQ, and how to contact ${siteConfig.contactPerson}.`,
   path: "/faq",
 });
 
@@ -20,7 +20,7 @@ export default function FaqPage() {
       <JsonLd data={faqPageJsonLd(faqItems)} />
       <PageHero
         title="B2B Bag Sourcing FAQ"
-        description={`Answers for importers, distributors, trading companies, and brand buyers sourcing bags from ${siteConfig.brandName}.`}
+        description={`Answers for importers, distributors, trading companies, online sellers, brand owners, and OEM/ODM buyers choosing between Factory Manufacturing and Flexible Supply from ${siteConfig.brandName}.`}
         breadcrumbPath="/faq"
       >
         <ButtonLink
@@ -51,8 +51,8 @@ export default function FaqPage() {
 
       <CtaBand
         title="Need a Category-Specific Answer?"
-        description={`Share your target product, market, order quantity, and customization needs. ${siteConfig.contactPerson} can give a practical sourcing reply.`}
-        message={contactMessage("I have a question about bag sourcing, MOQ, samples, or OEM/ODM support.")}
+        description={`Share your target product, market, order quantity, business type, and customization needs. ${siteConfig.contactPerson} can give a practical sourcing reply and help choose the right supply path.`}
+        message={contactMessage("I have a question about bag sourcing, two supply solutions, MOQ, samples, ready stock, or OEM/ODM support.")}
       />
     </>
   );

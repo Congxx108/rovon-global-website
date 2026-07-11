@@ -12,8 +12,8 @@ type CtaBandProps = {
 
 export function CtaBand({
   title = "Ready to discuss your bag sourcing plan?",
-  description = `Send your target categories, market, quantity, and customization needs. ${siteConfig.contactPerson} can share catalog options and a practical quotation path.`,
-  message = contactMessage(`I want to discuss bag sourcing with ${siteConfig.brandName}. Please send catalog and quotation details.`),
+  description = `Send your target category, market, quantity range, business type, and customization needs. ${siteConfig.contactPerson} can help you choose between Factory Manufacturing and Flexible Supply before quotation.`,
+  message = contactMessage(`I want to discuss bag sourcing with ${siteConfig.brandName}. Please send catalog options and help me choose between Factory Manufacturing and Flexible Supply.`),
 }: CtaBandProps) {
   return (
     <Reveal as="section" className="border-y border-stonebrand-200 bg-graphite-950 py-16 text-white md:py-20">

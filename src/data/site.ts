@@ -29,7 +29,7 @@ export const siteConfig = {
   siteUrl,
   url: siteUrl,
   description:
-    "ROVON Global is a China-based professional bag manufacturer, factory-backed wholesale supplier, and OEM/ODM partner for global importers, distributors, trading companies, and brand buyers.",
+    "ROVON Global is a factory-backed bag manufacturer and flexible supply partner from China, supporting OEM/ODM production, private label projects, ready stock, factory overstock, mixed wholesale, and practical sourcing communication for global B2B buyers.",
   contactPerson: "Cason",
   contactName: "Cason",
   email: "cason@rovonglobal.com",
@@ -40,6 +40,29 @@ export const siteConfig = {
   googleMapsEmbedUrl: `https://www.google.com/maps?q=${encodedGoogleMapsQuery}&output=embed`,
   googleMapsExternalUrl: `https://www.google.com/maps/search/?api=1&query=${encodedGoogleMapsQuery}`,
   socialLinks,
+};
+
+export const supplySolutions = [
+  {
+    title: "Factory Manufacturing",
+    subtitle: "For OEM/ODM, private label, custom bags, and long-term bulk production.",
+    description:
+      "Use this path when you need custom materials, logo methods, structure development, samples, quality control, packing, and repeatable production planning.",
+    fit: ["OEM/ODM", "Private label", "Custom bags", "Bulk production"],
+  },
+  {
+    title: "Flexible Supply",
+    subtitle: "For ready stock, factory overstock, mixed wholesale, market testing, and faster delivery.",
+    description:
+      "Use this path when you need lower inventory risk, flexible category combinations, available stock discussion, and faster replenishment for selected markets.",
+    fit: ["Ready stock", "Factory overstock", "Mixed wholesale", "Low MOQ"],
+  },
+];
+
+export const vantoKaro = {
+  name: "VANTO KARO",
+  description:
+    "VANTO KARO is an independent bag product brand developed by Cason for selected bag lines, labels, trims, hardware, and packaging. It is manufactured and supplied by ROVON Global, and it does not replace ROVON Global's role as the manufacturing and supply chain partner.",
 };
 
 export function whatsappLink(message: string) {

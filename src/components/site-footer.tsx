@@ -16,11 +16,11 @@ export function SiteFooter() {
             </span>
             <div>
               <p className="text-sm font-black uppercase tracking-[0.12em]">{siteConfig.brandName}</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-graphite-400">Bag manufacturer & wholesale supplier</p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-graphite-400">Factory-backed bag manufacturer</p>
             </div>
           </div>
           <p className="mt-6 max-w-sm text-sm leading-7 text-graphite-300">
-            Factory-backed bag production, wholesale supply, and OEM/ODM custom support for global B2B buyers.
+            Factory-backed Bag Manufacturer & Flexible Supply Partner from China for global B2B buyers.
           </p>
           <SocialLinks label="Follow ROVON Global" tone="light" className="mt-7" />
         </Reveal>
@@ -37,7 +37,7 @@ export function SiteFooter() {
             ))}
             <li>
               <Link className="transition hover:text-white" href={`/${readyStockInfo.slug}`}>
-                Ready Stock
+                Flexible Supply
               </Link>
             </li>
           </ul>
@@ -57,7 +57,7 @@ export function SiteFooter() {
         <Reveal delay={240}>
           <p className="muted-label text-graphite-400">Company</p>
           <ul className="mt-5 space-y-3 text-sm text-graphite-300">
-            <li><Link className="transition hover:text-white" href="/wholesale-solutions">Wholesale Solutions</Link></li>
+            <li><Link className="transition hover:text-white" href="/wholesale-solutions">Two Supply Solutions</Link></li>
             <li><Link className="transition hover:text-white" href="/catalog">Catalog Request</Link></li>
             <li><Link className="transition hover:text-white" href="/about">About</Link></li>
             <li><Link className="transition hover:text-white" href="/faq">FAQ</Link></li>
@@ -84,7 +84,7 @@ export function SiteFooter() {
             </li>
           </ul>
           <WhatsAppCTA
-            message={contactMessage("I want to contact you from the website footer about catalog and bag sourcing support.")}
+            message={contactMessage("I want to contact you from the website footer about catalog, Factory Manufacturing, Flexible Supply, and bag sourcing support.")}
             label={`Contact ${siteConfig.contactPerson}`}
             className="mt-6 w-full border-white bg-white !text-graphite-950 hover:border-white hover:bg-[#eeeeee]"
             eventName="click_contact_cason"

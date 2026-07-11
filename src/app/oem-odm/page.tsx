@@ -1,7 +1,7 @@
 import { CtaBand } from "@/components/cta-band";
 import { PageHero } from "@/components/page-hero";
 import { WhatsAppCTA } from "@/components/whatsapp-cta";
-import { contactMessage, siteConfig } from "@/data/site";
+import { contactMessage, siteConfig, vantoKaro } from "@/data/site";
 import { createPageMetadata } from "@/lib/metadata";
 
 const steps = [
@@ -15,7 +15,7 @@ const steps = [
 export const metadata = createPageMetadata({
   title: "OEM/ODM Custom Bags",
   description:
-    `Start OEM/ODM custom bag projects with ${siteConfig.brandName}, including logo, material, size, structure, sample development, bulk production, QC, and packing.`,
+    `Start Factory Manufacturing and OEM/ODM custom bag projects with ${siteConfig.brandName}, including logo, material, size, structure, sample development, bulk production, QC, VANTO KARO brand elements, and packing.`,
   path: "/oem-odm",
 });
 
@@ -23,12 +23,12 @@ export default function OemOdmPage() {
   return (
     <>
       <PageHero
-        title="OEM/ODM Custom Bag Solutions"
-        description={`${siteConfig.brandName} supports custom bag projects from idea, material selection, logo application, structure adjustment, and sampling to bulk production, quality control, packing, and export support. Contact ${siteConfig.contactPerson} to clarify your custom bag brief and next-step requirements.`}
+        title="Factory Manufacturing for OEM/ODM Custom Bags"
+        description={`${siteConfig.brandName} supports custom bag projects from idea, material selection, logo application, structure adjustment, and sampling to bulk production, quality control, packing, and export support. Contact ${siteConfig.contactPerson} to clarify your custom bag brief before quotation.`}
         breadcrumbPath="/oem-odm"
       >
         <WhatsAppCTA
-          message={contactMessage("I want to discuss an OEM/ODM custom bag project. Please tell me what information you need for materials, logo, sample, and order requirements.")}
+          message={contactMessage("I want to discuss Factory Manufacturing for an OEM/ODM custom bag project. Please tell me what information you need for materials, logo, sample, quantity, and packing requirements.")}
           label="Discuss OEM/ODM Project"
           eventName="click_oem_odm_inquiry"
           eventParams={{ cta_label: "Discuss OEM/ODM Project", inquiry_type: "OEM/ODM Custom Project" }}
@@ -42,7 +42,7 @@ export default function OemOdmPage() {
               A structured path for custom bag projects.
             </h2>
             <p className="mt-4 text-base leading-7 text-graphite-600">
-              Buyers can discuss logo methods, materials, hardware, lining, size, structure, colors, labels, hangtags, packing, carton marks, and market-specific product planning.
+              Buyers can discuss logo methods, materials, hardware, lining, size, structure, colors, labels, hangtags, packing, carton marks, market-specific product planning, and selected VANTO KARO brand elements where suitable.
             </p>
           </div>
           <div className="grid gap-0 overflow-hidden rounded-md border border-[#dddddd] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.04)]">
@@ -59,8 +59,8 @@ export default function OemOdmPage() {
       </section>
       <CtaBand
         title={`Prepare Your Custom Bag Brief With ${siteConfig.contactPerson}`}
-        description="Send your reference images, category, material ideas, target market, logo needs, and estimated quantity to start a practical OEM/ODM discussion."
-        message={contactMessage("I want to prepare a custom bag brief for OEM/ODM production. Please help me clarify materials, logo, sample, and order requirements.")}
+        description={`Send your reference images, category, material ideas, target market, logo needs, estimated quantity, and packing plan to start a practical OEM/ODM discussion. ${vantoKaro.name} can also be discussed for selected labels, trims, hardware, and packaging.`}
+        message={contactMessage("I want to prepare a custom bag brief for Factory Manufacturing and OEM/ODM production. Please help me clarify materials, logo, sample, quantity, and packing requirements.")}
       />
     </>
   );
