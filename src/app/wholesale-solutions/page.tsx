@@ -11,7 +11,7 @@ import { inquiryProcess, wholesaleSegments } from "@/data/wholesale";
 export const metadata = createPageMetadata({
   title: "Wholesale Solutions",
   description:
-    `Wholesale bag supply solutions from ${siteConfig.brandName} for importers, distributors, trading companies, brand buyers, and sellers choosing between Factory Manufacturing and Flexible Supply from China.`,
+    `Wholesale bag supply solutions from ${siteConfig.brandName} for importers, distributors, trading companies, brand buyers, and sellers sourcing from China.`,
   path: "/wholesale-solutions",
 });
 
@@ -19,13 +19,13 @@ export default function WholesaleSolutionsPage() {
   return (
     <>
       <PageHero
-        title="One Supplier. Two Supply Solutions for Global Buyers"
-        description={`${siteConfig.brandName} is not a retail shop or a low-price listing site. We support B2B buyers with Factory Manufacturing for OEM/ODM and long-term production, plus Flexible Supply for ready stock, factory overstock, mixed wholesale, low MOQ, market testing, and faster delivery.`}
+        title="Two Supply Models for Different Buying Needs"
+        description={`From long-term OEM/ODM production to ready stock and market-testing orders, ${siteConfig.brandName} helps B2B buyers choose a sourcing model that fits their business stage.`}
         breadcrumbPath="/wholesale-solutions"
       >
         <WhatsAppCTA
-          message={contactMessage("I want to discuss wholesale bag supply solutions for my market. Please help me choose between Factory Manufacturing and Flexible Supply before quotation.")}
-          label={`Talk to ${siteConfig.contactPerson}`}
+          message={contactMessage("I want to discuss wholesale bag supply solutions for my market. Please help me check suitable categories, MOQ options, and pricing details.")}
+          label="Discuss Your Requirements"
           eventName="click_contact_cason"
           eventParams={{ cta_label: `Talk to ${siteConfig.contactPerson}`, inquiry_type: "Wholesale Solutions" }}
         />
@@ -68,10 +68,10 @@ export default function WholesaleSolutionsPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
             <h2 className="text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
-              Factory-backed supply advantages without cheap sourcing noise.
+              Supply advantages for wholesale buyers.
             </h2>
             <p className="mt-4 text-base leading-7 text-graphite-600">
-              The cooperation model is built for B2B sourcing, not retail transactions. Buyers can discuss product category planning, OEM/ODM requirements, catalog support, packing, market-fit Flexible Supply, and long-term production directly with {siteConfig.contactPerson}.
+              Buyers can discuss product category planning, OEM/ODM requirements, catalog support, packing, market-specific supply options, and long-term production directly with {siteConfig.contactPerson}.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -93,10 +93,10 @@ export default function WholesaleSolutionsPage() {
               Inquiry Process
             </h2>
             <p className="mt-4 text-base leading-7 text-graphite-600">
-              A clear inquiry helps the team recommend the right supply path, suitable categories, catalog direction, quotation logic, and customization options.
+              A clear inquiry helps the team recommend suitable categories, available options, pricing details, and customization possibilities.
             </p>
             <ButtonLink href="/contact" variant="secondary" className="mt-8">
-              Contact {siteConfig.contactPerson}
+              Discuss Your Requirements
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </ButtonLink>
           </div>
@@ -115,8 +115,8 @@ export default function WholesaleSolutionsPage() {
 
       <CtaBand
         title="Explore Wholesale Cooperation"
-        description={`Send your buyer type, target category, market, quantity range, and customization needs. ${siteConfig.contactPerson} can help you choose the right supply path.`}
-        message={contactMessage("I want to explore wholesale cooperation for bag supply. Please help me clarify my buyer type, category needs, and whether Factory Manufacturing or Flexible Supply is right.")}
+        description={`Send your buyer type, target category, market, quantity range, and customization needs. ${siteConfig.contactPerson} can recommend suitable products and next steps.`}
+        message={contactMessage("I want to explore wholesale cooperation for bag supply. Please help me check suitable categories, MOQ options, and pricing details.")}
       />
     </>
   );

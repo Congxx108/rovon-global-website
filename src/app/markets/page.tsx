@@ -9,7 +9,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Markets",
   description:
-    `${siteConfig.brandName} supports bag buyers across Africa, the Middle East, Southeast Asia, and Latin America with Factory Manufacturing, Flexible Supply, ready stock, mixed wholesale, and OEM/ODM options.`,
+    `${siteConfig.brandName} supports bag buyers across Africa, the Middle East, Southeast Asia, and Latin America with OEM/ODM, ready stock, mixed wholesale, and market-specific product recommendations.`,
   path: "/markets",
 });
 
@@ -18,7 +18,7 @@ export default function MarketsPage() {
     <>
       <PageHero
         title="Market-fit Bag Supply From China"
-        description={`${siteConfig.brandName} serves importers, distributors, trading companies, online sellers, independent website sellers, and brand owners with market-fit bag categories, Factory Manufacturing, Flexible Supply, and practical WhatsApp communication with ${siteConfig.contactPerson}.`}
+        description={`${siteConfig.brandName} serves importers, distributors, trading companies, online retailers, e-commerce sellers, and brand owners with market-specific bag categories and practical WhatsApp communication with ${siteConfig.contactPerson}.`}
         breadcrumbPath="/markets"
       />
       <section className="section-y">
@@ -41,8 +41,8 @@ export default function MarketsPage() {
       </section>
       <CtaBand
         title="Ask for Regional Supply Options"
-        description={`Share your region, buyer type, target categories, quantity range, and inventory risk. ${siteConfig.contactPerson} can recommend whether Factory Manufacturing or Flexible Supply fits your market.`}
-        message={contactMessage(`I want to discuss regional bag supply options with ${siteConfig.brandName}. Please help me choose between Factory Manufacturing and Flexible Supply.`)}
+        description={`Share your region, buyer type, target categories, quantity range, and inventory risk. ${siteConfig.contactPerson} can recommend suitable products and order options for your market.`}
+        message={contactMessage(`I want to discuss regional bag supply options with ${siteConfig.brandName}. Please help me check suitable products, MOQ options, and pricing.`)}
       />
     </>
   );

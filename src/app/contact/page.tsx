@@ -10,7 +10,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Contact Cason",
   description:
-    `Contact ${siteConfig.contactPerson} from ${siteConfig.brandName} for Factory Manufacturing, Flexible Supply, wholesale catalog requests, OEM/ODM inquiries, ready stock, factory overstock, and product requirement discussion.`,
+    `Contact ${siteConfig.contactPerson} from ${siteConfig.brandName} for wholesale catalog requests, OEM/ODM inquiries, ready stock, factory overstock, and product requirement discussion.`,
   path: "/contact",
 });
 
@@ -18,12 +18,12 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        title={`Contact ${siteConfig.contactPerson} for Bag Sourcing Decisions`}
-        description={`Share your target product category, quantity range, market, business type, customization needs, and timeline. ${siteConfig.contactPerson} can help you get the right catalog and choose between Factory Manufacturing and Flexible Supply before quotation.`}
+        title={`Contact ${siteConfig.contactPerson} About Your Bag Requirements`}
+        description={`Share your target product category, quantity range, market, business type, customization needs, and timeline. ${siteConfig.contactPerson} can help you get the right catalog, product recommendations, and next steps.`}
         breadcrumbPath="/contact"
       >
         <WhatsAppCTA
-          message={contactMessage(`I want to contact ${siteConfig.brandName} for catalog, quotation, Factory Manufacturing, and Flexible Supply support.`)}
+          message={contactMessage(`I want to contact ${siteConfig.brandName} for catalog, pricing, OEM/ODM, or ready-stock support.`)}
           eventName="click_contact_cason"
         />
         <ButtonLink
@@ -43,10 +43,10 @@ export default function ContactPage() {
               Contact {siteConfig.contactPerson} on WhatsApp
             </h2>
             <p className="mt-3 text-sm leading-6 text-graphite-600">
-              WhatsApp is the fastest way to discuss catalogs, Factory Manufacturing, Flexible Supply, OEM/ODM requirements, product categories, quotation direction, and order follow-up with a real contact at {siteConfig.brandName}.
+              WhatsApp is the fastest way to discuss catalogs, OEM/ODM requirements, ready-stock options, product categories, pricing details, and order follow-up with {siteConfig.contactPerson}.
             </p>
             <WhatsAppCTA
-              message={contactMessage(`please send me the latest ${siteConfig.brandName} catalog and help me choose between Factory Manufacturing and Flexible Supply before quotation.`)}
+              message={contactMessage(`please send me the latest ${siteConfig.brandName} catalog and help me check suitable products, MOQ options, and pricing.`)}
               label={`Contact ${siteConfig.contactPerson} on WhatsApp`}
               className="mt-6"
               eventName="click_contact_cason"
@@ -90,7 +90,7 @@ export default function ContactPage() {
               Visit / Locate {siteConfig.brandName}
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              {siteConfig.brandName} is based in Baigou, Baoding, Hebei, China. Buyers can contact {siteConfig.contactPerson} on WhatsApp before visiting or discussing Factory Manufacturing, Flexible Supply, or sourcing requirements.
+              {siteConfig.brandName} is based in Baigou, Baoding, Hebei, China. Buyers can contact {siteConfig.contactPerson} on WhatsApp before visiting or discussing sourcing requirements.
             </p>
             <p className="mt-5 text-sm font-semibold leading-6 text-graphite-900">
               {siteConfig.address}

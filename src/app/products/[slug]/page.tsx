@@ -95,7 +95,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
               Built for B2B sourcing, not retail product browsing.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              This page shows category capability and supply direction. It is not a live retail inventory list. Cason can help you clarify whether Factory Manufacturing, Flexible Supply, or OEM/ODM customization is the right path.
+              This page shows category capability and supply direction. It is not a live retail inventory list. Share your quantity range and market so the team can recommend suitable products and MOQ options.
             </p>
           </div>
           <div className="grid gap-6">
@@ -156,10 +156,10 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
           <div>
             <p className="editorial-eyebrow">Customization options</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.01em] text-graphite-950">
-              Discuss materials, structure, logo, supply path, and packing before quotation.
+              Discuss materials, structure, logo, packing, and order details.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              For Factory Manufacturing, share reference photos, target market, expected quantity, material direction, logo needs, and packing requirements. For Flexible Supply, share your target market, category mix, quantity range, and delivery expectation.
+              For custom projects, share reference photos, target market, expected quantity, material direction, logo needs, and packing requirements. For ready stock or mixed wholesale, share your target market, category mix, quantity range, and delivery expectation.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <WhatsAppCTA
@@ -191,7 +191,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
               Capability examples for catalog and sourcing discussion.
             </h2>
             <p className="mt-4 text-sm leading-6 text-graphite-600">
-              The current page uses representative static data to describe category capability. Real photos, specifications, stock lists, and OEM/ODM details should be confirmed with {siteConfig.contactPerson} before quotation.
+              The current page uses representative static data to describe category capability. Real photos, specifications, stock lists, and OEM/ODM details can be confirmed with {siteConfig.contactPerson} during inquiry follow-up.
             </p>
           </div>
           <div className="mt-8 grid gap-6">
@@ -253,7 +253,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
                 Build a broader wholesale bag program.
               </h2>
               <p className="mt-4 text-sm leading-6 text-graphite-600">
-                Related categories can support a stronger Factory Manufacturing plan or a more flexible wholesale combination for market testing.
+                Related categories can support a broader product range, multi-category wholesale order, or market-testing plan.
               </p>
             </div>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -278,7 +278,7 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
 
       <CtaBand
         title={`Discuss ${category.name} Supply`}
-        description={`Share your market, target quantity, material preferences, business type, and packing needs. ${siteConfig.contactPerson} can help choose between Factory Manufacturing, Flexible Supply, and OEM/ODM customization.`}
+        description={`Share your market, target quantity, material preferences, business type, and packing needs. ${siteConfig.contactPerson} can recommend suitable products, MOQ options, and next steps.`}
         message={category.whatsappMessage}
       />
     </>

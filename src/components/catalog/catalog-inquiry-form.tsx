@@ -58,7 +58,7 @@ const customizationOptions = [
   "Color",
   "Size / Structure",
   "Packing",
-  "VANTO KARO label / trim / hardware direction",
+  "Label / trim / hardware customization",
   "No customization yet",
   "Not sure yet",
 ];
@@ -153,7 +153,7 @@ export function CatalogInquiryForm() {
 
   function buildMessage() {
     return [
-      `Hello ${siteConfig.contactPerson}, I visited ${siteConfig.brandName} website. I am interested in your bag supply solutions. Please send me the latest catalog and help me choose between Factory Manufacturing and Flexible Supply options.`,
+      `Hello ${siteConfig.contactPerson}, I visited ${siteConfig.brandName} website. Please send me the latest catalog and help me check suitable product recommendations, MOQ options, and pricing details.`,
       "",
       `Buyer name: ${valueOrFallback(formState.buyerName)}`,
       `Company / business type: ${valueOrFallback(formState.businessType)}`,
@@ -164,7 +164,7 @@ export function CatalogInquiryForm() {
       `Customization needs: ${customizationSummary}`,
       `Message: ${valueOrFallback(formState.extraMessage)}`,
       "",
-      "Please help me check suitable bag options, supply path, and quotation direction before I confirm the next step.",
+      "Please help me check suitable bag options, MOQ, pricing, and the next step.",
     ].join("\n");
   }
 
@@ -266,7 +266,7 @@ export function CatalogInquiryForm() {
           id="extra-message"
           value={formState.extraMessage}
           onChange={(event) => updateField("extraMessage", event.target.value)}
-          placeholder="Tell Cason about target styles, materials, logo needs, VANTO KARO elements, packing, sample questions, flexible supply needs, or timeline."
+          placeholder="Tell Cason about target styles, materials, logo needs, packing, sample questions, ready-stock needs, or timeline."
           rows={5}
           className="focus-ring rounded-sm border border-stonebrand-200 bg-white px-4 py-3 text-sm font-medium leading-6 text-graphite-700 outline-none transition placeholder:text-graphite-400 hover:border-graphite-400"
         />

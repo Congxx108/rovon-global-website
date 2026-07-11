@@ -9,7 +9,7 @@ import Link from "next/link";
 export const metadata = createPageMetadata({
   title: "Products",
   description:
-    `Explore ${siteConfig.brandName} product categories for Factory Manufacturing, Flexible Supply, OEM/ODM custom bags, private label projects, ready stock, factory overstock, and mixed wholesale discussions.`,
+    `Explore ${siteConfig.brandName} bag categories for wholesale programs, OEM/ODM custom bags, private label projects, ready stock, factory overstock, and mixed wholesale discussions.`,
   path: "/products",
 });
 
@@ -17,8 +17,8 @@ export default function ProductsPage() {
   return (
     <>
       <PageHero
-        title="Bag Product Categories for B2B Sourcing"
-        description={`${siteConfig.brandName} focuses on travel bags, men's bags, women's backpacks, chest bags, waist bags, crossbody bags, and OEM/ODM custom bags through two supply paths: Factory Manufacturing and Flexible Supply.`}
+        title="Bag Categories"
+        description={`${siteConfig.brandName} focuses on travel bags, men's bags, women's backpacks, chest bags, waist bags, crossbody bags, and OEM/ODM custom bags for global wholesale buyers.`}
         breadcrumbPath="/products"
       >
         <ButtonLink
@@ -44,7 +44,7 @@ export default function ProductsPage() {
                 {readyStockInfo.name}
               </h2>
               <p className="mt-4 text-sm leading-6 text-graphite-600">
-                Flexible Supply covers ready stock, factory overstock, mixed wholesale, low MOQ, market testing, and faster delivery when suitable options are available.
+                Ready stock, factory overstock, mixed wholesale, low MOQ, market testing, and faster delivery can be discussed when suitable options are available.
               </p>
             </div>
             <span className="mt-8 inline-flex w-fit rounded bg-graphite-950 px-4 py-2 text-[11px] font-bold text-white transition group-hover:bg-graphite-800">

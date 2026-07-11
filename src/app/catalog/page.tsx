@@ -9,7 +9,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Bag Catalog Request | ROVON Global",
   description:
-    `Tell ${siteConfig.contactPerson} what you need before asking for a quote. Request the latest ${siteConfig.brandName} catalog and choose between Factory Manufacturing and Flexible Supply on WhatsApp.`,
+    `Tell ${siteConfig.contactPerson} what you need and request the latest ${siteConfig.brandName} catalog, suitable product recommendations, MOQ options, and pricing details on WhatsApp.`,
   path: "/catalog",
 });
 
@@ -32,8 +32,8 @@ export default function CatalogPage() {
   return (
     <>
       <PageHero
-        title={`Tell ${siteConfig.contactPerson} What You Need Before Asking for a Quote`}
-        description={`Use this page to prepare a B2B inquiry for catalog, Factory Manufacturing, Flexible Supply, ready stock, factory overstock, mixed wholesale, or OEM/ODM custom bag discussion.`}
+        title={`Tell ${siteConfig.contactPerson} What You Need`}
+        description={`Use this page to prepare a B2B inquiry for catalog, OEM/ODM custom bags, ready stock, factory overstock, mixed wholesale, MOQ options, and pricing details.`}
         breadcrumbPath="/catalog"
       >
         <ButtonLink href="/products" variant="outline">
@@ -41,7 +41,7 @@ export default function CatalogPage() {
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </ButtonLink>
         <WhatsAppCTA
-          message={contactMessage("I visited ROVON Global website. I am interested in your bag supply solutions. Please send me the latest catalog and help me choose between Factory Manufacturing and Flexible Supply options.")}
+          message={contactMessage("I visited ROVON Global website. Please send me the latest catalog and help me check suitable product recommendations, MOQ options, and pricing details.")}
           label={`Contact ${siteConfig.contactPerson} Directly`}
           eventName="click_contact_cason"
           eventParams={{ cta_label: `Contact ${siteConfig.contactPerson} Directly`, page_path: "/catalog" }}
@@ -81,7 +81,7 @@ export default function CatalogPage() {
                 Direct contact at {siteConfig.brandName}
               </h2>
               <p className="mt-3 text-sm leading-6 text-graphite-200">
-                {siteConfig.contactPerson} is the direct contact at {siteConfig.brandName} for catalog requests, Factory Manufacturing, Flexible Supply, ready stock, factory overstock, mixed wholesale, and OEM/ODM communication.
+                {siteConfig.contactPerson} is the direct contact at {siteConfig.brandName} for catalog requests, ready stock, factory overstock, mixed wholesale, OEM/ODM communication, and pricing follow-up.
               </p>
               <ul className="mt-5 grid gap-2 text-sm text-graphite-200">
                 {inquiryTips.map((item) => (
@@ -98,7 +98,7 @@ export default function CatalogPage() {
                 Share the basics, then send them to {siteConfig.contactPerson} on WhatsApp.
               </h2>
               <p className="mt-4 max-w-3xl text-base leading-7 text-graphite-600">
-                Fill in what you already know: product category, quantity range, destination market, business type, logo needs, and preferred supply path. If some details are not confirmed yet, leave them blank or choose Not sure yet. The form only creates a WhatsApp message and does not store your information.
+                Fill in what you already know: product category, quantity range, destination market, business type, logo needs, and timing. If some details are not confirmed yet, leave them blank or choose Not sure yet. The form only creates a WhatsApp message and does not store your information.
               </p>
             </div>
             <CatalogInquiryForm />

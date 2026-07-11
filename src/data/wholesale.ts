@@ -7,7 +7,7 @@ export const wholesaleSegments: WholesaleSegment[] = [
   {
     title: "Importers",
     description:
-      "Support product category planning, catalog selection, Factory Manufacturing or Flexible Supply decisions, quotation communication, and export-ready packing coordination for buyers importing bags from China.",
+      "Support category planning, catalog selection, sourcing model decisions, quotation preparation, and export-ready packing coordination for buyers importing bags from China.",
   },
   {
     title: "Distributors",
@@ -17,7 +17,7 @@ export const wholesaleSegments: WholesaleSegment[] = [
   {
     title: "Trading Companies",
     description:
-      "Support fast communication, product matching, quotation coordination, OEM/ODM requirement clarification, and practical supply recommendations for end-buyer projects.",
+      "Support fast communication, product matching, pricing discussion, OEM/ODM requirement clarification, and practical supply recommendations for end-buyer projects.",
   },
   {
     title: "Brand Buyers",
@@ -28,8 +28,8 @@ export const wholesaleSegments: WholesaleSegment[] = [
 
 export const inquiryProcess = [
   "Share category, market, quantity range, business type, and customization needs",
-  "Clarify whether Factory Manufacturing or Flexible Supply fits the project",
-  "Receive catalog direction, availability check, and quotation discussion",
+  "Clarify the sourcing model that fits the project",
+  "Receive suitable product recommendations, availability checks, and pricing discussion",
   "Confirm sample, material, logo, packing, quality, and shipment details",
 ];
 

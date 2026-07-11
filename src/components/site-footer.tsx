@@ -16,11 +16,11 @@ export function SiteFooter() {
             </span>
             <div>
               <p className="text-sm font-black uppercase tracking-[0.12em]">{siteConfig.brandName}</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-graphite-400">Factory-backed bag manufacturer</p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-graphite-400">Bag manufacturing partner</p>
             </div>
           </div>
           <p className="mt-6 max-w-sm text-sm leading-7 text-graphite-300">
-            Factory-backed Bag Manufacturer & Flexible Supply Partner from China for global B2B buyers.
+            Bag manufacturing, wholesale supply, and OEM/ODM support from China for global B2B buyers.
           </p>
           <SocialLinks label="Follow ROVON Global" tone="light" className="mt-7" />
         </Reveal>
@@ -84,7 +84,7 @@ export function SiteFooter() {
             </li>
           </ul>
           <WhatsAppCTA
-            message={contactMessage("I want to contact you from the website footer about catalog, Factory Manufacturing, Flexible Supply, and bag sourcing support.")}
+            message={contactMessage("I want to contact you from the website footer about catalog, OEM/ODM, ready stock, and bag sourcing support.")}
             label={`Contact ${siteConfig.contactPerson}`}
             className="mt-6 w-full border-white bg-white !text-graphite-950 hover:border-white hover:bg-[#eeeeee]"
             eventName="click_contact_cason"

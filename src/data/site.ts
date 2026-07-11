@@ -54,7 +54,7 @@ export const supplySolutions = [
     title: "Flexible Supply",
     subtitle: "For ready stock, factory overstock, mixed wholesale, market testing, and faster delivery.",
     description:
-      "Use this path when you need lower inventory risk, flexible category combinations, available stock discussion, and faster replenishment for selected markets.",
+      "Use this path when you need lower inventory risk, mixed product selections, available stock checks, and faster replenishment for selected markets.",
     fit: ["Ready stock", "Factory overstock", "Mixed wholesale", "Low MOQ"],
   },
 ];

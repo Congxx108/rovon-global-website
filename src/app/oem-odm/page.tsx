@@ -24,7 +24,7 @@ export default function OemOdmPage() {
     <>
       <PageHero
         title="Factory Manufacturing for OEM/ODM Custom Bags"
-        description={`${siteConfig.brandName} supports custom bag projects from idea, material selection, logo application, structure adjustment, and sampling to bulk production, quality control, packing, and export support. Contact ${siteConfig.contactPerson} to clarify your custom bag brief before quotation.`}
+        description={`${siteConfig.brandName} supports custom bag projects from idea, material selection, logo application, structure adjustment, and sampling to bulk production, quality control, packing, and export support. Contact ${siteConfig.contactPerson} to prepare a clear custom bag brief.`}
         breadcrumbPath="/oem-odm"
       >
         <WhatsAppCTA
@@ -42,7 +42,7 @@ export default function OemOdmPage() {
               A structured path for custom bag projects.
             </h2>
             <p className="mt-4 text-base leading-7 text-graphite-600">
-              Buyers can discuss logo methods, materials, hardware, lining, size, structure, colors, labels, hangtags, packing, carton marks, market-specific product planning, and selected VANTO KARO brand elements where suitable.
+              Buyers can discuss logo methods, materials, hardware, lining, size, structure, colors, labels, hangtags, packing, carton marks, and market-specific product planning.
             </p>
           </div>
           <div className="grid gap-0 overflow-hidden rounded-md border border-[#dddddd] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.04)]">

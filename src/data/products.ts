@@ -49,7 +49,7 @@ export type Product = {
 };
 
 const defaultMoqNote =
-  "MOQ depends on whether the project uses Factory Manufacturing or Flexible Supply, plus material, color, logo, packing, and available stock conditions.";
+  "MOQ depends on bag type, material, color, logo method, packing, and available stock conditions.";
 
 export const productCategories: ProductCategory[] = [
   {
@@ -57,9 +57,9 @@ export const productCategories: ProductCategory[] = [
     name: "Travel Bags",
     headline: "Travel bag manufacturing and flexible supply for wholesale buyers",
     description:
-      "Factory-backed duffel bags, travel organizers, multi-function travel bags, and export-ready travel products for importers, distributors, and private label buyers.",
+      "Duffel bags, travel organizers, multi-function travel bags, and export-ready travel products for importers, distributors, and private label buyers.",
     buyerUseCase:
-      "Suitable for buyers building travel goods programs through Factory Manufacturing, or testing market demand with Flexible Supply when ready stock or overstock is available.",
+      "Suitable for buyers building travel goods programs, seasonal wholesale lines, promotional travel collections, or market-testing orders.",
     suitableBuyers: ["Importers", "Travel goods wholesalers", "Regional distributors", "Promotional buyers"],
     commonUseCases: ["Regional travel goods programs", "Promotional travel bag projects", "Wholesale duffel bag sourcing", "Private label travel accessories"],
     productHighlights: [
@@ -69,12 +69,12 @@ export const productCategories: ProductCategory[] = [
       "Packing support for export orders",
     ],
     customizationOptions: ["Material", "Logo", "Zipper", "Lining", "Size", "Color", "Packaging"],
-    sourcingSupport: ["Factory Manufacturing planning", "Flexible Supply availability check", "Material and capacity discussion", "Logo and packing requirements"],
+    sourcingSupport: ["Production planning", "Availability check", "Material and capacity discussion", "Logo and packing requirements"],
     moqNote: defaultMoqNote,
     relatedCategorySlugs: ["mens-bags", "crossbody-bags", "oem-odm-custom-bags"],
     image: "/images/products/travel-bags/travel-bag-001-main.svg",
     priority: 1,
-    ctaLabel: "Request Travel Bag Quote",
+    ctaLabel: "Ask About This Category",
     whatsappMessage:
       contactMessage("I am interested in travel bags. Please send the latest catalog and help me choose between Factory Manufacturing and Flexible Supply options for my market."),
     seoTitle: `Travel Bag Manufacturer in China | ${siteConfig.brandName}`,
@@ -103,7 +103,7 @@ export const productCategories: ProductCategory[] = [
     relatedCategorySlugs: ["crossbody-bags", "chest-bags", "oem-odm-custom-bags"],
     image: "/images/products/mens-bags/mens-bag-001-main.svg",
     priority: 2,
-    ctaLabel: "Ask for Men's Bag Catalog",
+    ctaLabel: "Ask About This Category",
     whatsappMessage:
       contactMessage("I am interested in men's bags. Please send suitable catalog options and advise whether Factory Manufacturing or Flexible Supply is better for my order plan."),
     seoTitle: `Men's Bag Manufacturer and Supplier | ${siteConfig.brandName}`,
@@ -132,7 +132,7 @@ export const productCategories: ProductCategory[] = [
     relatedCategorySlugs: ["travel-bags", "crossbody-bags", "oem-odm-custom-bags"],
     image: "/images/products/womens-backpacks/women-backpack-001-main.svg",
     priority: 3,
-    ctaLabel: "Request Backpack Catalog",
+    ctaLabel: "Ask About This Category",
     whatsappMessage:
       contactMessage("I am interested in women's backpacks. Please send catalog options and help me check OEM/ODM, ready stock, or mixed wholesale directions."),
     seoTitle: `Women's Backpack Supplier in China | ${siteConfig.brandName}`,
@@ -156,12 +156,12 @@ export const productCategories: ProductCategory[] = [
       "Logo and packaging customization support",
     ],
     customizationOptions: ["Material", "Strap", "Buckle", "Pocket layout", "Logo", "Color", "Packing"],
-    sourcingSupport: ["Design direction matching", "Strap and pocket structure discussion", "Logo and packing coordination", "Factory or flexible supply quotation path"],
+    sourcingSupport: ["Style matching", "Strap and pocket structure discussion", "Logo and packing coordination", "Quotation preparation"],
     moqNote: defaultMoqNote,
     relatedCategorySlugs: ["waist-bags", "mens-bags", "crossbody-bags"],
     image: "/images/products/chest-bags/chest-bag-001-main.svg",
     priority: 4,
-    ctaLabel: "Ask for Chest Bag Quote",
+    ctaLabel: "Ask About This Category",
     whatsappMessage:
       contactMessage("I am interested in chest bags. Please send catalog options and help me compare custom production, ready stock, or mixed wholesale supply."),
     seoTitle: `Chest Bag Manufacturer and Wholesale Supplier | ${siteConfig.brandName}`,
@@ -185,12 +185,12 @@ export const productCategories: ProductCategory[] = [
       "Flexible packing discussion for wholesale orders",
     ],
     customizationOptions: ["Fabric", "Buckle", "Strap", "Pocket structure", "Logo", "Color", "Polybag or carton packing"],
-    sourcingSupport: ["Fabric and buckle discussion", "Logo and strap requirement follow-up", "Packing coordination", "Manufacturing or ready stock quotation"],
+    sourcingSupport: ["Fabric and buckle discussion", "Logo and strap requirement follow-up", "Packing coordination", "Quotation preparation"],
     moqNote: defaultMoqNote,
     relatedCategorySlugs: ["chest-bags", "crossbody-bags", "travel-bags"],
     image: "/images/products/waist-bags/waist-bag-001-main.svg",
     priority: 5,
-    ctaLabel: "Request Waist Bag Quote",
+    ctaLabel: "Ask About This Category",
     whatsappMessage:
       contactMessage("I am interested in waist bags. Please send catalog options and advise the suitable supply path for my quantity range and target market."),
     seoTitle: `Waist Bag Supplier and Manufacturer | ${siteConfig.brandName}`,
@@ -214,12 +214,12 @@ export const productCategories: ProductCategory[] = [
       "Suitable for multi-category wholesale programs",
     ],
     customizationOptions: ["Material", "Logo", "Hardware", "Strap length", "Interior structure", "Color", "Packaging"],
-    sourcingSupport: ["Category and style planning", "Hardware and strap discussion", "Logo and structure coordination", "Two-solution catalog and quotation follow-up"],
+    sourcingSupport: ["Category and style planning", "Hardware and strap discussion", "Logo and structure coordination", "Catalog and pricing follow-up"],
     moqNote: defaultMoqNote,
     relatedCategorySlugs: ["mens-bags", "chest-bags", "waist-bags"],
     image: "/images/products/crossbody-bags/crossbody-bag-001-main.svg",
     priority: 6,
-    ctaLabel: "Request Crossbody Bag Quote",
+    ctaLabel: "Ask About This Category",
     whatsappMessage:
       contactMessage("I am interested in crossbody bags. Please send catalog options and help me choose between OEM/ODM production and flexible wholesale supply."),
     seoTitle: `Crossbody Bag Manufacturer and Supplier | ${siteConfig.brandName}`,
@@ -248,7 +248,7 @@ export const productCategories: ProductCategory[] = [
     relatedCategorySlugs: ["travel-bags", "mens-bags", "womens-backpacks"],
     image: "/images/products/oem-odm/oem-odm-bag-001-main.svg",
     priority: 7,
-    ctaLabel: "Start Custom Bag Project",
+    ctaLabel: "Discuss Your Requirements",
     whatsappMessage:
       contactMessage("I am interested in Factory Manufacturing for an OEM/ODM custom bag project. Please tell me what information you need for materials, logo, samples, quantity, and packing."),
     seoTitle: `OEM ODM Custom Bag Manufacturer | ${siteConfig.brandName}`,
@@ -286,7 +286,7 @@ export const readyStockInfo = {
   headline: "Ready stock, factory overstock, mixed wholesale, low MOQ, and faster delivery as a flexible supply option",
   description:
     `Flexible Supply is the supplementary path for ready stock, factory overstock, mixed wholesale, low MOQ, fast delivery, and market testing. It supports buyers who need lower inventory risk, while ${siteConfig.brandName}'s core positioning remains factory-backed bag manufacturing and OEM/ODM custom bag supply.`,
-  ctaLabel: "Ask Cason for Flexible Supply Options",
+  ctaLabel: "Discuss Your Requirements",
   whatsappMessage:
     contactMessage("I am interested in Flexible Supply. Please send available ready stock, factory overstock, or mixed wholesale options and help me check what fits my market and quantity range."),
 };

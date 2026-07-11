@@ -35,7 +35,7 @@ export const markets: Market[] = [
     name: "Southeast Asia",
     headline: "Flexible bag supply for trend-driven Southeast Asian markets",
     description:
-      `${siteConfig.brandName} helps Southeast Asian buyers source fast-moving styles, practical daily bags, women's backpacks, crossbody bags, and flexible category combinations for online and wholesale channels.`,
+      `${siteConfig.brandName} helps Southeast Asian buyers source fast-moving styles, practical daily bags, women's backpacks, crossbody bags, and mixed product selections for online and wholesale channels.`,
     strengths: ["Fast-moving daily bag styles", "Women's backpacks and crossbody bags", "Flexible sourcing and category combinations", "Market-fit catalog recommendations"],
     whatsappMessage:
       contactMessage("I need bag supply options for Southeast Asia. Please send fast-moving styles, women's backpacks, crossbody bags, and flexible sourcing recommendations."),

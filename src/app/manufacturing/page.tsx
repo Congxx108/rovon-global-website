@@ -11,7 +11,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Manufacturing",
   description:
-    `${siteConfig.brandName} provides Factory Manufacturing support from China for OEM/ODM bags, private label projects, bulk production, quality control, packing, and export communication.`,
+    `${siteConfig.brandName} provides bag production support from China for OEM/ODM bags, private label projects, bulk production, quality control, packing, and export communication.`,
   path: "/manufacturing",
 });
 
@@ -19,8 +19,8 @@ export default function ManufacturingPage() {
   return (
     <>
       <PageHero
-        title="Factory Manufacturing for Custom Bags and Long-term Supply"
-        description={`${siteConfig.brandName} supports global buyers with structured manufacturing communication across product categories, material selection, accessory matching, sample discussion, production coordination, quality inspection, packing, and OEM/ODM custom bag workflows.`}
+        title="Bag Production, Inspection and Packing Support"
+        description={`${siteConfig.brandName} supports global buyers with production communication across product categories, material selection, accessory matching, sample discussion, cutting, stitching, assembly, quality inspection, packing, and OEM/ODM workflows.`}
         breadcrumbPath="/manufacturing"
       />
       <section className="section-y">
@@ -29,7 +29,7 @@ export default function ManufacturingPage() {
             <div className="relative aspect-[16/10] bg-graphite-100">
               <Image
                 src="/images/generated/factory-process-detail.png"
-                alt="Factory-backed luggage manufacturing support"
+                alt="Luggage and bag manufacturing support"
                 fill
                 sizes="(min-width: 1024px) 52vw, 100vw"
                 className="object-cover"
@@ -37,9 +37,9 @@ export default function ManufacturingPage() {
             </div>
           </div>
           <div>
-            <p className="editorial-eyebrow">Factory-backed supply capability</p>
+            <p className="editorial-eyebrow">Manufacturing capability</p>
             <h2 className="mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
-              Built around practical bag production and sourcing communication.
+              Built around practical bag production communication.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
               Backed by around 5,000 sqm of warehouse and operating space, 150+ skilled workers, and 10 production lines, ROVON Global supports both flexible wholesale orders and large-scale OEM/ODM production, with around 2,000 bags shipped per day.
@@ -59,7 +59,7 @@ export default function ManufacturingPage() {
               ))}
             </div>
             <div className="mt-6 rounded-md border border-stonebrand-200 bg-graphite-50 p-5">
-              <p className="text-sm font-black text-graphite-950">Factory-backed supply from Baigou, China</p>
+              <p className="text-sm font-black text-graphite-950">Production base in Baigou, China</p>
               <p className="mt-2 text-sm leading-6 text-graphite-600">{siteConfig.address}</p>
               <a
                 href={siteConfig.googleMapsExternalUrl}
@@ -93,8 +93,8 @@ export default function ManufacturingPage() {
       </section>
       <CtaBand
         title="Discuss Production Capability"
-        description={`Share your product category, material direction, quantity range, business type, and custom requirements. ${siteConfig.contactPerson} can help clarify whether Factory Manufacturing or Flexible Supply fits the project.`}
-        message={contactMessage(`I want to discuss ${siteConfig.brandName} Factory Manufacturing capability for my bag sourcing project. Please help me clarify materials, samples, production support, packing requirements, and whether flexible supply is also suitable.`)}
+        description={`Share your product category, material direction, quantity range, business type, and custom requirements. ${siteConfig.contactPerson} can help clarify production, inspection, and packing details.`}
+        message={contactMessage(`I want to discuss ${siteConfig.brandName} manufacturing capability for my bag sourcing project. Please help me clarify materials, samples, production support, and packing requirements.`)}
       />
     </>
   );

@@ -24,18 +24,18 @@ import { WhatsAppCTA } from "@/components/whatsapp-cta";
 import { factoryStats } from "@/data/factory";
 import { faqItems } from "@/data/faq";
 import { productCategories } from "@/data/products";
-import { contactMessage, siteConfig, supplySolutions, vantoKaro } from "@/data/site";
+import { contactMessage, siteConfig, supplySolutions } from "@/data/site";
 import { wholesaleSegments } from "@/data/wholesale";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "ROVON Global | Factory-backed Bag Manufacturer & Flexible Supply Partner",
+  title: "ROVON Global | Factory-Backed Bag Manufacturer & Flexible Supply Partner",
   description:
     `${siteConfig.brandName} is a factory-backed bag manufacturer and flexible supply partner from China, supporting OEM/ODM production, private label, ready stock, factory overstock, and mixed wholesale.`,
   path: "/",
 });
 
-const buyerMarks = ["FACTORY-BACKED SUPPLY", "TWO SUPPLY SOLUTIONS", "OEM/ODM PRODUCTION", "FLEXIBLE WHOLESALE", "DIRECT WHATSAPP CONTACT WITH CASON"];
+const buyerMarks = ["FACTORY-BACKED SUPPLY", "TWO SUPPLY SOLUTIONS", "OEM/ODM PRODUCTION", "FLEXIBLE WHOLESALE", "DIRECT WHATSAPP CONTACT"];
 
 const productIcons = [BriefcaseBusiness, Store, Layers3, PackageCheck, Ruler, Scissors, Factory];
 
@@ -52,6 +52,7 @@ const wholesaleIcons = [Store, Handshake, BriefcaseBusiness, Factory];
 
 export default function HomePage() {
   const featuredCategories = productCategories.slice(0, 7);
+  const featuredFaqItems = faqItems.slice(0, 3);
 
   return (
     <>
@@ -67,14 +68,14 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/48 to-black/55" />
         <div className="container-shell relative flex min-h-[680px] flex-col items-center justify-center py-24 text-center md:min-h-[760px] xl:min-h-[820px]">
           <p className="hero-kicker text-[11px] font-bold uppercase tracking-[0.28em] text-white/75">
-            Factory-backed bag manufacturer from China
+            Factory-backed bag supplier from China
           </p>
           <h1 className="hero-title mt-5 max-w-4xl text-5xl font-black leading-[0.98] text-white md:text-7xl">
-            Factory-backed Bag Manufacturer
+            Factory-Backed Bag Manufacturer{" "}
             <span className="block">& Flexible Supply Partner</span>
           </h1>
           <p className="hero-subtext mt-6 max-w-3xl text-base leading-8 text-white/82 md:text-lg">
-            ROVON Global helps global B2B buyers source bags from China through two supply solutions: Factory Manufacturing for OEM/ODM and long-term production, and Flexible Supply for ready stock, factory overstock, mixed wholesale, low MOQ, and fast delivery.
+            Source travel bags, men&apos;s bags, women&apos;s backpacks, chest bags, waist bags, crossbody bags and OEM/ODM custom bags through manufacturing and flexible wholesale support from China.
           </p>
           <div className="hero-actions mt-8 flex flex-wrap justify-center gap-3">
             <ButtonLink
@@ -99,7 +100,7 @@ export default function HomePage() {
       <Reveal as="section" className="border-b border-[#dedede] bg-white">
         <div className="container-shell py-8 text-center">
           <p className="text-lg font-black text-graphite-950 md:text-xl">
-            Factory-backed supply for global importers, distributors, wholesalers, brand buyers and OEM/ODM buyers.
+            Trusted by importers, distributors, wholesalers, brand buyers and OEM/ODM buyers.
           </p>
         </div>
         <div className="overflow-hidden border-t border-[#eeeeee] py-6">
@@ -119,7 +120,7 @@ export default function HomePage() {
         <div className="container-shell">
           <SectionHeading
             title="One Supplier. Two Supply Solutions."
-            description="Choose the sourcing path that fits your business stage, order plan, inventory risk, and customization needs."
+            description="Choose the sourcing path that fits your order plan, inventory risk, and customization needs."
             align="center"
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -148,7 +149,7 @@ export default function HomePage() {
         <div className="container-shell">
           <SectionHeading
             title="Product Categories We Manufacture"
-            description="Core bag categories for Factory Manufacturing, wholesale programs, private label projects, and Flexible Supply discussions."
+            description="Core bag categories for wholesale programs, private label projects, ready stock checks, and custom sourcing."
             align="center"
           />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -195,7 +196,7 @@ export default function HomePage() {
         <div className="container-shell">
           <SectionHeading
             title="A Clear OEM/ODM Process From Idea To Production"
-            description="A stable Factory Manufacturing workflow for custom bags, private label projects, catalog selection, sample confirmation, production, inspection, and packing."
+            description="A stable workflow for custom bags, private label projects, sample confirmation, production, inspection, and packing."
             align="center"
           />
           <HomeProcessTabs />
@@ -206,7 +207,7 @@ export default function HomePage() {
         <div className="container-shell">
           <SectionHeading
             title="Materials, Components And Packing Support"
-            description="A practical capability view for material selection, structure planning, hardware, stitching, logo application, export packing, and selected VANTO KARO brand elements."
+            description="A practical capability view for material selection, structure planning, hardware, stitching, logo application, and export packing."
             align="center"
           />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -244,13 +245,13 @@ export default function HomePage() {
           <div className="rounded-md border border-[#dedede] bg-white p-7 shadow-[0_18px_48px_rgba(0,0,0,0.07)] md:p-10">
             <p className="editorial-eyebrow mb-3">Factory capability</p>
             <h2 className="text-3xl font-black leading-[1.08] text-graphite-950 md:text-4xl">
-              Factory-backed Supply Capability
+              Supply Capacity From Baigou
             </h2>
             <p className="mt-5 text-sm leading-7 text-graphite-600 md:text-base">
-              Backed by around 5,000 sqm of warehouse and operating space, 150+ skilled workers, and 10 production lines, ROVON Global supports both Flexible Supply orders and large-scale OEM/ODM production, with around 2,000 bags shipped per day.
+              Backed by around 5,000 sqm of warehouse and operating space, 150+ skilled workers, and 10 production lines, ROVON Global supports wholesale orders and OEM/ODM production, with around 2,000 bags shipped per day.
             </p>
             <div className="mt-6 grid gap-4 border-y border-[#dedede] py-6">
-              {[...factoryStats, "Direct production and sourcing communication with Cason"].map((item) => (
+              {[...factoryStats, "Direct production and sourcing communication"].map((item) => (
                 <div key={item} className="flex items-center gap-3 text-sm font-semibold text-graphite-800">
                   <BadgeCheck className="h-4 w-4" aria-hidden="true" />
                   {item}
@@ -263,8 +264,8 @@ export default function HomePage() {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </ButtonLink>
               <WhatsAppCTA
-                message={contactMessage("I want to talk about production capability, Factory Manufacturing, Flexible Supply, quality inspection, and packing support.")}
-                label="Talk to Cason About Production"
+                message={contactMessage("I want to talk about production capability, quality inspection, packing support, and suitable product categories.")}
+                label="Discuss Requirements"
                 className="bg-white !text-graphite-950 hover:bg-graphite-950 hover:!text-white"
                 eventName="click_contact_cason"
               />
@@ -276,31 +277,30 @@ export default function HomePage() {
       <Reveal as="section" className="section-y border-y border-stonebrand-200 bg-[#f6f6f6]">
         <div className="container-shell grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
-            <p className="editorial-eyebrow">Cason / ROVON Global / VANTO KARO</p>
+            <p className="editorial-eyebrow">Direct communication</p>
             <h2 className="text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
-              A clear brand structure for buyer trust.
+              Work directly with Cason.
             </h2>
+            <p className="mt-5 text-base leading-7 text-graphite-600">
+              Cason handles catalog requests, product discussions and OEM/ODM communication for ROVON Global buyers. If you found us through Facebook or TikTok, WhatsApp is the fastest way to continue the conversation.
+            </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {[
-              {
-                title: "Cason",
-                text: "The real contact behind ROVON Global and your direct WhatsApp sourcing partner.",
-              },
-              {
-                title: "ROVON Global",
-                text: "The manufacturing and supply chain partner for Factory Manufacturing and Flexible Supply.",
-              },
-              {
-                title: vantoKaro.name,
-                text: "An independent bag product brand for selected lines, labels, trims, hardware, and packaging.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="interactive-card rounded-md border border-[#dedede] bg-white p-6 shadow-[0_12px_34px_rgba(0,0,0,0.04)]">
-                <h3 className="text-lg font-black text-graphite-950">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-graphite-600">{item.text}</p>
-              </div>
-            ))}
+          <div className="rounded-md border border-[#dedede] bg-white p-7 shadow-[0_12px_34px_rgba(0,0,0,0.04)]">
+            <h3 className="text-lg font-black text-graphite-950">What to send</h3>
+            <div className="mt-5 grid gap-3 text-sm leading-6 text-graphite-700 sm:grid-cols-2">
+              {["Product category", "Quantity range", "Destination market", "Logo or packing needs"].map((item) => (
+                <div key={item} className="flex items-center gap-3">
+                  <Check className="h-4 w-4 text-graphite-950" aria-hidden="true" />
+                  {item}
+                </div>
+              ))}
+            </div>
+            <WhatsAppCTA
+              message={contactMessage("I want to discuss bag categories, quantities, and catalog options for my market.")}
+              label="Discuss Your Requirements"
+              className="mt-6"
+              eventName="click_contact_cason"
+            />
           </div>
         </div>
       </Reveal>
@@ -308,8 +308,8 @@ export default function HomePage() {
       <Reveal as="section" className="section-y bg-white pt-0">
         <div className="container-shell">
           <SectionHeading
-            title="What Set Us Apart?"
-            description="Different buyer types need different sourcing support. ROVON keeps the path practical for supply-path selection, catalog direction, customization, production, and follow-up."
+            title="Supply Support for Different Types of Bag Buyers"
+            description="Importers, distributors, trading companies and brand buyers need different sourcing support. ROVON keeps product selection, customization, production and follow-up clear."
             align="center"
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -345,7 +345,7 @@ export default function HomePage() {
         <div className="container-shell">
           <h2 className="text-center text-4xl font-black text-graphite-950">FAQ</h2>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {faqItems.map((item, index) => (
+            {featuredFaqItems.map((item, index) => (
               <Reveal key={item.question} delay={(index % 2) * 100}>
               <div className="interactive-card rounded-md border border-[#e2e2e2] bg-white p-6 shadow-[0_10px_28px_rgba(0,0,0,0.04)]">
                 <div className="flex items-start gap-3">
@@ -359,13 +359,18 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+          <div className="mt-8 text-center">
+            <ButtonLink href="/faq" variant="outline">
+              View Full FAQ
+            </ButtonLink>
+          </div>
         </div>
       </Reveal>
 
       <CtaBand
         title="Send your bag sourcing requirements to Cason."
-        description="Share your target market, product category, quantity range, business type and customization needs. ROVON Global will help you choose between Factory Manufacturing and Flexible Supply before quotation."
-        message={contactMessage("I want to send my bag sourcing requirements. Please help me review product category, quantity range, and whether Factory Manufacturing or Flexible Supply fits before quotation.")}
+        description="Share your target market, product category, quantity range, business type and customization needs. ROVON Global will recommend suitable products, MOQ options and next steps."
+        message={contactMessage("I want to send my bag sourcing requirements. Please help me review product category, quantity range, and suitable next steps.")}
       />
     </>
   );

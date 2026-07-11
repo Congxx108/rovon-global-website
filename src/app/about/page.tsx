@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/lib/metadata";
 
 const buyerSupport = [
   "Multi-category sourcing",
-  "Catalog and quotation support",
+  "Catalog and quotation preparation",
   "Customization communication",
   "Sample and production follow-up",
   "Packing and export coordination",
@@ -17,7 +17,7 @@ const buyerSupport = [
 export const metadata = createPageMetadata({
   title: "About ROVON Global and Cason",
   description:
-    `Learn about ${siteConfig.brandName}, a factory-backed bag manufacturer and flexible supply partner from China, ${siteConfig.contactPerson} as the direct B2B contact, and VANTO KARO as an independent bag product brand.`,
+    `Learn about ${siteConfig.brandName}, its bag manufacturing and supply work, ${siteConfig.contactPerson} as the direct B2B contact, and VANTO KARO as an independent bag product brand.`,
   path: "/about",
 });
 
@@ -26,7 +26,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title={`About ${siteConfig.brandName}`}
-        description={`${siteConfig.brandName} is a factory-backed bag manufacturer and flexible supply partner from China, supporting global B2B buyers through Factory Manufacturing and Flexible Supply.`}
+        description={`${siteConfig.brandName} supports global B2B buyers with bag manufacturing, wholesale supply, OEM/ODM development, ready stock, and export coordination from China.`}
         breadcrumbPath="/about"
       >
         <WhatsAppCTA
@@ -40,18 +40,18 @@ export default function AboutPage() {
           <div>
             <p className="editorial-eyebrow">About ROVON Global</p>
             <h2 className="headline-serif mt-4 text-3xl font-black leading-tight text-graphite-950 md:text-4xl">
-              Factory-backed Bag Manufacturer & Flexible Supply Partner from China.
+              A China-based bag manufacturer and supply partner for global buyers.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              {siteConfig.brandName} serves importers, distributors, wholesalers, trading companies, boutique owners, online store sellers, independent website sellers, and brand buyers who need reliable China bag sourcing support.
+              {siteConfig.brandName} serves importers, distributors, wholesalers, trading companies, boutique owners, e-commerce sellers, DTC brand owners, and brand buyers who need reliable China bag sourcing support.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              "Factory Manufacturing for OEM/ODM and private label",
-              "Flexible Supply for ready stock, overstock, and mixed wholesale",
+              "OEM/ODM and private label development",
+              "Ready stock, overstock, and mixed wholesale support",
               "Direct WhatsApp communication with Cason",
-              "VANTO KARO support for selected brand elements",
+              "Selected VANTO KARO product-brand elements",
             ].map((item) => (
               <div key={item} className="rounded-md border border-[#dddddd] bg-white p-5 text-sm font-bold text-graphite-900 shadow-[0_6px_18px_rgba(0,0,0,0.04)]">
                 {item}
@@ -109,7 +109,7 @@ export default function AboutPage() {
               From product category discussion to packing coordination.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              The website is structured for B2B sourcing. Buyers can clarify product categories, catalog needs, materials, logos, sample plans, production follow-up, and packing requirements without generic ecommerce steps.
+              We keep the sourcing process direct and practical, from product selection and sampling to production, inspection, packing and export coordination.
             </p>
           </div>
           <div className="grid gap-4">
@@ -130,7 +130,7 @@ export default function AboutPage() {
               Meet {siteConfig.contactPerson}, Your Direct Contact at {siteConfig.brandName}
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite-600">
-              {siteConfig.contactPerson} is the real contact behind {siteConfig.brandName}. He helps global buyers communicate directly about catalogs, Factory Manufacturing, Flexible Supply, OEM/ODM discussions, quantity range, market fit, and order requirement follow-up. The website keeps {siteConfig.brandName} as the supply partner while making Cason the practical trust entrance for WhatsApp communication.
+              {siteConfig.contactPerson} helps global buyers communicate directly about catalogs, product requirements, OEM/ODM projects, ready-stock updates, quantity range, market fit, and order follow-up. {siteConfig.brandName} remains the supply partner; Cason is the practical WhatsApp contact.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <WhatsAppCTA
@@ -175,8 +175,8 @@ export default function AboutPage() {
 
       <CtaBand
         title={`Talk to ${siteConfig.contactPerson} About Your Bag Sourcing Plan`}
-        description={`Send your target category, market, quantity range, business type, and customization needs. ${siteConfig.contactPerson} can help you choose between Factory Manufacturing and Flexible Supply.`}
-        message={contactMessage("I want to talk about my bag sourcing plan, request the latest catalog, and choose between Factory Manufacturing and Flexible Supply.")}
+        description={`Send your target category, market, quantity range, business type, and customization needs. ${siteConfig.contactPerson} can recommend suitable products and next steps.`}
+        message={contactMessage("I want to talk about my bag sourcing plan, request the latest catalog, and discuss suitable next steps.")}
       />
     </>
   );

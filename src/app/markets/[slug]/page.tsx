@@ -46,7 +46,7 @@ export default async function MarketDetailPage({ params }: MarketDetailProps) {
             Market-Fit Supply Focus
           </h2>
           <p className="mt-4 text-base leading-7 text-graphite-600">
-            Cason can help compare Factory Manufacturing, Flexible Supply, ready stock, factory overstock, mixed wholesale, and OEM/ODM paths based on your region, buyer type, and inventory risk.
+            Cason can help compare OEM/ODM, ready stock, factory overstock, mixed wholesale, and market-testing options based on your region, buyer type, and inventory risk.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {market.strengths.map((strength) => (

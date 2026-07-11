@@ -43,7 +43,7 @@ export default async function ManufacturingDetailPage({ params }: ManufacturingD
             What Buyers Can Discuss With {siteConfig.brandName}
           </h2>
           <p className="mt-4 text-base leading-7 text-graphite-600">
-            This page focuses on professional factory communication for global B2B buyers. The goal is to clarify what should be discussed before catalog selection, sample development, bulk production, quality inspection, packing, or Flexible Supply decisions.
+            This page focuses on practical production communication for global B2B buyers, including sample development, bulk production, quality inspection, packing, and export preparation.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {page.points.map((point) => (
@@ -56,8 +56,8 @@ export default async function ManufacturingDetailPage({ params }: ManufacturingD
       </section>
       <CtaBand
         title={`Discuss ${page.title} With ${siteConfig.contactPerson}`}
-        description={`Talk to ${siteConfig.contactPerson} about your target bag category, material requirements, customization needs, quantity range, supply path, and packing plan.`}
-        message={contactMessage(`I want to discuss ${page.title.toLowerCase()} for my bag sourcing project. Please help me clarify category, material, customization, packing, and the right supply path.`)}
+        description={`Talk to ${siteConfig.contactPerson} about your target bag category, material requirements, customization needs, quantity range, and packing plan.`}
+        message={contactMessage(`I want to discuss ${page.title.toLowerCase()} for my bag sourcing project. Please help me clarify category, material, customization, and packing requirements.`)}
       />
     </>
   );

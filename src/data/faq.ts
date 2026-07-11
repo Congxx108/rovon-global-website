@@ -1,4 +1,4 @@
-import { siteConfig, vantoKaro } from "@/data/site";
+import { siteConfig } from "@/data/site";
 
 export type FaqItem = {
   question: string;
@@ -7,62 +7,68 @@ export type FaqItem = {
 
 export const faqItems: FaqItem[] = [
   {
-    question: "What are ROVON Global's two supply solutions?",
+    question: "What is your MOQ?",
     answer:
-      `${siteConfig.brandName} works through two supply solutions: Factory Manufacturing for OEM/ODM, private label, custom bags, and long-term bulk production; and Flexible Supply for ready stock, factory overstock, mixed wholesale, low MOQ, market testing, and faster delivery.`,
+      "MOQ depends on the bag type, material, color, logo method, packing, and whether the order is custom production or available stock. Share your category, quantity range, and market so we can suggest a practical starting point.",
   },
   {
-    question: "What is the difference between Factory Manufacturing and Flexible Supply?",
+    question: "Can I order samples before bulk production?",
     answer:
-      "Factory Manufacturing is for buyers who need custom materials, logo methods, samples, production planning, QC, and repeat orders. Flexible Supply is for buyers who want available stock, factory overstock, mixed category combinations, lower inventory risk, or faster replenishment.",
+      "Yes. Samples can be arranged for suitable OEM/ODM projects after the main material, size, logo method, and structure are discussed. For ready-stock items, sample availability depends on current inventory.",
+  },
+  {
+    question: "How long does sampling usually take?",
+    answer:
+      "Sampling time depends on the product complexity, material availability, logo method, and revision needs. Simple adjustments are usually faster than new structures or fully customized developments.",
+  },
+  {
+    question: "What is the typical production lead time?",
+    answer:
+      "Production lead time depends on category, order quantity, material preparation, customization, packing, and the factory schedule. Clear requirements help us estimate timing more accurately.",
+  },
+  {
+    question: "Which logo methods do you support?",
+    answer:
+      "Common options include woven labels, rubber patches, metal plates, embroidery, printing, zipper pullers, hangtags, and branded packing. The right method depends on material, order quantity, and the product surface.",
+  },
+  {
+    question: "Can you customize materials, colors, and sizes?",
+    answer:
+      "Yes. Materials, colors, lining, hardware, size, structure, straps, pockets, and packing can be discussed for OEM/ODM orders. Final feasibility depends on the design, quantity, and material supply.",
+  },
+  {
+    question: "How do you control quality?",
+    answer:
+      "Quality checks can cover materials, cutting, stitching, reinforcement, hardware, logo placement, packing, carton marks, and final shipment readiness. The inspection focus depends on the product and order requirements.",
+  },
+  {
+    question: "Can you help with packing and shipping?",
+    answer:
+      "Yes. Packing can be discussed for wholesale cartons, private label packaging, mixed cartons, labels, carton marks, and export preparation. Shipping coordination depends on destination, volume, and buyer requirements.",
+  },
+  {
+    question: "Do ready-stock items change frequently?",
+    answer:
+      "Yes. Ready stock, factory overstock, and mixed wholesale options change with current inventory. Contact Cason for the latest available list before planning a replenishment or test order.",
+  },
+  {
+    question: "What payment terms do you accept?",
+    answer:
+      "Payment terms depend on the order type, buyer profile, product category, and cooperation stage. Please discuss the project details first so the team can confirm suitable terms.",
+  },
+  {
+    question: "What information should I send for a quotation?",
+    answer:
+      "Send the product category, quantity range, destination market, business type, logo or customization needs, material level, packing needs, and any reference images. Clear details help us respond with suitable products, MOQ options, and pricing.",
+  },
+  {
+    question: "What are ROVON Global's two supply solutions?",
+    answer:
+      `${siteConfig.brandName} supports Factory Manufacturing for OEM/ODM, private label, custom bags, and bulk production, plus Flexible Supply for ready stock, factory overstock, mixed wholesale, low MOQ, and market testing.`,
   },
   {
     question: "Can I talk directly with Cason on WhatsApp?",
     answer:
-      `Yes. ${siteConfig.contactPerson} is the real contact behind ${siteConfig.brandName}. Buyers can speak with him directly about catalogs, product direction, OEM/ODM requirements, quantity range, market fit, packing, and the right supply path before asking for a quotation.`,
-  },
-  {
-    question: "Is ROVON Global only a mixed bag supplier?",
-    answer:
-      `No. Mixed wholesale is only one part of the Flexible Supply path. The main positioning of ${siteConfig.brandName} is factory-backed bag manufacturing and flexible B2B supply from China, including OEM/ODM production, private label projects, and selected ready stock or overstock support.`,
-  },
-  {
-    question: "Do you support OEM/ODM custom bags?",
-    answer:
-      "Yes. OEM/ODM projects can include material selection, structure adjustment, logo methods, labels, trims, hardware, sample development, bulk production, quality inspection, and export packing coordination.",
-  },
-  {
-    question: "What is VANTO KARO?",
-    answer: vantoKaro.description,
-  },
-  {
-    question: "Can I use my own brand or logo?",
-    answer:
-      "Yes. Buyers can discuss private label and logo options such as woven labels, rubber patches, metal plates, embroidery, printing, hangtags, trims, hardware, and branded packing. Feasibility depends on the product structure, material, quantity, and production method.",
-  },
-  {
-    question: "What information should I send before asking for a quotation?",
-    answer:
-      "Send your product category, quantity range, destination market, business type, logo or customization needs, material or quality preference, packing needs, and whether you prefer Factory Manufacturing or Flexible Supply. Clear information helps Cason give a practical next step.",
-  },
-  {
-    question: "Do you support ready stock, factory overstock, and mixed wholesale?",
-    answer:
-      "Yes, when suitable options are available. These belong to Flexible Supply and are useful for market testing, lower MOQ needs, mixed category combinations, fast-moving wholesale, and replenishment. Availability changes, so buyers should contact Cason for the current list.",
-  },
-  {
-    question: "Which buyers are suitable for ROVON Global?",
-    answer:
-      "ROVON Global is suitable for importers, wholesalers, regional distributors, trading companies, boutique owners, online store sellers, independent website sellers, brand owners, and OEM/ODM custom bag buyers who need reliable China bag sourcing support.",
-  },
-  {
-    question: "What product categories are the main focus?",
-    answer:
-      `${siteConfig.brandName} focuses on travel bags, men's bags, women's backpacks, chest bags, waist bags, crossbody bags, and OEM/ODM custom bags. Hand bags and school bags may appear as Flexible Supply or ready stock opportunities, but they are not the core manufacturing positioning.`,
-  },
-  {
-    question: "How does ROVON Global reduce sourcing risk?",
-    answer:
-      "The process starts by clarifying market fit, quantity range, product category, material level, customization needs, and packing requirements before quotation. This helps buyers avoid wrong product combinations, unclear MOQ assumptions, and unnecessary inventory risk.",
+      `Yes. ${siteConfig.contactPerson} is your direct contact at ${siteConfig.brandName} for catalog requests, product discussions, OEM/ODM projects, ready-stock updates, and follow-up questions.`,
   },
 ];
